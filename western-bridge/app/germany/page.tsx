@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import GermanyHero from "@/components/germany/GermanyHero";
 import GermanyRouteFinderSection from "@/components/germany/GermanyRouteFinderSection";
 import GermanyInPracticeSection from "@/components/germany/GermanyInPracticeSection";
@@ -7,20 +5,33 @@ import GermanySystemSection from "@/components/germany/GermanySystemSection";
 import GermanyBusinessInstitutionsSection from "@/components/germany/GermanyBusinessInstitutionsSection";
 import GermanyFinalSection from "@/components/germany/GermanyFinalSection";
 
-export const metadata: Metadata = {
-  title: "Germany",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "Germany Pathways for Professionals, Business & Education | Western Bridge",
+
   description:
-    "Western Bridge Germany Desk supports individuals, healthcare professionals, businesses, universities, and institutions with Germany-focused preparation, qualification, market entry, training, and institutional pathways.",
-};
+    "Western Bridge helps individuals, healthcare professionals, businesses, students and institutions understand and prepare for structured Germany-focused international pathways.",
+
+  path: "/germany",
+
+  image: "/images/germany-hero.jpg",
+});
 
 export default function GermanyPage() {
   return (
-    <main id="germany-page">
+    <main>
       <GermanyHero />
+
       <GermanyRouteFinderSection />
+
       <GermanyInPracticeSection />
+
       <GermanySystemSection />
+
       <GermanyBusinessInstitutionsSection />
+
       <GermanyFinalSection />
     </main>
   );

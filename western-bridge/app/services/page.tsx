@@ -1,23 +1,32 @@
-import type { Metadata } from "next";
-
 import ServicesHero from "@/components/services/ServicesHero";
 import ServiceSystemSection from "@/components/services/ServiceSystemSection";
 import ServicesCapabilitiesSection from "@/components/services/ServicesCapabilitiesSection";
 import ServicesDeliverySection from "@/components/services/ServicesDeliverySection";
 
-export const metadata: Metadata = {
-  title: "Services",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "International Consulting & Qualification Services | Western Bridge",
 
   description:
-    "Western Bridge provides international consulting, training, qualification support, healthcare preparation, education and institutional cooperation, business development, market research, digital solutions, and international networking services.",
-};
+    "Explore Western Bridge services in international consulting, professional preparation, qualification, healthcare, education, business development, technology and institutional networking.",
+
+  path: "/services",
+
+  image:
+    "/images/services-hero-consulting.jpg",
+});
 
 export default function ServicesPage() {
   return (
-    <main id="services-page">
+    <main>
       <ServicesHero />
+
       <ServiceSystemSection />
+
       <ServicesCapabilitiesSection />
+
       <ServicesDeliverySection />
     </main>
   );

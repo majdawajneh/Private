@@ -1,0 +1,61 @@
+import type { MetadataRoute } from "next";
+
+import { SITE_URL } from "@/lib/seo";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    {
+      url: `${SITE_URL}/`,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+
+    {
+      url: `${SITE_URL}/individuals`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${SITE_URL}/businesses`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${SITE_URL}/medical`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${SITE_URL}/education`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${SITE_URL}/germany`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${SITE_URL}/services`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
+    {
+      url: `${SITE_URL}/about`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+
+    {
+      url: `${SITE_URL}/contact`,
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+  ];
+}

@@ -1,23 +1,31 @@
-import type { Metadata } from "next";
-
 import MedicalHero from "@/components/medical/MedicalHero";
 import MedicalPathwaySection from "@/components/medical/MedicalPathwaySection";
-import ProfessionPathsSection from "@/components/individuals/ProfessionPathsSection";
+import ProfessionRoutesSection from "@/components/medical/ProfessionRoutesSection";
 import MedicalReadinessSection from "@/components/medical/MedicalReadinessSection";
 
-export const metadata: Metadata = {
-  title: "Medical & Healthcare",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "Healthcare & Medical International Pathways | Western Bridge",
 
   description:
-    "Explore Germany-focused pathways for nurses, doctors, pharmacists, and healthcare professionals through language preparation, qualification recognition, licensing guidance, and professional readiness with Western Bridge.",
-};
+    "Western Bridge provides preparation and qualification pathway support for healthcare professionals including nurses, doctors, pharmacists and allied health professionals.",
+
+  path: "/medical",
+
+  image: "/images/medical-hero.jpg",
+});
 
 export default function MedicalPage() {
   return (
-    <main id="medical-page">
+    <main>
       <MedicalHero />
+
       <MedicalPathwaySection />
-      <ProfessionPathsSection />
+
+      <ProfessionRoutesSection />
+
       <MedicalReadinessSection />
     </main>
   );

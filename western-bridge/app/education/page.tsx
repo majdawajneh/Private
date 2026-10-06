@@ -1,25 +1,34 @@
-import type { Metadata } from "next";
-
 import EducationHero from "@/components/education/EducationHero";
 import EducationEntrySection from "@/components/education/EducationEntrySection";
 import EducationPathwaysSection from "@/components/education/EducationPathwaysSection";
 import InstitutionNetworkSection from "@/components/education/InstitutionNetworkSection";
 import EducationPreparationSection from "@/components/education/EducationPreparationSection";
 
-export const metadata: Metadata = {
-  title: "Education & Institutions",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "Education & Institutional Cooperation | Western Bridge",
 
   description:
-    "Explore academic pathways, university connections, training opportunities, educational partnerships, institutional cooperation, and international education support with Western Bridge.",
-};
+    "Western Bridge supports students, universities, training providers and educational institutions through international education pathways, preparation and institutional cooperation.",
+
+  path: "/education",
+
+  image: "/images/education-campus.jpg",
+});
 
 export default function EducationPage() {
   return (
-    <main id="education-page">
+    <main>
       <EducationHero />
+
       <EducationEntrySection />
+
       <EducationPathwaysSection />
+
       <InstitutionNetworkSection />
+
       <EducationPreparationSection />
     </main>
   );

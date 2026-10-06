@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import IndividualsHero from "@/components/individuals/IndividualsHero";
 import IndividualOptionsSection from "@/components/individuals/IndividualOptionsSection";
 import GermanyJourneySection from "@/components/individuals/GermanyJourneySection";
@@ -7,21 +5,33 @@ import ProfessionPathsSection from "@/components/individuals/ProfessionPathsSect
 import PreparationBoardSection from "@/components/individuals/PreparationBoardSection";
 import IndividualAISection from "@/components/individuals/IndividualAISection";
 
-export const metadata: Metadata = {
-  title: "Individuals",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "International Pathways for Individuals | Western Bridge",
 
   description:
-    "Explore international pathways, professional preparation, qualification guidance, training, and Germany-focused opportunities with Western Bridge.",
-};
+    "Western Bridge supports individuals with structured international consulting, preparation, qualification and professional pathway planning, including Germany-focused opportunities.",
+
+  path: "/individuals",
+
+  image: "/images/individuals-hero.jpg",
+});
 
 export default function IndividualsPage() {
   return (
-    <main id="individuals-page">
+    <main>
       <IndividualsHero />
+
       <IndividualOptionsSection />
+
       <GermanyJourneySection />
+
       <ProfessionPathsSection />
+
       <PreparationBoardSection />
+
       <IndividualAISection />
     </main>
   );

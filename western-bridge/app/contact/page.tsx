@@ -1,17 +1,22 @@
-import type { Metadata } from "next";
-
 import ContactSection from "@/components/contact/ContactSection";
 
-export const metadata: Metadata = {
-  title: "Contact Western Bridge",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "Contact Western Bridge | الجسر الغربي",
 
   description:
-    "Contact Western Bridge regarding international pathways, healthcare preparation, business development, Germany, education, training, and institutional cooperation.",
-};
+    "Contact Western Bridge (الجسر الغربي / ويسترن بريدج) for international consulting, healthcare, business, education, institutional cooperation and professional preparation inquiries.",
+
+  path: "/contact",
+
+  image: "/images/contact-hero.jpg",
+});
 
 export default function ContactPage() {
   return (
-    <main id="contact-page">
+    <main>
       <ContactSection />
     </main>
   );

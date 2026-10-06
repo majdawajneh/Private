@@ -1,5 +1,3 @@
-import type { Metadata } from "next";
-
 import BusinessHero from "@/components/businesses/BusinessHero";
 import ExpansionIntelligenceSection from "@/components/businesses/ExpansionIntelligenceSection";
 import MarketEntryNavigatorSection from "@/components/businesses/MarketEntryNavigatorSection";
@@ -7,21 +5,33 @@ import PartnershipBridgeSection from "@/components/businesses/PartnershipBridgeS
 import OrganizationalSolutionsSection from "@/components/businesses/OrganizationalSolutionsSection";
 import BusinessExpansionBlueprintSection from "@/components/businesses/BusinessExpansionBlueprintSection";
 
-export const metadata: Metadata = {
-  title: "Businesses",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "International Business Expansion & Partnerships | Western Bridge",
 
   description:
-    "Explore business development, market research, international expansion, strategic partnerships, digital solutions, and Germany-focused growth support with Western Bridge.",
-};
+    "Western Bridge supports companies and organizations with international market preparation, business development, institutional connections, partnerships and structured expansion pathways.",
+
+  path: "/businesses",
+
+  image: "/images/business-expansion.jpg",
+});
 
 export default function BusinessesPage() {
   return (
-    <main id="businesses-page">
+    <main>
       <BusinessHero />
+
       <ExpansionIntelligenceSection />
+
       <MarketEntryNavigatorSection />
+
       <PartnershipBridgeSection />
+
       <OrganizationalSolutionsSection />
+
       <BusinessExpansionBlueprintSection />
     </main>
   );

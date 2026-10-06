@@ -1,21 +1,28 @@
-import type { Metadata } from "next";
-
 import AboutHero from "@/components/about/AboutHero";
 import AboutPurposeSection from "@/components/about/AboutPurposeSection";
 import AboutValuesSection from "@/components/about/AboutValuesSection";
 
-export const metadata: Metadata = {
-  title: "About Western Bridge",
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata = createPageMetadata({
+  title:
+    "About Western Bridge | الجسر الغربي",
 
   description:
-    "Learn about Western Bridge, an international consulting and development platform supporting individuals, businesses, healthcare professionals, universities, training providers, and institutions through preparation, qualification, international growth, and strategic connections.",
-};
+    "Learn about Western Bridge (الجسر الغربي / ويسترن بريدج), our international consulting approach, preparation, qualification, institutional cooperation and responsible pathway development.",
+
+  path: "/about",
+
+  image: "/images/about-hero.jpg",
+});
 
 export default function AboutPage() {
   return (
-    <main id="about-page">
+    <main>
       <AboutHero />
+
       <AboutPurposeSection />
+
       <AboutValuesSection />
     </main>
   );
