@@ -410,3 +410,28 @@
     height: 290px;
   }
 }
+/* ========================================
+   RTL - Arabic Hero
+   ======================================== */
+
+:global(html[dir="rtl"]) .image {
+  object-position: left center;
+}
+
+:global(html[dir="rtl"]) .overlay {
+  background:
+    linear-gradient(
+      270deg,
+      rgba(5, 24, 42, 0.98) 0%,
+      rgba(7, 31, 54, 0.9) 38%,
+      rgba(7, 31, 54, 0.52) 65%,
+      rgba(7, 31, 54, 0.08) 100%
+    );
+}
+
+:global(html[dir="rtl"]) .content {
+  margin-left: 0;
+  margin-right: 0;
+
+  text-align: right;
+}

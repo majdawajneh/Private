@@ -1,17 +1,24 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_Arabic } from "next/font/google";
-import "./globals.css";
+import {
+  Inter,
+  Noto_Sans_Arabic,
+} from "next/font/google";
+
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
-const notoArabic = Noto_Sans_Arabic({
+const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
   variable: "--font-arabic",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,30 +28,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Western Bridge provides consulting, qualification, training, business development, and international pathway guidance with a strong focus on Germany and Europe.",
-
-  keywords: [
-    "Western Bridge",
-    "Germany",
-    "Business Consulting",
-    "Medical Professionals",
-    "German Language",
-    "Professional Qualification",
-    "International Opportunities",
-    "Business Development",
-  ],
-
-  authors: [{ name: "Western Bridge" }],
-  creator: "Western Bridge",
-
-  openGraph: {
-    title: "Western Bridge",
-    description:
-      "Connecting people, professionals, and businesses with international pathways and opportunities.",
-    type: "website",
-    locale: "en_US",
-    siteName: "Western Bridge",
-  },
+    "International consulting, preparation, qualification, business development, healthcare, education, and institutional cooperation.",
 };
 
 export default function RootLayout({
@@ -55,10 +39,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${notoArabic.variable}`}
+      className={`${inter.variable} ${notoSansArabic.variable}`}
     >
-      
-      <body><Navbar />{children}<Footer/></body>
+      <body>
+        <Navbar />
+
+        {children}
+
+        <Footer />
+      </body>
     </html>
   );
 }
