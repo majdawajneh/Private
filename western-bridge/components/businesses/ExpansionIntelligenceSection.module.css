@@ -1,0 +1,538 @@
+.section {
+  position: relative;
+  padding: 130px 0;
+  background: var(--color-white);
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Main Layout
+   ======================================== */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  gap: 90px;
+  align-items: start;
+}
+
+
+/* ========================================
+   Left Side
+   ======================================== */
+
+.intro {
+  position: sticky;
+  top: 125px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 20px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  max-width: 540px;
+  margin-bottom: 24px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  line-height: 1;
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.description {
+  max-width: 520px;
+  margin-bottom: 32px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   Strategic Principle
+   ======================================== */
+
+.principle {
+  padding: 23px 24px;
+
+  background: var(--color-background-blue);
+
+  border-left: 4px solid var(--color-gold);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.principleLabel {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.principleText {
+  color: var(--color-navy);
+
+  font-size: 0.93rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   Intelligence Matrix
+   ======================================== */
+
+.matrix {
+  position: relative;
+
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* ========================================
+   Row
+   ======================================== */
+
+.row {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 85px minmax(0, 1fr) 165px;
+  gap: 28px;
+
+  align-items: center;
+
+  min-height: 170px;
+
+  padding: 28px 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    padding var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.row:hover {
+  padding-left: 18px;
+  padding-right: 18px;
+
+  background: var(--color-background-soft);
+}
+
+
+/* ========================================
+   Number
+   ======================================== */
+
+.number {
+  color: rgba(13, 49, 88, 0.12);
+
+  font-size: 3.2rem;
+  font-weight: 900;
+
+  line-height: 1;
+  letter-spacing: -0.06em;
+
+  transition: color var(--transition-normal);
+}
+
+.row:hover .number {
+  color: var(--color-gold);
+}
+
+
+/* ========================================
+   Row Content
+   ======================================== */
+
+.rowContent {
+  min-width: 0;
+}
+
+.rowLabel {
+  display: block;
+  margin-bottom: 7px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.rowTitle {
+  margin-bottom: 10px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.rowText {
+  max-width: 630px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.86rem;
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   Strategic Meter
+   ======================================== */
+
+.meter {
+  min-width: 0;
+}
+
+.meterTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+}
+
+.meterLabel {
+  color: var(--color-text-light);
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.meterValue {
+  color: var(--color-navy);
+
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.track {
+  height: 6px;
+
+  background: var(--color-background-blue);
+
+  border-radius: var(--radius-full);
+
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-gold),
+      var(--color-navy)
+    );
+
+  border-radius: inherit;
+}
+
+
+/* Different visual lengths */
+
+.fillMarket {
+  width: 92%;
+}
+
+.fillFeasibility {
+  width: 78%;
+}
+
+.fillPartnership {
+  width: 86%;
+}
+
+.fillDigital {
+  width: 70%;
+}
+
+
+/* ========================================
+   Bottom Decision Strip
+   ======================================== */
+
+.decisionStrip {
+  margin-top: 42px;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+
+  gap: 24px;
+
+  padding: 24px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+
+  border-radius: var(--radius-lg);
+}
+
+.decisionMark {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-radius: 50%;
+
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.decisionLabel {
+  display: block;
+  margin-bottom: 5px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.decisionTitle {
+  margin-bottom: 5px;
+
+  color: var(--color-white);
+
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.decisionText {
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+
+.decisionButton {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0 20px;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.decisionButton:hover {
+  background: var(--color-gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Decorative Index
+   ======================================== */
+
+.sideIndex {
+  position: absolute;
+
+  top: 50%;
+  right: -58px;
+
+  transform: translateY(-50%) rotate(90deg);
+
+  color: rgba(13, 49, 88, 0.05);
+
+  font-size: 0.68rem;
+  font-weight: 900;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   Background Decoration
+   ======================================== */
+
+.backgroundNumber {
+  position: absolute;
+
+  left: -25px;
+  bottom: -70px;
+
+  color: rgba(13, 49, 88, 0.025);
+
+  font-size: clamp(10rem, 20vw, 20rem);
+  font-weight: 900;
+
+  line-height: 1;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+
+  .intro {
+    position: relative;
+    top: auto;
+
+    max-width: 760px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .section {
+    padding: 95px 0;
+  }
+
+  .row {
+    grid-template-columns: 60px minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .meter {
+    grid-column: 2;
+    max-width: 320px;
+  }
+
+  .decisionStrip {
+    grid-template-columns: auto 1fr;
+  }
+
+  .decisionButton {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 560px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+
+    padding: 25px 0;
+  }
+
+  .row:hover {
+    padding-left: 0;
+    padding-right: 0;
+
+    background: transparent;
+  }
+
+  .number {
+    font-size: 2.3rem;
+  }
+
+  .meter {
+    grid-column: auto;
+
+    max-width: 100%;
+  }
+
+  .decisionStrip {
+    grid-template-columns: 1fr;
+
+    padding: 24px;
+  }
+
+  .decisionMark {
+    width: 46px;
+    height: 46px;
+  }
+
+  .backgroundNumber,
+  .sideIndex {
+    display: none;
+  }
+}

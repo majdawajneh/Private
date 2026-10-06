@@ -1,0 +1,507 @@
+.section {
+  position: relative;
+
+  padding: 110px 0;
+
+  background: var(--color-background-soft);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Section Header
+   ======================================== */
+
+.header {
+  max-width: 760px;
+
+  margin: 0 auto 54px;
+
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 16px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 28px;
+  height: 2px;
+
+  background: var(--color-gold);
+
+  border-radius: var(--radius-full);
+}
+
+.title {
+  margin-bottom: 18px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.25rem, 4vw, 3.6rem);
+
+  letter-spacing: -0.045em;
+}
+
+.description {
+  max-width: 670px;
+
+  margin: 0 auto;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.05rem;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   Cards Grid
+   ======================================== */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 24px;
+}
+
+
+/* ========================================
+   Pathway Card
+   ======================================== */
+
+.card {
+  position: relative;
+
+  min-height: 440px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 34px;
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  overflow: hidden;
+
+  transition:
+    transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(199, 162, 74, 0.45);
+
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* ========================================
+   Accent
+   ======================================== */
+
+.cardAccent {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-gold),
+      var(--color-gold-light)
+    );
+}
+
+
+/* ========================================
+   Icon
+   ======================================== */
+
+.iconWrapper {
+  width: 62px;
+  height: 62px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 28px;
+
+  color: var(--color-navy);
+
+  background: rgba(199, 162, 74, 0.1);
+
+  border: 1px solid rgba(199, 162, 74, 0.24);
+  border-radius: var(--radius-md);
+
+  font-size: 1.65rem;
+
+  transition:
+    transform var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.card:hover .iconWrapper {
+  transform: scale(1.06);
+
+  background: rgba(199, 162, 74, 0.16);
+}
+
+
+/* ========================================
+   Card Content
+   ======================================== */
+
+.cardLabel {
+  margin-bottom: 10px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  margin-bottom: 16px;
+
+  color: var(--color-navy);
+
+  font-size: 1.65rem;
+
+  letter-spacing: -0.03em;
+}
+
+.cardDescription {
+  margin-bottom: 26px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   Features
+   ======================================== */
+
+.features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+
+  margin-bottom: 32px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.88rem;
+}
+
+.check {
+  width: 19px;
+  height: 19px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+  color: var(--color-gold-dark);
+
+  border: 1px solid rgba(199, 162, 74, 0.38);
+  border-radius: 50%;
+
+  font-size: 0.62rem;
+  font-weight: 800;
+}
+
+
+/* ========================================
+   Card Link
+   ======================================== */
+
+.cardLink {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: auto;
+
+  color: var(--color-navy);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    color var(--transition-fast),
+    gap var(--transition-fast);
+}
+
+.cardLink:hover {
+  color: var(--color-gold-dark);
+
+  gap: 14px;
+}
+
+.arrow {
+  font-size: 1.05rem;
+}
+
+
+/* ========================================
+   Medical Highlight
+   ======================================== */
+
+.featuredCard {
+  background:
+    linear-gradient(
+      145deg,
+      var(--color-navy-dark) 0%,
+      var(--color-navy) 100%
+    );
+
+  border-color: transparent;
+
+  box-shadow: var(--shadow-md);
+}
+
+.featuredCard .cardLabel {
+  color: var(--color-gold-light);
+}
+
+.featuredCard .cardTitle {
+  color: var(--color-white);
+}
+
+.featuredCard .cardDescription {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.featuredCard .feature {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.featuredCard .check {
+  color: var(--color-gold-light);
+
+  border-color: rgba(219, 193, 118, 0.45);
+}
+
+.featuredCard .iconWrapper {
+  color: var(--color-gold-light);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.featuredCard .cardLink {
+  color: var(--color-gold-light);
+}
+
+.featuredCard:hover {
+  border-color: transparent;
+
+  box-shadow: 0 24px 60px rgba(13, 49, 88, 0.24);
+}
+
+
+/* ========================================
+   Bottom Note
+   ======================================== */
+
+.bottomNote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 42px;
+
+  color: var(--color-text-light);
+
+  text-align: center;
+
+  font-size: 0.84rem;
+}
+
+.bottomDot {
+  width: 6px;
+  height: 6px;
+
+  background: var(--color-gold);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Decorative Background
+   ======================================== */
+
+.decorationOne,
+.decorationTwo {
+  position: absolute;
+
+  border: 1px solid rgba(199, 162, 74, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.decorationOne {
+  width: 320px;
+  height: 320px;
+
+  top: -180px;
+  right: -100px;
+}
+
+.decorationTwo {
+  width: 220px;
+  height: 220px;
+
+  bottom: -130px;
+  left: -90px;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featuredCard {
+    grid-column: span 2;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .section {
+    padding: 82px 0;
+  }
+
+  .header {
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .featuredCard {
+    grid-column: auto;
+  }
+
+  .card {
+    min-height: auto;
+
+    padding: 28px;
+  }
+
+  .description {
+    font-size: 0.98rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 68px 0;
+  }
+
+  .header {
+    margin-bottom: 34px;
+
+    text-align: left;
+  }
+
+  .header .description {
+    margin: 0;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+  }
+
+  .card {
+    padding: 24px;
+
+    border-radius: var(--radius-md);
+  }
+
+  .iconWrapper {
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 22px;
+
+    font-size: 1.4rem;
+  }
+
+  .cardTitle {
+    font-size: 1.45rem;
+  }
+
+  .bottomNote {
+    align-items: flex-start;
+
+    margin-top: 30px;
+
+    text-align: left;
+  }
+}

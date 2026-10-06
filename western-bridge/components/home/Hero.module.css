@@ -1,0 +1,412 @@
+.hero {
+  position: relative;
+
+  min-height: calc(100vh - 84px);
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.98) 38%,
+      rgba(255, 255, 255, 0.8) 58%,
+      rgba(255, 255, 255, 0.15) 100%
+    );
+}
+
+
+/* ========================================
+   Background Image
+   ======================================== */
+
+.background {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 58%;
+  height: 100%;
+
+  z-index: 0;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  object-position: center;
+
+  filter: saturate(0.92) contrast(1.02);
+}
+
+.backgroundOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.65) 20%,
+      rgba(13, 49, 88, 0.04) 70%,
+      rgba(13, 49, 88, 0.12) 100%
+    );
+}
+
+
+/* ========================================
+   Content
+   ======================================== */
+
+.heroContainer {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+.content {
+  max-width: 700px;
+
+  padding: 100px 0;
+}
+
+
+/* ========================================
+   Badge
+   ======================================== */
+
+.badge {
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  padding: 9px 15px;
+
+  color: var(--color-navy);
+
+  background: rgba(199, 162, 74, 0.1);
+
+  border: 1px solid rgba(199, 162, 74, 0.28);
+  border-radius: var(--radius-full);
+
+  font-size: 0.82rem;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+.badgeDot {
+  width: 7px;
+  height: 7px;
+
+  background: var(--color-gold);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Heading
+   ======================================== */
+
+.title {
+  max-width: 680px;
+
+  margin-bottom: 24px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(3rem, 5.6vw, 5.3rem);
+
+  line-height: 1.02;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold);
+}
+
+
+/* ========================================
+   Description
+   ======================================== */
+
+.description {
+  max-width: 610px;
+
+  margin-bottom: 34px;
+
+  color: var(--color-text-secondary);
+
+  font-size: clamp(1rem, 1.4vw, 1.15rem);
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   Buttons
+   ======================================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.93rem;
+  font-weight: 700;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryButton {
+  color: var(--color-white);
+
+  background: var(--color-gold);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.primaryButton:hover {
+  background: var(--color-gold-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.secondaryButton {
+  color: var(--color-navy);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid rgba(13, 49, 88, 0.2);
+
+  backdrop-filter: blur(8px);
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-navy);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Trust Row
+   ======================================== */
+
+.trustRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  margin-top: 42px;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.trustIcon {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-gold);
+
+  border: 1px solid rgba(199, 162, 74, 0.4);
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+}
+
+
+/* ========================================
+   Decorative Element
+   ======================================== */
+
+.decorativeLine {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-gold) 0%,
+      var(--color-gold) 28%,
+      transparent 28%
+    );
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1100px) {
+  .hero {
+    min-height: 760px;
+  }
+
+  .background {
+    width: 52%;
+  }
+
+  .content {
+    max-width: 620px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+
+    align-items: flex-start;
+
+    background: var(--color-white);
+  }
+
+  .background {
+    position: relative;
+
+    order: 2;
+
+    width: 100%;
+    height: 430px;
+  }
+
+  .hero {
+    display: block;
+  }
+
+  .content {
+    max-width: 100%;
+
+    padding: 72px 0 54px;
+  }
+
+  .backgroundOverlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(13, 49, 88, 0.15) 100%
+      );
+  }
+
+  .title {
+    max-width: 760px;
+  }
+
+  .description {
+    max-width: 680px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .content {
+    padding: 56px 0 44px;
+  }
+
+  .badge {
+    margin-bottom: 18px;
+
+    padding: 8px 12px;
+
+    font-size: 0.74rem;
+  }
+
+  .title {
+    margin-bottom: 20px;
+
+    font-size: clamp(2.55rem, 13vw, 4rem);
+  }
+
+  .description {
+    margin-bottom: 28px;
+
+    font-size: 0.98rem;
+
+    line-height: 1.65;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .trustRow {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 32px;
+  }
+
+  .background {
+    height: 340px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .background {
+    height: 290px;
+  }
+}

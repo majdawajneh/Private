@@ -1,0 +1,601 @@
+.section {
+  padding: 130px 0 115px;
+
+  background: var(--color-white);
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.65fr);
+
+  align-items: end;
+
+  gap: 75px;
+
+  margin-bottom: 58px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  color: var(--color-navy);
+
+  font-size: clamp(2.9rem, 5vw, 4.9rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.intro {
+  max-width: 620px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.94rem;
+
+  line-height: 1.82;
+}
+
+
+/* ========================================
+   Main Workspace
+   ======================================== */
+
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
+
+  gap: 42px;
+
+  align-items: stretch;
+}
+
+
+/* ========================================
+   Image
+   ======================================== */
+
+.visual {
+  position: relative;
+
+  min-height: 760px;
+
+  border-radius: 30px 30px 90px 30px;
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-lg);
+}
+
+.image {
+  object-fit: cover;
+
+  transition: transform 0.8s ease;
+}
+
+.visual:hover .image {
+  transform: scale(1.025);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 38, 65, 0.03) 22%,
+      rgba(8, 38, 65, 0.18) 55%,
+      rgba(6, 29, 50, 0.92) 100%
+    );
+}
+
+.visualContent {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 31px;
+
+  z-index: 2;
+}
+
+.visualLabel {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visualTitle {
+  max-width: 390px;
+
+  margin-bottom: 10px;
+
+  color: var(--color-white);
+
+  font-size: 1.5rem;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+.visualText {
+  max-width: 390px;
+
+  color: rgba(255, 255, 255, 0.67);
+
+  font-size: 0.75rem;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   Workstreams
+   ======================================== */
+
+.workstreams {
+  border-top: 1px solid var(--color-border);
+}
+
+.workstream {
+  padding: 30px 0;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+.workstreamHead {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr);
+
+  align-items: start;
+
+  gap: 20px;
+
+  margin-bottom: 17px;
+}
+
+.number {
+  color: rgba(13, 49, 88, 0.14);
+
+  font-size: 2.3rem;
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.subtitle {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.59rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.workstreamTitle {
+  color: var(--color-navy);
+
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  letter-spacing: -0.025em;
+}
+
+.description {
+  max-width: 720px;
+
+  margin: 0 0 20px 80px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.8rem;
+
+  line-height: 1.68;
+}
+
+
+/* ========================================
+   Support Area
+   ======================================== */
+
+.supportBlock {
+  margin-left: 80px;
+}
+
+.supportLabel {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--color-text-light);
+
+  font-size: 0.59rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.supportList {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 9px 24px;
+}
+
+.supportItem {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--color-text);
+
+  font-size: 0.71rem;
+  font-weight: 700;
+}
+
+.supportMark {
+  width: 7px;
+  height: 7px;
+
+  flex-shrink: 0;
+
+  background: var(--color-gold);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Authority
+   ======================================== */
+
+.authority {
+  margin: 21px 0 0 80px;
+
+  padding-top: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  border-top: 1px dashed var(--color-border);
+}
+
+.authorityLabel {
+  color: var(--color-text-light);
+
+  font-size: 0.61rem;
+
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.authority strong {
+  color: var(--color-navy);
+
+  font-size: 0.68rem;
+
+  text-align: right;
+}
+
+
+/* ========================================
+   Final Case Review
+   ======================================== */
+
+.finalBlock {
+  margin-top: 65px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr) auto;
+
+  align-items: center;
+
+  gap: 38px;
+
+  padding: 34px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+
+  border-radius: var(--radius-xl);
+
+  box-shadow: var(--shadow-md);
+}
+
+.finalLabel {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.61rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.finalTitle {
+  margin-bottom: 8px;
+
+  color: var(--color-white);
+
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+.finalText {
+  max-width: 610px;
+
+  color: rgba(255, 255, 255, 0.64);
+
+  font-size: 0.75rem;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   Case Fields
+   ======================================== */
+
+.caseFields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 8px;
+}
+
+.caseFields span {
+  padding: 8px 10px;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   CTA
+   ======================================== */
+
+.cta {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 20px;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.cta:hover {
+  background: var(--color-gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Legal
+   ======================================== */
+
+.legal {
+  max-width: 960px;
+
+  margin-top: 18px;
+
+  color: var(--color-text-light);
+
+  font-size: 0.65rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .top {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .intro {
+    max-width: 760px;
+  }
+
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    min-height: 520px;
+
+    max-width: 780px;
+  }
+
+  .finalBlock {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cta {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 720px) {
+  .section {
+    padding: 95px 0 85px;
+  }
+
+  .visual {
+    min-height: 450px;
+
+    border-radius: var(--radius-xl);
+  }
+
+  .description,
+  .supportBlock,
+  .authority {
+    margin-left: 0;
+  }
+
+  .supportList {
+    grid-template-columns: 1fr;
+  }
+
+  .finalBlock {
+    grid-template-columns: 1fr;
+  }
+
+  .caseFields {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cta {
+    grid-column: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 12vw, 3.7rem);
+  }
+
+  .visual {
+    min-height: 390px;
+  }
+
+  .visualContent {
+    left: 21px;
+    right: 21px;
+    bottom: 22px;
+  }
+
+  .workstreamHead {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .authority {
+    align-items: flex-start;
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .authority strong {
+    text-align: left;
+  }
+
+  .finalBlock {
+    padding: 25px 21px;
+
+    border-radius: var(--radius-lg);
+  }
+
+  .caseFields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

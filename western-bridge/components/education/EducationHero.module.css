@@ -1,0 +1,684 @@
+.hero {
+  position: relative;
+
+  min-height: calc(100vh - 84px);
+
+  display: flex;
+  align-items: center;
+
+  padding: 100px 0 110px;
+
+  background:
+    radial-gradient(
+      circle at 12% 12%,
+      rgba(199, 162, 74, 0.09),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #f7f9fb 52%,
+      #eef3f7 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Layout
+   ======================================== */
+
+.wrapper {
+  position: relative;
+  z-index: 3;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.82fr)
+    minmax(0, 1.18fr);
+
+  align-items: center;
+
+  gap: 76px;
+}
+
+
+/* ========================================
+   Content
+   ======================================== */
+
+.content {
+  position: relative;
+
+  max-width: 670px;
+
+  z-index: 3;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowDot {
+  width: 8px;
+  height: 8px;
+
+  background: var(--color-gold);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px rgba(199, 162, 74, 0.1);
+}
+
+.title {
+  max-width: 680px;
+
+  margin-bottom: 25px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(3rem, 5.7vw, 5.6rem);
+
+  line-height: 0.96;
+
+  letter-spacing: -0.06em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.description {
+  max-width: 610px;
+
+  margin-bottom: 32px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.02rem;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   Audience
+   ======================================== */
+
+.audienceRow {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-bottom: 33px;
+}
+
+.audienceItem {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 9px 12px;
+
+  color: var(--color-navy);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+
+  box-shadow: var(--shadow-sm);
+
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.audienceDot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: var(--color-gold);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Actions
+   ======================================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 13px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 54px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 23px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.86rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryButton {
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.primaryButton:hover {
+  background: var(--color-navy-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.secondaryButton {
+  color: var(--color-navy);
+
+  background: rgba(255, 255, 255, 0.82);
+
+  border: 1px solid var(--color-border);
+
+  backdrop-filter: blur(8px);
+}
+
+.secondaryButton:hover {
+  border-color: rgba(199, 162, 74, 0.55);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Visual
+   ======================================== */
+
+.visual {
+  position: relative;
+
+  min-height: 630px;
+}
+
+
+/* ========================================
+   Main Image
+   ======================================== */
+
+.mainImage {
+  position: absolute;
+
+  top: 15px;
+  right: 0;
+
+  width: 84%;
+  height: 520px;
+
+  border-radius: 36px 36px 36px 110px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 30px 65px rgba(8, 38, 65, 0.2);
+}
+
+.image {
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.mainImage:hover .image,
+.secondaryImage:hover .image {
+  transform: scale(1.025);
+}
+
+.mainImage .image {
+  object-position: center;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 38, 65, 0) 25%,
+      rgba(8, 38, 65, 0.12) 58%,
+      rgba(6, 28, 48, 0.82) 100%
+    );
+}
+
+
+/* ========================================
+   Main Image Caption
+   ======================================== */
+
+.imageCaption {
+  position: absolute;
+
+  right: 28px;
+  bottom: 27px;
+
+  z-index: 3;
+
+  width: min(310px, 48%);
+
+  text-align: right;
+}
+
+.captionLabel {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.captionTitle {
+  margin: 0;
+
+  color: var(--color-white);
+
+  font-size: 1.16rem;
+  font-weight: 800;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* ========================================
+   Secondary Image
+   ======================================== */
+
+.secondaryImage {
+  position: absolute;
+
+  left: 0;
+  bottom: 5px;
+
+  z-index: 5;
+
+  width: 41%;
+  height: 235px;
+
+  background: var(--color-white);
+
+  border: 8px solid var(--color-white);
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 22px 48px rgba(8, 38, 65, 0.2);
+}
+
+.secondaryImage .image {
+  object-position: center;
+}
+
+.secondaryOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(6, 28, 48, 0.76) 100%
+    );
+}
+
+.secondaryCaption {
+  position: absolute;
+
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+
+  z-index: 3;
+}
+
+.secondaryCaption span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.secondaryCaption strong {
+  display: block;
+
+  color: var(--color-white);
+
+  font-size: 0.8rem;
+
+  line-height: 1.3;
+}
+
+
+/* ========================================
+   Floating Labels
+   ======================================== */
+
+.labelGermany,
+.labelUniversities,
+.labelTraining {
+  position: absolute;
+
+  z-index: 7;
+
+  padding: 8px 12px;
+
+  color: var(--color-navy);
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border: 1px solid rgba(13, 49, 88, 0.08);
+  border-radius: var(--radius-full);
+
+  box-shadow: var(--shadow-sm);
+
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  backdrop-filter: blur(10px);
+}
+
+.labelGermany {
+  top: 48px;
+  left: 8%;
+}
+
+.labelUniversities {
+  top: 182px;
+  right: -18px;
+}
+
+.labelTraining {
+  left: 37%;
+  bottom: 57px;
+}
+
+
+/* ========================================
+   Decorations
+   ======================================== */
+
+.goldCircle {
+  position: absolute;
+
+  top: -30px;
+  right: -35px;
+
+  width: 155px;
+  height: 155px;
+
+  border: 1px solid rgba(199, 162, 74, 0.17);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.goldCircle::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 29px;
+
+  border: 1px solid rgba(199, 162, 74, 0.11);
+  border-radius: 50%;
+}
+
+.backgroundWord {
+  position: absolute;
+
+  left: -35px;
+  bottom: -45px;
+
+  color: rgba(13, 49, 88, 0.025);
+
+  font-size: clamp(8rem, 18vw, 17rem);
+  font-weight: 900;
+
+  letter-spacing: -0.08em;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ========================================
+   Responsive - Tablet
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .wrapper {
+    gap: 50px;
+  }
+
+  .visual {
+    min-height: 590px;
+  }
+
+  .mainImage {
+    height: 485px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+
+    padding: 85px 0 100px;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 58px;
+  }
+
+  .content {
+    max-width: 760px;
+  }
+
+  .visual {
+    max-width: 760px;
+    width: 100%;
+
+    margin: 0 auto;
+  }
+}
+
+
+/* ========================================
+   Responsive - Mobile
+   ======================================== */
+
+@media (max-width: 650px) {
+  .hero {
+    padding: 72px 0 82px;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .visual {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+  .mainImage {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 100%;
+    height: 400px;
+
+    border-radius: var(--radius-xl);
+  }
+
+  .secondaryImage {
+    position: relative;
+
+    left: auto;
+    bottom: auto;
+
+    width: 58%;
+    height: 190px;
+
+    margin-top: -55px;
+    margin-left: 18px;
+
+    border-width: 6px;
+  }
+
+  .imageCaption {
+    right: 22px;
+    bottom: 22px;
+
+    width: 58%;
+  }
+
+  .labelGermany {
+    top: 18px;
+    left: 14px;
+  }
+
+  .labelUniversities {
+    top: 315px;
+    right: 12px;
+  }
+
+  .labelTraining {
+    right: 10px;
+    left: auto;
+    bottom: 58px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(2.55rem, 13vw, 3.8rem);
+  }
+
+  .description {
+    font-size: 0.96rem;
+  }
+
+  .audienceItem {
+    width: 100%;
+
+    border-radius: var(--radius-sm);
+  }
+
+  .mainImage {
+    height: 360px;
+  }
+
+  .imageCaption {
+    right: 18px;
+    left: 18px;
+    bottom: 20px;
+
+    width: auto;
+
+    text-align: left;
+  }
+
+  .secondaryImage {
+    width: 65%;
+    height: 175px;
+
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .labelUniversities {
+    top: 295px;
+  }
+
+  .labelTraining {
+    bottom: 52px;
+  }
+
+  .goldCircle,
+  .backgroundWord {
+    display: none;
+  }
+}

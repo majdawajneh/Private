@@ -1,0 +1,273 @@
+.section {
+  position: relative;
+
+  padding: 100px 0;
+
+  background: var(--color-white);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CTA Box
+   ======================================== */
+
+.box {
+  position: relative;
+
+  padding: 70px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 50px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark) 0%,
+      var(--color-navy) 65%,
+      #164b7a 100%
+    );
+
+  border-radius: var(--radius-xl);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* ========================================
+   Content
+   ======================================== */
+
+.content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 700px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 30px;
+  height: 2px;
+
+  background: var(--color-gold);
+
+  border-radius: var(--radius-full);
+}
+
+.title {
+  margin-bottom: 20px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
+
+  line-height: 1.08;
+
+  letter-spacing: -0.05em;
+}
+
+.goldText {
+  color: var(--color-gold-light);
+}
+
+.description {
+  max-width: 620px;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 1.02rem;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   Actions
+   ======================================== */
+
+.actions {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 250px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 24px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryButton {
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.primaryButton:hover {
+  background: var(--color-gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.secondaryButton {
+  color: var(--color-white);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-gold-light);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Decorative Elements
+   ======================================== */
+
+.circleOne,
+.circleTwo {
+  position: absolute;
+
+  border: 1px solid rgba(219, 193, 118, 0.13);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.circleOne {
+  width: 320px;
+  height: 320px;
+
+  top: -170px;
+  right: 160px;
+}
+
+.circleTwo {
+  width: 220px;
+  height: 220px;
+
+  right: -90px;
+  bottom: -100px;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 82px 0;
+  }
+
+  .box {
+    padding: 56px 42px;
+
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .actions {
+    width: 100%;
+    min-width: 0;
+
+    flex-direction: row;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    flex: 1;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .box {
+    padding: 46px 28px;
+
+    border-radius: var(--radius-lg);
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 68px 0;
+  }
+
+  .box {
+    padding: 40px 22px;
+  }
+
+  .title {
+    font-size: clamp(2.1rem, 11vw, 3rem);
+  }
+
+  .description {
+    font-size: 0.96rem;
+  }
+}

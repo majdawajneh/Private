@@ -1,0 +1,620 @@
+.section {
+  position: relative;
+
+  padding: 130px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #f7f9fb 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Main Layout
+   ======================================== */
+
+.wrapper {
+  display: grid;
+
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+
+  gap: 90px;
+
+  align-items: start;
+}
+
+
+/* ========================================
+   Left Side
+   ======================================== */
+
+.intro {
+  position: sticky;
+
+  top: 130px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 22px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowNumber {
+  color: var(--color-navy);
+
+  font-size: 0.78rem;
+}
+
+.eyebrowLine {
+  width: 34px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+
+/* ========================================
+   Headline
+   ======================================== */
+
+.title {
+  max-width: 520px;
+
+  margin-bottom: 26px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(3rem, 5vw, 5.2rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.06em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.description {
+  max-width: 510px;
+
+  margin-bottom: 34px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1rem;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   Germany Identity Block
+   ======================================== */
+
+.germanyBlock {
+  position: relative;
+
+  width: fit-content;
+
+  padding: 22px 26px;
+
+  background: var(--color-navy);
+
+  border-radius: var(--radius-md);
+
+  overflow: hidden;
+}
+
+.germanyLabel {
+  display: block;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.germanyWord {
+  display: block;
+
+  margin-top: 4px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  font-weight: 800;
+
+  letter-spacing: -0.05em;
+}
+
+.germanySub {
+  display: block;
+
+  margin-top: 5px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 0.74rem;
+}
+
+.germanyAccent {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 7px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      #111111 0%,
+      #111111 33%,
+      #c73434 33%,
+      #c73434 66%,
+      #d2aa43 66%,
+      #d2aa43 100%
+    );
+}
+
+
+/* ========================================
+   Journey
+   ======================================== */
+
+.journey {
+  position: relative;
+
+  padding-left: 72px;
+}
+
+
+/* vertical route */
+
+.journey::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  bottom: 34px;
+  left: 24px;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-gold) 0%,
+      var(--color-navy-light) 55%,
+      rgba(13, 49, 88, 0.15) 100%
+    );
+}
+
+
+/* ========================================
+   Journey Step
+   ======================================== */
+
+.step {
+  position: relative;
+
+  padding: 0 0 58px;
+}
+
+.step:last-child {
+  padding-bottom: 0;
+}
+
+
+/* route node */
+
+.node {
+  position: absolute;
+
+  top: 4px;
+  left: -59px;
+
+  width: 24px;
+  height: 24px;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--color-white);
+
+  border: 3px solid var(--color-gold);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 7px rgba(199, 162, 74, 0.09);
+
+  z-index: 2;
+}
+
+.nodeInner {
+  width: 6px;
+  height: 6px;
+
+  background: var(--color-navy);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Step Content
+   ======================================== */
+
+.stepTop {
+  display: flex;
+  align-items: baseline;
+
+  gap: 18px;
+
+  margin-bottom: 12px;
+}
+
+.stepNumber {
+  color: var(--color-gold-dark);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.stepTitle {
+  color: var(--color-navy);
+
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+
+  font-weight: 800;
+
+  letter-spacing: -0.03em;
+}
+
+.stepText {
+  max-width: 610px;
+
+  margin-left: 52px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.92rem;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   Tags
+   ======================================== */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 16px;
+  margin-left: 52px;
+}
+
+.tag {
+  padding: 7px 10px;
+
+  color: var(--color-navy);
+
+  background: var(--color-background-blue);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-full);
+
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   Highlight Step
+   ======================================== */
+
+.highlightStep {
+  margin-bottom: 58px;
+  padding: 28px 30px 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-md);
+}
+
+.highlightStep .node {
+  top: 32px;
+}
+
+.highlightStep .stepNumber {
+  color: var(--color-gold-light);
+}
+
+.highlightStep .stepTitle {
+  color: var(--color-white);
+}
+
+.highlightStep .stepText {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.highlightStep .tag {
+  color: rgba(255, 255, 255, 0.8);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ========================================
+   Final Destination
+   ======================================== */
+
+.destination {
+  position: relative;
+
+  margin-top: 16px;
+
+  padding: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  background: var(--color-white);
+
+  border: 1px solid rgba(199, 162, 74, 0.3);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.destinationContent {
+  max-width: 520px;
+}
+
+.destinationLabel {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.destinationTitle {
+  margin-bottom: 8px;
+
+  color: var(--color-navy);
+
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.destinationText {
+  color: var(--color-text-secondary);
+
+  font-size: 0.86rem;
+
+  line-height: 1.6;
+}
+
+.destinationButton {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0 22px;
+
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.destinationButton:hover {
+  background: var(--color-navy-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Large Decorative Text
+   ======================================== */
+
+.backgroundWord {
+  position: absolute;
+
+  right: -30px;
+  bottom: -35px;
+
+  color: rgba(13, 49, 88, 0.025);
+
+  font-size: clamp(7rem, 17vw, 16rem);
+  font-weight: 900;
+
+  letter-spacing: -0.08em;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1000px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .intro {
+    position: relative;
+
+    top: auto;
+
+    max-width: 720px;
+  }
+
+  .title {
+    max-width: 680px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .section {
+    padding: 90px 0;
+  }
+
+  .journey {
+    padding-left: 54px;
+  }
+
+  .journey::before {
+    left: 17px;
+  }
+
+  .node {
+    left: -48px;
+  }
+
+  .stepText,
+  .tags {
+    margin-left: 0;
+  }
+
+  .destination {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .destinationButton {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.6rem, 13vw, 3.8rem);
+  }
+
+  .description {
+    font-size: 0.96rem;
+  }
+
+  .germanyBlock {
+    width: 100%;
+  }
+
+  .journey {
+    padding-left: 44px;
+  }
+
+  .journey::before {
+    left: 13px;
+  }
+
+  .node {
+    left: -42px;
+
+    width: 22px;
+    height: 22px;
+  }
+
+  .step {
+    padding-bottom: 46px;
+  }
+
+  .stepTop {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+  .highlightStep {
+    margin-left: -10px;
+
+    padding: 24px;
+  }
+
+  .highlightStep .node {
+    left: -32px;
+  }
+
+  .destination {
+    padding: 24px;
+  }
+
+  .backgroundWord {
+    display: none;
+  }
+}

@@ -1,0 +1,448 @@
+.section {
+  position: relative;
+
+  padding: 135px 0;
+
+  background: var(--color-white);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+
+  align-items: end;
+
+  gap: 80px;
+
+  margin-bottom: 55px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  color: var(--color-navy);
+
+  font-size: clamp(2.9rem, 5vw, 5rem);
+
+  line-height: 0.97;
+
+  letter-spacing: -0.057em;
+}
+
+.title span {
+  color: var(--color-gold-dark);
+}
+
+.intro {
+  max-width: 610px;
+}
+
+.intro p {
+  margin-bottom: 18px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.94rem;
+
+  line-height: 1.82;
+}
+
+.introLink {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: var(--color-navy);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  transition:
+    gap var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.introLink:hover {
+  gap: 13px;
+
+  color: var(--color-gold-dark);
+}
+
+
+/* ========================================
+   Photo Gallery
+   ======================================== */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, 0.85fr);
+
+  grid-template-rows:
+    360px
+    280px
+    350px;
+
+  gap: 18px;
+}
+
+
+/* ========================================
+   Photo Block
+   ======================================== */
+
+.photoBlock {
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+
+  isolation: isolate;
+
+  box-shadow: var(--shadow-sm);
+}
+
+.city {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.university {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.healthcare {
+  grid-column: 2;
+  grid-row: 2 / span 2;
+}
+
+.business {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.image {
+  object-fit: cover;
+
+  transition: transform 0.9s ease;
+}
+
+.photoBlock:hover .image {
+  transform: scale(1.035);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 31, 54, 0.03) 15%,
+      rgba(7, 31, 54, 0.13) 48%,
+      rgba(6, 27, 47, 0.9) 100%
+    );
+}
+
+
+/* ========================================
+   Number
+   ======================================== */
+
+.number {
+  position: absolute;
+
+  top: 20px;
+  left: 22px;
+
+  z-index: 2;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 0.63rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* ========================================
+   Photo Content
+   ======================================== */
+
+.photoContent {
+  position: absolute;
+
+  left: 26px;
+  right: 26px;
+  bottom: 25px;
+
+  z-index: 2;
+}
+
+.label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.59rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.photoContent h3 {
+  max-width: 470px;
+
+  margin-bottom: 8px;
+
+  color: var(--color-white);
+
+  font-size: clamp(1.2rem, 2vw, 1.65rem);
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.025em;
+}
+
+.photoContent p {
+  max-width: 520px;
+
+  color: rgba(255, 255, 255, 0.66);
+
+  font-size: 0.7rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Germany Context Strip
+   ======================================== */
+
+.context {
+  margin-top: 28px;
+
+  display: grid;
+  grid-template-columns:
+    minmax(200px, 0.65fr)
+    minmax(300px, 1fr)
+    minmax(280px, auto);
+
+  align-items: center;
+
+  gap: 38px;
+
+  padding: 30px 32px;
+
+  background: var(--color-background-soft);
+
+  border-left: 4px solid var(--color-gold);
+}
+
+.contextTitle span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.59rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.contextTitle h3 {
+  color: var(--color-navy);
+
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.contextText p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.75rem;
+
+  line-height: 1.62;
+}
+
+
+/* ========================================
+   Context Tags
+   ======================================== */
+
+.contextTags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  gap: 8px;
+}
+
+.contextTags span {
+  padding: 8px 10px;
+
+  color: var(--color-navy);
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1000px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .intro {
+    max-width: 760px;
+  }
+
+  .gallery {
+    grid-template-rows:
+      390px
+      280px
+      320px;
+  }
+
+  .context {
+    grid-template-columns: 1fr 1.4fr;
+  }
+
+  .contextTags {
+    grid-column: 1 / -1;
+
+    justify-content: flex-start;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .section {
+    padding: 95px 0;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+  }
+
+  .photoBlock {
+    min-height: 390px;
+  }
+
+  .city,
+  .university,
+  .healthcare,
+  .business {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .context {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .contextTags {
+    grid-column: auto;
+
+    justify-content: flex-start;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 12vw, 3.8rem);
+  }
+
+  .photoBlock {
+    min-height: 350px;
+
+    border-radius: var(--radius-md);
+  }
+
+  .photoContent {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .photoContent p {
+    font-size: 0.69rem;
+  }
+
+  .context {
+    padding: 24px 20px;
+  }
+
+  .contextTags {
+    flex-direction: column;
+  }
+
+  .contextTags span {
+    width: 100%;
+  }
+}

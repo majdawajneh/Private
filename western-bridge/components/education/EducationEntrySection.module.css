@@ -1,0 +1,607 @@
+.section {
+  position: relative;
+
+  padding: 130px 0;
+
+  background: var(--color-white);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 62px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  max-width: 700px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.headerText {
+  max-width: 650px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.98rem;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   Entry Layout
+   ======================================== */
+
+.entries {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 24px;
+
+  align-items: stretch;
+}
+
+
+/* ========================================
+   Portal
+   ======================================== */
+
+.portal {
+  position: relative;
+
+  min-height: 610px;
+
+  border-radius: var(--radius-xl);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-lg);
+
+  isolation: isolate;
+}
+
+.portalImage {
+  position: absolute;
+  inset: 0;
+
+  z-index: -3;
+}
+
+.image {
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+.portal:hover .image {
+  transform: scale(1.035);
+}
+
+
+/* ========================================
+   Overlays
+   ======================================== */
+
+.student .overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 25, 43, 0.04) 10%,
+      rgba(8, 38, 65, 0.28) 48%,
+      rgba(7, 31, 54, 0.94) 100%
+    );
+}
+
+.institution .overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(28, 22, 10, 0.03) 10%,
+      rgba(13, 49, 88, 0.3) 48%,
+      rgba(8, 38, 65, 0.95) 100%
+    );
+}
+
+
+/* ========================================
+   Top Label
+   ======================================== */
+
+.portalTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 26px;
+}
+
+.portalNumber {
+  color: rgba(255, 255, 255, 0.82);
+
+  font-size: 0.7rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+}
+
+.portalType {
+  padding: 8px 11px;
+
+  color: var(--color-white);
+
+  background: rgba(8, 38, 65, 0.42);
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-full);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 0.64rem;
+  font-weight: 800;
+
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   Content
+   ======================================== */
+
+.portalContent {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 38px;
+}
+
+.portalLabel {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.portalTitle {
+  max-width: 500px;
+
+  margin-bottom: 15px;
+
+  color: var(--color-white);
+
+  font-size: clamp(2rem, 3.7vw, 3.5rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.portalText {
+  max-width: 520px;
+
+  margin-bottom: 24px;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  font-size: 0.88rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   Features
+   ======================================== */
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-bottom: 27px;
+}
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 10px;
+
+  color: rgba(255, 255, 255, 0.86);
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: var(--radius-full);
+
+  backdrop-filter: blur(8px);
+
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.featureDot {
+  width: 5px;
+  height: 5px;
+
+  flex-shrink: 0;
+
+  background: var(--color-gold-light);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Portal Action
+   ======================================== */
+
+.action {
+  min-height: 50px;
+
+  width: fit-content;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 20px;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.action:hover {
+  background: var(--color-gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Center Bridge Marker
+   ======================================== */
+
+.bridgeMarker {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  z-index: 8;
+
+  width: 86px;
+  height: 86px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-white);
+
+  border: 8px solid rgba(199, 162, 74, 0.14);
+  border-radius: 50%;
+
+  box-shadow:
+    0 15px 35px rgba(8, 38, 65, 0.16);
+
+  transform: translate(-50%, -50%);
+}
+
+.bridgeInner {
+  text-align: center;
+}
+
+.bridgeMark {
+  display: block;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.bridgeText {
+  display: block;
+
+  margin-top: 2px;
+
+  color: var(--color-navy);
+
+  font-size: 0.51rem;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+
+/* ========================================
+   Divider
+   ======================================== */
+
+.entries::before {
+  content: "";
+
+  position: absolute;
+
+  top: 8%;
+  bottom: 8%;
+  left: 50%;
+
+  z-index: 6;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(199, 162, 74, 0.7),
+      transparent
+    );
+
+  transform: translateX(-50%);
+}
+
+
+/* ========================================
+   Bottom Note
+   ======================================== */
+
+.bottom {
+  margin-top: 34px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  max-width: 930px;
+}
+
+.bottomMark {
+  color: var(--color-gold-dark);
+
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.bottomText {
+  color: var(--color-text-light);
+
+  font-size: 0.79rem;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   Background Decoration
+   ======================================== */
+
+.backgroundWord {
+  position: absolute;
+
+  right: -30px;
+  bottom: -55px;
+
+  color: rgba(13, 49, 88, 0.022);
+
+  font-size: clamp(8rem, 18vw, 17rem);
+  font-weight: 900;
+
+  letter-spacing: -0.08em;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1000px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .headerText {
+    max-width: 760px;
+  }
+}
+
+
+@media (max-width: 850px) {
+  .section {
+    padding: 95px 0;
+  }
+
+  .entries {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .entries::before {
+    display: none;
+  }
+
+  .portal {
+    min-height: 540px;
+  }
+
+  .bridgeMarker {
+    top: 50%;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .portal {
+    min-height: 520px;
+  }
+
+  .portalContent {
+    padding: 28px;
+  }
+
+  .portalTitle {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .bridgeMarker {
+    width: 72px;
+    height: 72px;
+
+    border-width: 6px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .portal {
+    min-height: 520px;
+
+    border-radius: var(--radius-lg);
+  }
+
+  .portalTop {
+    padding: 20px;
+  }
+
+  .portalContent {
+    padding: 24px 20px;
+  }
+
+  .features {
+    gap: 6px;
+  }
+
+  .feature {
+    width: 100%;
+
+    border-radius: var(--radius-sm);
+  }
+
+  .action {
+    width: 100%;
+  }
+
+  .bridgeMarker {
+    width: 64px;
+    height: 64px;
+  }
+
+  .bottom {
+    margin-top: 28px;
+  }
+
+  .backgroundWord {
+    display: none;
+  }
+}

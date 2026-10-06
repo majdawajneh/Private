@@ -1,0 +1,615 @@
+.section {
+  padding: 135px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      var(--color-background-soft) 100%
+    );
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(330px, 0.62fr);
+
+  align-items: end;
+
+  gap: 80px;
+
+  margin-bottom: 60px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  color: var(--color-navy);
+
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.headerCopy p {
+  max-width: 600px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.94rem;
+
+  line-height: 1.82;
+}
+
+
+/* ========================================
+   Directory
+   ======================================== */
+
+.directory {
+  border-top: 1px solid var(--color-border);
+}
+
+.directoryHeader {
+  display: grid;
+  grid-template-columns:
+    minmax(190px, 0.8fr)
+    minmax(290px, 1.2fr)
+    minmax(220px, 0.85fr)
+    minmax(190px, 0.7fr);
+
+  gap: 34px;
+
+  padding: 14px 0;
+
+  color: var(--color-text-light);
+
+  border-bottom: 1px solid var(--color-border);
+
+  font-size: 0.59rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   Route
+   ======================================== */
+
+.route {
+  position: relative;
+
+  display: grid;
+  grid-template-columns:
+    minmax(190px, 0.8fr)
+    minmax(290px, 1.2fr)
+    minmax(220px, 0.85fr)
+    minmax(190px, 0.7fr);
+
+  align-items: start;
+
+  gap: 34px;
+
+  padding: 36px 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  scroll-margin-top: 120px;
+
+  transition:
+    padding var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.route:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  background: var(--color-white);
+}
+
+
+/* ========================================
+   Route Identity
+   ======================================== */
+
+.number {
+  display: block;
+
+  margin-bottom: 24px;
+
+  color: rgba(13, 49, 88, 0.13);
+
+  font-size: 2.4rem;
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+}
+
+.category {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.routeTitle {
+  max-width: 230px;
+
+  color: var(--color-navy);
+
+  font-size: 1.2rem;
+  font-weight: 800;
+
+  line-height: 1.28;
+
+  letter-spacing: -0.02em;
+}
+
+
+/* ========================================
+   Audience
+   ======================================== */
+
+.audience strong {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--color-navy);
+
+  font-size: 0.81rem;
+  font-weight: 800;
+}
+
+.audience p {
+  max-width: 520px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.75rem;
+
+  line-height: 1.65;
+}
+
+
+/* ========================================
+   Preparation
+   ======================================== */
+
+.preparation {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.preparationItem {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+
+  flex-shrink: 0;
+
+  background: var(--color-gold);
+
+  border-radius: 50%;
+}
+
+
+/* ========================================
+   Dependency
+   ======================================== */
+
+.dependencyLabel {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--color-text-light);
+
+  font-size: 0.56rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.dependency p {
+  margin-bottom: 17px;
+
+  color: var(--color-navy);
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  line-height: 1.5;
+}
+
+.routeLink {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.68rem;
+  font-weight: 800;
+
+  transition:
+    gap var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.routeLink:hover {
+  gap: 11px;
+
+  color: var(--color-navy);
+}
+
+
+/* ========================================
+   Featured Healthcare Route
+   ======================================== */
+
+.featured {
+  margin: 16px 0;
+
+  padding: 34px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+
+  border: 0;
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-md);
+}
+
+.featured:hover {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+}
+
+.featured .number {
+  color: rgba(255, 255, 255, 0.13);
+}
+
+.featured .category {
+  color: var(--color-gold-light);
+}
+
+.featured .routeTitle,
+.featured .audience strong,
+.featured .dependency p {
+  color: var(--color-white);
+}
+
+.featured .audience p,
+.featured .preparationItem {
+  color: rgba(255, 255, 255, 0.67);
+}
+
+.featured .dependencyLabel {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.featured .routeLink {
+  color: var(--color-gold-light);
+}
+
+.featured .routeLink:hover {
+  color: var(--color-white);
+}
+
+
+/* ========================================
+   Individual Note
+   ======================================== */
+
+.individualNote {
+  margin-top: 55px;
+
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 30px;
+
+  padding: 32px;
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-sm);
+
+  scroll-margin-top: 120px;
+}
+
+.noteNumber {
+  width: 62px;
+  height: 62px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-radius: 50%;
+
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.noteLabel {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.59rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.noteTitle {
+  margin-bottom: 7px;
+
+  color: var(--color-navy);
+
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.noteText {
+  max-width: 760px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.75rem;
+
+  line-height: 1.6;
+}
+
+.noteButton {
+  min-height: 49px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 0 19px;
+
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.76rem;
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.noteButton:hover {
+  background: var(--color-navy-dark);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Legal
+   ======================================== */
+
+.legal {
+  max-width: 980px;
+
+  margin-top: 18px;
+
+  color: var(--color-text-light);
+
+  font-size: 0.65rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1100px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .headerCopy {
+    max-width: 760px;
+  }
+
+  .directoryHeader {
+    display: none;
+  }
+
+  .route {
+    grid-template-columns:
+      minmax(170px, 0.65fr)
+      minmax(0, 1.35fr);
+
+    gap: 30px;
+  }
+
+  .preparation,
+  .dependency {
+    grid-column: 2;
+  }
+
+  .preparation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured {
+    padding: 32px 24px;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .section {
+    padding: 95px 0;
+  }
+
+  .route {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 32px 0;
+  }
+
+  .route:hover {
+    padding-left: 0;
+    padding-right: 0;
+
+    background: transparent;
+  }
+
+  .preparation,
+  .dependency {
+    grid-column: auto;
+  }
+
+  .featured,
+  .featured:hover {
+    padding: 27px 23px;
+  }
+
+  .individualNote {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .noteButton {
+    grid-column: 1 / -1;
+
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.45rem, 12vw, 3.7rem);
+  }
+
+  .number {
+    margin-bottom: 14px;
+  }
+
+  .preparation {
+    grid-template-columns: 1fr;
+  }
+
+  .individualNote {
+    grid-template-columns: 1fr;
+
+    padding: 24px 21px;
+  }
+
+  .noteNumber {
+    width: 52px;
+    height: 52px;
+  }
+
+  .noteButton {
+    grid-column: auto;
+  }
+}

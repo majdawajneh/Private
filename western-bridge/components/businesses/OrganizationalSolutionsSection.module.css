@@ -1,0 +1,706 @@
+.section {
+  position: relative;
+
+  padding: 135px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-background-soft) 0%,
+      #ffffff 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  display: grid;
+
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 70px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  max-width: 700px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.headerText {
+  max-width: 660px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.98rem;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   System Stage
+   ======================================== */
+
+.system {
+  position: relative;
+
+  min-height: 670px;
+
+  padding: 48px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #071f36,
+      var(--color-navy-dark) 55%,
+      #123f69
+    );
+
+  border-radius: var(--radius-xl);
+
+  box-shadow:
+    0 30px 70px rgba(8, 38, 65, 0.2);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Grid Background
+   ======================================== */
+
+.systemGrid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.035;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.7) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.7) 1px,
+      transparent 1px
+    );
+
+  background-size: 44px 44px;
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   Center Core
+   ======================================== */
+
+.core {
+  position: absolute;
+
+  top: 48.5%;
+  left: 50%;
+
+  z-index: 10;
+
+  width: 180px;
+  height: 180px;
+
+  display: grid;
+  place-items: center;
+
+  padding: 25px;
+
+  color: var(--color-white);
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #1b537f,
+      var(--color-navy) 55%,
+      var(--color-navy-dark)
+    );
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 16px rgba(199, 162, 74, 0.05),
+    0 0 0 32px rgba(255, 255, 255, 0.025),
+    0 24px 55px rgba(0, 0, 0, 0.24);
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.coreMark {
+  width: 50px;
+  height: 50px;
+
+  display: grid;
+  place-items: center;
+
+  margin: 0 auto 12px;
+
+  color: var(--color-navy-dark);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-gold-light),
+      var(--color-gold)
+    );
+
+  border-radius: 14px;
+
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.coreLabel {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.6rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+
+
+/* ========================================
+   Modules
+   ======================================== */
+
+.module {
+  position: absolute;
+
+  z-index: 4;
+
+  width: 280px;
+
+  padding: 23px;
+
+  background: rgba(255, 255, 255, 0.075);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform var(--transition-normal),
+    background var(--transition-normal),
+    border-color var(--transition-normal);
+}
+
+.module:hover {
+  transform: translateY(-5px);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(219, 193, 118, 0.35);
+}
+
+
+/* positions */
+
+.digital {
+  top: 22px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.digital:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+.people {
+  left: 45px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.people:hover {
+  transform: translateY(calc(-50% - 5px));
+}
+
+.education {
+  right: 45px;
+  top: 50%;
+
+  transform: translateY(-50%);
+}
+
+.education:hover {
+  transform: translateY(calc(-50% - 5px));
+}
+
+.market {
+  bottom: 22px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.market:hover {
+  transform: translateX(-50%) translateY(-5px);
+}
+
+
+/* ========================================
+   Module Content
+   ======================================== */
+
+.moduleNumber {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.65rem;
+  font-weight: 900;
+
+  letter-spacing: 0.1em;
+}
+
+.moduleTitle {
+  margin-bottom: 8px;
+
+  color: var(--color-white);
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.moduleText {
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 0.72rem;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   Connection Lines
+   ======================================== */
+
+.connector {
+  position: absolute;
+
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(199, 162, 74, 0.18),
+      rgba(219, 193, 118, 0.75),
+      rgba(199, 162, 74, 0.18)
+    );
+}
+
+.connectorTop,
+.connectorBottom {
+  width: 1px;
+  height: 92px;
+
+  left: 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(199, 162, 74, 0.2),
+      rgba(219, 193, 118, 0.75),
+      rgba(199, 162, 74, 0.2)
+    );
+}
+
+.connectorTop {
+  top: 172px;
+}
+
+.connectorBottom {
+  bottom: 172px;
+}
+
+.connectorLeft,
+.connectorRight {
+  width: 120px;
+  height: 1px;
+
+  top: 50%;
+}
+
+.connectorLeft {
+  left: calc(50% - 230px);
+}
+
+.connectorRight {
+  right: calc(50% - 230px);
+}
+
+
+/* ========================================
+   Connection Nodes
+   ======================================== */
+
+.connectionDot {
+  position: absolute;
+
+  z-index: 3;
+
+  width: 11px;
+  height: 11px;
+
+  background: var(--color-gold-light);
+
+  border: 3px solid var(--color-navy-dark);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px rgba(199, 162, 74, 0.08);
+}
+
+.dotTop {
+  top: 255px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.dotBottom {
+  bottom: 255px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.dotLeft {
+  top: 50%;
+  left: calc(50% - 118px);
+
+  transform: translateY(-50%);
+}
+
+.dotRight {
+  top: 50%;
+  right: calc(50% - 118px);
+
+  transform: translateY(-50%);
+}
+
+
+/* ========================================
+   Education Accent
+   ======================================== */
+
+.education {
+  border-color: rgba(219, 193, 118, 0.24);
+}
+
+.educationBadge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-top: 13px;
+
+  padding: 6px 9px;
+
+  color: var(--color-gold-light);
+
+  background: rgba(199, 162, 74, 0.08);
+
+  border: 1px solid rgba(199, 162, 74, 0.15);
+  border-radius: var(--radius-full);
+
+  font-size: 0.58rem;
+  font-weight: 800;
+}
+
+
+/* ========================================
+   Bottom Capability Strip
+   ======================================== */
+
+.capabilityStrip {
+  margin-top: 34px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 26px 30px;
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+}
+
+.capabilityLabel {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.66rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.capabilityTitle {
+  margin-bottom: 7px;
+
+  color: var(--color-navy);
+
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.capabilityText {
+  max-width: 800px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.82rem;
+
+  line-height: 1.65;
+}
+
+.capabilityButton {
+  min-height: 50px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  gap: 8px;
+
+  padding: 0 21px;
+
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.82rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.capabilityButton:hover {
+  background: var(--color-navy-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Decorative
+   ======================================== */
+
+.glow {
+  position: absolute;
+
+  width: 360px;
+  height: 360px;
+
+  top: -160px;
+  right: -120px;
+
+  background: rgba(199, 162, 74, 0.06);
+
+  border-radius: 50%;
+
+  filter: blur(18px);
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .system {
+    min-height: 820px;
+  }
+
+  .people {
+    left: 25px;
+  }
+
+  .education {
+    right: 25px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .section {
+    padding: 95px 0;
+  }
+
+  .system {
+    min-height: auto;
+
+    padding: 32px;
+  }
+
+  .core {
+    position: relative;
+
+    top: auto;
+    left: auto;
+
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 30px;
+
+    transform: none;
+  }
+
+  .module {
+    position: relative;
+
+    inset: auto;
+
+    width: 100%;
+
+    margin-bottom: 14px;
+
+    transform: none;
+  }
+
+  .module:hover,
+  .digital:hover,
+  .people:hover,
+  .education:hover,
+  .market:hover {
+    transform: translateY(-3px);
+  }
+
+  .connector,
+  .connectionDot {
+    display: none;
+  }
+
+  .capabilityStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .capabilityButton {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .system {
+    padding: 24px 20px;
+
+    border-radius: var(--radius-lg);
+  }
+
+  .core {
+    width: 170px;
+    height: 170px;
+  }
+
+  .module {
+    padding: 20px;
+  }
+
+  .capabilityStrip {
+    padding: 23px;
+  }
+}

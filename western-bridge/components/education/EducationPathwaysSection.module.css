@@ -1,0 +1,655 @@
+.section {
+  position: relative;
+
+  padding: 135px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7f9fb 0%,
+      #ffffff 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: end;
+
+  gap: 70px;
+
+  margin-bottom: 65px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.74rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  max-width: 720px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.headerText {
+  max-width: 650px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.98rem;
+
+  line-height: 1.85;
+}
+
+
+/* ========================================
+   Main Layout
+   ======================================== */
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+  align-items: stretch;
+
+  gap: 65px;
+}
+
+
+/* ========================================
+   Image Side
+   ======================================== */
+
+.visual {
+  position: relative;
+
+  min-height: 690px;
+}
+
+.imageWrapper {
+  position: absolute;
+
+  inset: 0 40px 0 0;
+
+  border-radius: 32px 32px 110px 32px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 28px 60px rgba(8, 38, 65, 0.18);
+}
+
+.image {
+  object-fit: cover;
+
+  transition:
+    transform 0.8s ease;
+}
+
+.imageWrapper:hover .image {
+  transform: scale(1.025);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 38, 65, 0.02) 25%,
+      rgba(8, 38, 65, 0.15) 60%,
+      rgba(7, 31, 54, 0.82) 100%
+    );
+}
+
+
+/* ========================================
+   Image Caption
+   ======================================== */
+
+.imageCaption {
+  position: absolute;
+
+  left: 30px;
+  right: 60px;
+  bottom: 30px;
+
+  z-index: 3;
+}
+
+.captionLabel {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.65rem;
+  font-weight: 800;
+
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.captionTitle {
+  max-width: 390px;
+
+  margin-bottom: 8px;
+
+  color: var(--color-white);
+
+  font-size: 1.35rem;
+  font-weight: 800;
+
+  line-height: 1.35;
+}
+
+.captionText {
+  max-width: 380px;
+
+  color: rgba(255, 255, 255, 0.64);
+
+  font-size: 0.75rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Germany Badge
+   ======================================== */
+
+.germanyBadge {
+  position: absolute;
+
+  top: 34px;
+  right: 0;
+
+  z-index: 5;
+
+  width: 145px;
+
+  padding: 17px;
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-md);
+}
+
+.badgeLabel {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.56rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.badgeTitle {
+  color: var(--color-navy);
+
+  font-size: 0.93rem;
+  font-weight: 800;
+}
+
+.badgeLine {
+  width: 34px;
+  height: 3px;
+
+  margin-top: 11px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #111111 0%,
+      #111111 33%,
+      #c73434 33%,
+      #c73434 66%,
+      #d6ad42 66%,
+      #d6ad42 100%
+    );
+}
+
+
+/* ========================================
+   Pathways List
+   ======================================== */
+
+.pathways {
+  border-top: 1px solid var(--color-border);
+}
+
+
+/* ========================================
+   Pathway
+   ======================================== */
+
+.pathway {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 24px;
+
+  min-height: 125px;
+
+  padding: 24px 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    padding var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.pathway:hover {
+  padding-left: 16px;
+  padding-right: 16px;
+
+  background: var(--color-white);
+}
+
+
+/* ========================================
+   Number
+   ======================================== */
+
+.number {
+  color: rgba(13, 49, 88, 0.13);
+
+  font-size: 2.4rem;
+  font-weight: 900;
+
+  line-height: 1;
+
+  letter-spacing: -0.06em;
+
+  transition:
+    color var(--transition-normal);
+}
+
+.pathway:hover .number {
+  color: var(--color-gold);
+}
+
+
+/* ========================================
+   Pathway Content
+   ======================================== */
+
+.pathwayLabel {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.pathwayTitle {
+  margin-bottom: 7px;
+
+  color: var(--color-navy);
+
+  font-size: 1.15rem;
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+}
+
+.pathwayText {
+  max-width: 570px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.8rem;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   Arrow
+   ======================================== */
+
+.arrow {
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-navy);
+
+  background: var(--color-background-blue);
+
+  border-radius: 50%;
+
+  font-size: 0.95rem;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.pathway:hover .arrow {
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  transform: translateX(4px);
+}
+
+
+/* ========================================
+   Bottom CTA
+   ======================================== */
+
+.bottom {
+  margin-top: 34px;
+
+  padding: 24px 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 28px;
+
+  background: var(--color-navy);
+
+  border-radius: var(--radius-lg);
+}
+
+.bottomContent {
+  max-width: 700px;
+}
+
+.bottomLabel {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-gold-light);
+
+  font-size: 0.63rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bottomTitle {
+  margin-bottom: 5px;
+
+  color: var(--color-white);
+
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+.bottomText {
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.78rem;
+
+  line-height: 1.55;
+}
+
+.button {
+  min-height: 49px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  gap: 8px;
+
+  padding: 0 20px;
+
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.8rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button:hover {
+  background: var(--color-gold);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Decorative
+   ======================================== */
+
+.backgroundWord {
+  position: absolute;
+
+  left: -40px;
+  bottom: -55px;
+
+  color: rgba(13, 49, 88, 0.022);
+
+  font-size: clamp(9rem, 18vw, 18rem);
+  font-weight: 900;
+
+  letter-spacing: -0.08em;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .headerText {
+    max-width: 760px;
+  }
+
+  .layout {
+    gap: 45px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .section {
+    padding: 95px 0;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .visual {
+    min-height: 570px;
+
+    max-width: 760px;
+  }
+
+  .imageWrapper {
+    inset: 0 55px 0 0;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .visual {
+    min-height: 490px;
+  }
+
+  .imageWrapper {
+    inset: 0;
+
+    border-radius: var(--radius-xl);
+  }
+
+  .germanyBadge {
+    top: 18px;
+    right: 14px;
+  }
+
+  .imageCaption {
+    right: 25px;
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .pathway {
+    grid-template-columns: 52px minmax(0, 1fr);
+  }
+
+  .arrow {
+    grid-column: 2;
+
+    width: 100%;
+    height: 38px;
+
+    border-radius: var(--radius-sm);
+  }
+
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .title {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .visual {
+    min-height: 430px;
+  }
+
+  .germanyBadge {
+    width: 125px;
+
+    padding: 14px;
+  }
+
+  .captionTitle {
+    font-size: 1.15rem;
+  }
+
+  .pathway {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+
+    min-height: auto;
+
+    padding: 24px 0;
+  }
+
+  .pathway:hover {
+    padding-left: 0;
+    padding-right: 0;
+
+    background: transparent;
+  }
+
+  .number {
+    font-size: 2rem;
+  }
+
+  .arrow {
+    grid-column: auto;
+  }
+
+  .backgroundWord {
+    display: none;
+  }
+}

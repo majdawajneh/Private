@@ -1,0 +1,567 @@
+.section {
+  position: relative;
+
+  padding: 130px 0;
+
+  background: var(--color-white);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Header
+   ======================================== */
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  align-items: end;
+
+  gap: 80px;
+
+  margin-bottom: 65px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.73rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 2px;
+
+  background: var(--color-gold);
+}
+
+.title {
+  max-width: 720px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.055em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.headerRight {
+  max-width: 650px;
+}
+
+.description {
+  color: var(--color-text-secondary);
+
+  font-size: 0.96rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   Notice
+   ======================================== */
+
+.notice {
+  margin-top: 20px;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 15px 17px;
+
+  background: var(--color-background-blue);
+
+  border-left: 3px solid var(--color-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.noticeMark {
+  width: 22px;
+  height: 22px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: var(--color-navy);
+
+  background: rgba(199, 162, 74, 0.16);
+
+  border-radius: 50%;
+
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.notice p {
+  color: var(--color-text-secondary);
+
+  font-size: 0.75rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Pathway
+   ======================================== */
+
+.pathway {
+  border-top: 1px solid var(--color-border);
+}
+
+.stage {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1.1fr) minmax(280px, 0.9fr);
+
+  gap: 28px;
+
+  min-height: 190px;
+
+  padding: 32px 0;
+
+  border-bottom: 1px solid var(--color-border);
+
+  transition:
+    padding var(--transition-normal),
+    background var(--transition-normal);
+}
+
+.stage:hover {
+  padding-left: 18px;
+  padding-right: 18px;
+
+  background: var(--color-background-soft);
+}
+
+
+/* ========================================
+   Rail
+   ======================================== */
+
+.stageRail {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+}
+
+.stageNode {
+  position: relative;
+
+  z-index: 2;
+
+  width: 48px;
+  height: 48px;
+
+  display: grid;
+  place-items: center;
+
+  color: var(--color-navy);
+
+  background: var(--color-white);
+
+  border: 2px solid var(--color-gold);
+  border-radius: 50%;
+
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.railLine {
+  position: absolute;
+
+  top: 48px;
+  bottom: -33px;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      var(--color-gold),
+      rgba(13, 49, 88, 0.12)
+    );
+}
+
+.stage:last-child .railLine {
+  display: none;
+}
+
+
+/* ========================================
+   Main Stage Content
+   ======================================== */
+
+.phase {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.stageTitle {
+  margin-bottom: 10px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-weight: 800;
+
+  letter-spacing: -0.025em;
+}
+
+.stageText {
+  max-width: 620px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 0.82rem;
+
+  line-height: 1.68;
+}
+
+
+/* ========================================
+   Items
+   ======================================== */
+
+.stageItems {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  align-content: center;
+
+  gap: 9px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  min-height: 42px;
+
+  padding: 9px 10px;
+
+  color: var(--color-text-secondary);
+
+  background: var(--color-background-soft);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-sm);
+
+  font-size: 0.69rem;
+  font-weight: 700;
+}
+
+.itemMark {
+  width: 18px;
+  height: 18px;
+
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  color: var(--color-gold-dark);
+
+  background: rgba(199, 162, 74, 0.11);
+
+  border-radius: 50%;
+
+  font-size: 0.52rem;
+  font-weight: 900;
+}
+
+
+/* ========================================
+   Featured Recognition Stage
+   ======================================== */
+
+.featured {
+  margin: 18px 0;
+
+  padding: 32px 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+
+  border: 0;
+  border-radius: var(--radius-lg);
+
+  box-shadow: var(--shadow-md);
+}
+
+.featured:hover {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--color-navy-dark),
+      var(--color-navy)
+    );
+}
+
+.featured .stageNode {
+  color: var(--color-navy-dark);
+
+  background: var(--color-gold-light);
+
+  border-color: var(--color-gold-light);
+}
+
+.featured .phase {
+  color: var(--color-gold-light);
+}
+
+.featured .stageTitle {
+  color: var(--color-white);
+}
+
+.featured .stageText {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.featured .item {
+  color: rgba(255, 255, 255, 0.78);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.featured .itemMark {
+  color: var(--color-gold-light);
+
+  background: rgba(199, 162, 74, 0.12);
+}
+
+
+/* ========================================
+   Bottom CTA
+   ======================================== */
+
+.bottom {
+  margin-top: 45px;
+
+  padding: 27px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  background: var(--color-background-blue);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+}
+
+.bottomContent {
+  max-width: 720px;
+}
+
+.bottomLabel {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bottomTitle {
+  margin-bottom: 6px;
+
+  color: var(--color-navy);
+
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.bottomText {
+  color: var(--color-text-secondary);
+
+  font-size: 0.77rem;
+
+  line-height: 1.55;
+}
+
+.button {
+  min-height: 49px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  gap: 8px;
+
+  padding: 0 20px;
+
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.79rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.button:hover {
+  background: var(--color-navy-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1000px) {
+  .header {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+  }
+
+  .stage {
+    grid-template-columns: 72px minmax(0, 1fr);
+  }
+
+  .stageItems {
+    grid-column: 2;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .section {
+    padding: 90px 0;
+  }
+
+  .stage {
+    grid-template-columns: 50px minmax(0, 1fr);
+
+    gap: 16px;
+  }
+
+  .stageItems {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .title {
+    font-size: clamp(2.4rem, 12vw, 3.6rem);
+  }
+
+  .stage {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding: 28px 0;
+  }
+
+  .stage:hover {
+    padding-left: 0;
+    padding-right: 0;
+
+    background: transparent;
+  }
+
+  .stageRail {
+    justify-content: flex-start;
+  }
+
+  .railLine {
+    display: none;
+  }
+
+  .stageItems {
+    grid-column: auto;
+  }
+
+  .featured {
+    padding: 25px 22px;
+  }
+
+  .featured:hover {
+    padding: 25px 22px;
+  }
+
+  .bottom {
+    padding: 23px;
+  }
+}

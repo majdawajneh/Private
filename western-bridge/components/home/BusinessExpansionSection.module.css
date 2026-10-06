@@ -1,0 +1,431 @@
+.section {
+  position: relative;
+
+  padding: 120px 0;
+
+  background: var(--color-background-soft);
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   Layout
+   ======================================== */
+
+.wrapper {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 72px;
+}
+
+
+/* ========================================
+   Content
+   ======================================== */
+
+.content {
+  max-width: 640px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.eyebrowLine {
+  width: 30px;
+  height: 2px;
+
+  background: var(--color-gold);
+
+  border-radius: var(--radius-full);
+}
+
+.title {
+  margin-bottom: 24px;
+
+  color: var(--color-navy);
+
+  font-size: clamp(2.45rem, 4.5vw, 4rem);
+
+  line-height: 1.07;
+
+  letter-spacing: -0.05em;
+}
+
+.goldText {
+  color: var(--color-gold-dark);
+}
+
+.description {
+  margin-bottom: 34px;
+
+  color: var(--color-text-secondary);
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   Services
+   ======================================== */
+
+.services {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-bottom: 38px;
+}
+
+.serviceCard {
+  padding: 18px;
+
+  background: var(--color-white);
+
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    transform var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(199, 162, 74, 0.4);
+
+  box-shadow: var(--shadow-md);
+}
+
+.serviceIcon {
+  width: 42px;
+  height: 42px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 14px;
+
+  color: var(--color-gold-dark);
+
+  background: rgba(199, 162, 74, 0.1);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 1rem;
+}
+
+.serviceTitle {
+  margin-bottom: 7px;
+
+  color: var(--color-navy);
+
+  font-size: 0.96rem;
+  font-weight: 800;
+}
+
+.serviceText {
+  color: var(--color-text-secondary);
+
+  font-size: 0.83rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Actions
+   ======================================== */
+
+.actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 52px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 23px;
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.9rem;
+  font-weight: 800;
+
+  transition:
+    transform var(--transition-fast),
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.primaryButton {
+  color: var(--color-white);
+
+  background: var(--color-navy);
+
+  box-shadow: var(--shadow-sm);
+}
+
+.primaryButton:hover {
+  background: var(--color-navy-dark);
+
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-md);
+}
+
+.secondaryButton {
+  color: var(--color-navy);
+
+  background: transparent;
+
+  border: 1px solid var(--color-border);
+}
+
+.secondaryButton:hover {
+  border-color: var(--color-gold);
+
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Visual Side
+   ======================================== */
+
+.visual {
+  position: relative;
+
+  min-height: 580px;
+
+  border-radius: var(--radius-xl);
+
+  overflow: hidden;
+
+  box-shadow: var(--shadow-lg);
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(8, 38, 65, 0.02) 0%,
+      rgba(8, 38, 65, 0.08) 55%,
+      rgba(8, 38, 65, 0.5) 100%
+    );
+}
+
+
+/* ========================================
+   Floating Card
+   ======================================== */
+
+.expansionCard {
+  position: absolute;
+
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+
+  padding: 22px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-md);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.expansionLabel {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: var(--color-gold-dark);
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.expansionTitle {
+  margin-bottom: 8px;
+
+  color: var(--color-navy);
+
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.expansionText {
+  color: var(--color-text-secondary);
+
+  font-size: 0.84rem;
+
+  line-height: 1.55;
+}
+
+
+/* ========================================
+   Decorative Elements
+   ======================================== */
+
+.decorationOne,
+.decorationTwo {
+  position: absolute;
+
+  border: 1px solid rgba(199, 162, 74, 0.1);
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.decorationOne {
+  width: 380px;
+  height: 380px;
+
+  top: -190px;
+  left: -150px;
+}
+
+.decorationTwo {
+  width: 260px;
+  height: 260px;
+
+  right: -120px;
+  bottom: -130px;
+}
+
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 1050px) {
+  .wrapper {
+    gap: 50px;
+  }
+
+  .visual {
+    min-height: 520px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .section {
+    padding: 90px 0;
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+
+    gap: 48px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .visual {
+    min-height: 500px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .visual {
+    min-height: 420px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
+  }
+
+  .description {
+    font-size: 0.98rem;
+  }
+
+  .visual {
+    min-height: 360px;
+
+    border-radius: var(--radius-lg);
+  }
+
+  .expansionCard {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+
+    padding: 18px;
+  }
+}
