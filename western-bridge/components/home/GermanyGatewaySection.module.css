@@ -3,7 +3,8 @@
 
   padding: 120px 0;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
   overflow: hidden;
 }
@@ -11,12 +12,14 @@
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .wrapper {
   display: grid;
 
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
 
   align-items: center;
 
@@ -26,18 +29,20 @@
 
 /* ========================================
    Image Side
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
 
   min-height: 610px;
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
   overflow: hidden;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
@@ -61,7 +66,7 @@
 
 /* ========================================
    Floating Badge
-   ======================================== */
+======================================== */
 
 .locationCard {
   position: absolute;
@@ -73,12 +78,18 @@
 
   padding: 22px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background:
+    rgba(255, 255, 255, 0.95);
 
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.55);
 
-  box-shadow: var(--shadow-md);
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-md);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -100,24 +111,28 @@
   display: grid;
   place-items: center;
 
-  color: var(--color-gold-dark);
+  flex-shrink: 0;
 
-  background: rgba(199, 162, 74, 0.12);
+  color:
+    var(--color-gold-dark);
+
+  background:
+    rgba(199, 162, 74, 0.12);
 
   border-radius: 50%;
-
-  font-size: 1rem;
 }
 
 .locationTitle {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.98rem;
   font-weight: 800;
 }
 
 .locationText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.85rem;
 
@@ -127,7 +142,7 @@
 
 /* ========================================
    Content Side
-   ======================================== */
+======================================== */
 
 .content {
   max-width: 620px;
@@ -141,7 +156,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.8rem;
   font-weight: 800;
@@ -154,17 +170,25 @@
   width: 30px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 }
 
 .title {
   margin-bottom: 22px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.4rem, 4.5vw, 4rem);
+  font-size:
+    clamp(
+      2.4rem,
+      4.5vw,
+      4rem
+    );
 
   line-height: 1.08;
 
@@ -172,13 +196,15 @@
 }
 
 .goldText {
-  color: var(--color-gold);
+  color:
+    var(--color-gold);
 }
 
 .description {
   margin-bottom: 34px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 1.05rem;
 
@@ -188,12 +214,16 @@
 
 /* ========================================
    Reasons Grid
-   ======================================== */
+======================================== */
 
 .reasonsGrid {
   display: grid;
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap: 16px;
 
@@ -203,23 +233,34 @@
 .reasonCard {
   padding: 20px;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-md);
 
   transition:
-    transform var(--transition-fast),
-    border-color var(--transition-fast),
-    background var(--transition-fast);
+    transform
+      var(--transition-fast),
+    border-color
+      var(--transition-fast),
+    background
+      var(--transition-fast);
 }
 
 .reasonCard:hover {
-  transform: translateY(-3px);
+  transform:
+    translateY(-3px);
 
-  border-color: rgba(199, 162, 74, 0.4);
+  border-color:
+    rgba(199, 162, 74, 0.4);
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 }
 
 .reasonIcon {
@@ -231,26 +272,29 @@
 
   margin-bottom: 14px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
-  background: rgba(199, 162, 74, 0.1);
+  background:
+    rgba(199, 162, 74, 0.1);
 
-  border-radius: var(--radius-sm);
-
-  font-size: 1.05rem;
+  border-radius:
+    var(--radius-sm);
 }
 
 .reasonTitle {
   margin-bottom: 7px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.98rem;
   font-weight: 800;
 }
 
 .reasonText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.84rem;
 
@@ -260,7 +304,7 @@
 
 /* ========================================
    Actions
-   ======================================== */
+======================================== */
 
 .actions {
   display: flex;
@@ -270,8 +314,7 @@
   gap: 14px;
 }
 
-.primaryButton,
-.secondaryButton {
+.primaryButton {
   min-height: 52px;
 
   display: inline-flex;
@@ -280,52 +323,45 @@
 
   padding: 0 23px;
 
-  border-radius: var(--radius-sm);
+  color:
+    var(--color-white);
+
+  background:
+    var(--color-navy);
+
+  border-radius:
+    var(--radius-sm);
+
+  box-shadow:
+    var(--shadow-sm);
 
   font-size: 0.9rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.primaryButton {
-  color: var(--color-white);
-
-  background: var(--color-navy);
-
-  box-shadow: var(--shadow-sm);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .primaryButton:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
-}
-
-.secondaryButton {
-  color: var(--color-navy);
-
-  background: var(--color-white);
-
-  border: 1px solid var(--color-border);
-}
-
-.secondaryButton:hover {
-  border-color: var(--color-gold);
-
-  transform: translateY(-2px);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Decorative Shape
-   ======================================== */
+======================================== */
 
 .decoration {
   position: absolute;
@@ -336,7 +372,10 @@
   top: 40px;
   right: -230px;
 
-  border: 1px solid rgba(199, 162, 74, 0.12);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.12);
+
   border-radius: 50%;
 
   pointer-events: none;
@@ -344,8 +383,62 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .wrapper {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .content {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .reasonCard {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .reasonText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .locationCard {
+  left: auto;
+  right: 28px;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .locationTop {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .decoration {
+  right: auto;
+  left: -230px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1100px) {
   .wrapper {
@@ -371,16 +464,14 @@
 
   .content {
     max-width: 100%;
+
+    order: 1;
   }
 
   .visual {
     min-height: 500px;
 
     order: 2;
-  }
-
-  .content {
-    order: 1;
   }
 
   .title {
@@ -414,13 +505,18 @@
     max-width: none;
   }
 
+  :global(html[dir="rtl"]) .locationCard {
+    left: 18px;
+    right: 18px;
+  }
+
   .actions {
     align-items: stretch;
+
     flex-direction: column;
   }
 
-  .primaryButton,
-  .secondaryButton {
+  .primaryButton {
     width: 100%;
   }
 }
@@ -430,7 +526,8 @@
   .visual {
     min-height: 360px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .locationCard {
@@ -438,7 +535,12 @@
   }
 
   .title {
-    font-size: clamp(2.2rem, 11vw, 3.3rem);
+    font-size:
+      clamp(
+        2.2rem,
+        11vw,
+        3.3rem
+      );
   }
 
   .description {

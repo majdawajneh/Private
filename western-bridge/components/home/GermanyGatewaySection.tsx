@@ -1,31 +1,177 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-import Container from "../ui/Container";
+import Image from "next/image";
+import { useLocale } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+import Container from "@/components/ui/Container";
+
 import styles from "./GermanyGatewaySection.module.css";
 
-const reasons = [
-  {
-    id: "economy",
-    title: "Strong Business Environment",
-    text: "A major European market for professionals, businesses, investment, and international partnerships.",
+type Locale = "de" | "en" | "ar";
+
+type Reason = {
+  id: string;
+  title: string;
+  text: string;
+};
+
+const content = {
+  de: {
+    locationTitle: "Deutschland im Fokus",
+
+    locationText:
+      "Western Bridge stellt Deutschland in den Mittelpunkt vieler internationaler beruflicher, akademischer und geschäftlicher Wege.",
+
+    eyebrow: "Deutschland als Ihr Zugang",
+
+    titleBefore: "Wir verbinden Sie mit",
+    highlightedTitle: "Deutschland",
+    titleAfter: "und darüber hinaus",
+
+    description:
+      "Deutschland gehört zu den wichtigsten internationalen Märkten von Western Bridge. Wir unterstützen Privatpersonen, medizinische Fachkräfte und Unternehmen dabei, die Vorbereitung, Qualifizierung und strategischen Schritte zu verstehen, die für geeignete Wege nach Deutschland und Europa relevant sein können.",
+
+    primaryButton: "Deutschland entdecken",
+
+    imageAlt: "Berlin, Deutschland",
+
+    reasons: [
+      {
+        id: "economy",
+        title: "Starkes Geschäftsumfeld",
+        text:
+          "Einer der bedeutendsten europäischen Märkte für Fachkräfte, Unternehmen, Investitionen und internationale Partnerschaften.",
+      },
+      {
+        id: "healthcare",
+        title: "Wege im Gesundheitswesen",
+        text:
+          "Ein wichtiges Ziel für medizinische Fachkräfte, die sich auf Qualifizierung, Anerkennung und berufliche Entwicklung vorbereiten.",
+      },
+      {
+        id: "training",
+        title: "Bildung & Weiterbildung",
+        text:
+          "Berufliche, akademische, sprachliche und qualifikationsbezogene Wege für unterschiedliche Karrierestufen.",
+      },
+      {
+        id: "europe",
+        title: "Zugang zu Europa",
+        text:
+          "Deutschland kann als strategischer Ausgangspunkt für weitere europäische Möglichkeiten und Partnerschaften dienen.",
+      },
+    ],
   },
-  {
-    id: "healthcare",
-    title: "Healthcare Pathways",
-    text: "A key destination for medical professionals seeking qualification, recognition, and professional development.",
+
+  en: {
+    locationTitle: "Germany Focus",
+
+    locationText:
+      "Western Bridge places Germany at the center of many international professional, training, and business pathways.",
+
+    eyebrow: "Germany as Your Gateway",
+
+    titleBefore: "Connecting You With",
+    highlightedTitle: "Germany",
+    titleAfter: "and Beyond",
+
+    description:
+      "Germany is one of Western Bridge's primary international markets. We support individuals, medical professionals, and businesses in understanding the preparation, qualification, and strategic steps that may help them pursue suitable pathways connected to Germany and Europe.",
+
+    primaryButton: "Explore Germany",
+
+    imageAlt: "Berlin, Germany",
+
+    reasons: [
+      {
+        id: "economy",
+        title: "Strong Business Environment",
+        text:
+          "A major European market for professionals, businesses, investment, and international partnerships.",
+      },
+      {
+        id: "healthcare",
+        title: "Healthcare Pathways",
+        text:
+          "A key destination for medical professionals seeking qualification, recognition, and professional development.",
+      },
+      {
+        id: "training",
+        title: "Education & Training",
+        text:
+          "Professional, vocational, language, and qualification pathways for different career stages.",
+      },
+      {
+        id: "europe",
+        title: "Gateway to Europe",
+        text:
+          "Germany can serve as a strategic starting point for broader European opportunities and partnerships.",
+      },
+    ],
   },
-  {
-    id: "training",
-    title: "Education & Training",
-    text: "Professional, vocational, language, and qualification pathways for different career stages.",
+
+  ar: {
+    locationTitle: "التركيز على ألمانيا",
+
+    locationText:
+      "تضع Western Bridge ألمانيا في صميم العديد من المسارات المهنية والتعليمية والتجارية الدولية.",
+
+    eyebrow: "ألمانيا بوابتك إلى فرص أوسع",
+
+    titleBefore: "نربطك بـ",
+    highlightedTitle: "ألمانيا",
+    titleAfter: "وما بعدها",
+
+    description:
+      "تُعد ألمانيا من أهم الأسواق الدولية التي تركز عليها Western Bridge. نساعد الأفراد والمتخصصين في القطاع الطبي والشركات على فهم متطلبات الاستعداد والتأهيل والخطوات الاستراتيجية التي قد تدعم الوصول إلى مسارات مناسبة مرتبطة بألمانيا وأوروبا.",
+
+    primaryButton: "استكشف ألمانيا",
+
+    imageAlt: "برلين، ألمانيا",
+
+    reasons: [
+      {
+        id: "economy",
+        title: "بيئة أعمال قوية",
+        text:
+          "واحدة من أهم الأسواق الأوروبية للمهنيين والشركات والاستثمار وبناء الشراكات الدولية.",
+      },
+      {
+        id: "healthcare",
+        title: "مسارات القطاع الطبي",
+        text:
+          "وجهة مهمة للمتخصصين في القطاع الطبي الراغبين في التأهيل والاعتراف المهني والتطور المهني.",
+      },
+      {
+        id: "training",
+        title: "التعليم والتدريب",
+        text:
+          "مسارات مهنية وتعليمية ولغوية وتأهيلية مناسبة لمراحل مهنية مختلفة.",
+      },
+      {
+        id: "europe",
+        title: "بوابة إلى أوروبا",
+        text:
+          "يمكن أن تكون ألمانيا نقطة انطلاق استراتيجية نحو فرص وشراكات أوسع داخل أوروبا.",
+      },
+    ],
   },
+} satisfies Record<
+  Locale,
   {
-    id: "europe",
-    title: "Gateway to Europe",
-    text: "Germany can serve as a strategic starting point for broader European opportunities and partnerships.",
-  },
-];
+    locationTitle: string;
+    locationText: string;
+    eyebrow: string;
+    titleBefore: string;
+    highlightedTitle: string;
+    titleAfter: string;
+    description: string;
+    primaryButton: string;
+    imageAlt: string;
+    reasons: Reason[];
+  }
+>;
 
 function ReasonIcon({ id }: { id: string }) {
   if (id === "healthcare") {
@@ -150,24 +296,26 @@ function ReasonIcon({ id }: { id: string }) {
 }
 
 export default function GermanyGatewaySection() {
+  const locale = useLocale() as Locale;
+
+  const t = content[locale] ?? content.de;
+
   return (
     <section className={styles.section}>
-      <div className={styles.decoration}></div>
+      <div className={styles.decoration} />
 
       <Container>
         <div className={styles.wrapper}>
-          {/* Visual */}
-
           <div className={styles.visual}>
             <Image
               src="/images/germany-gateway.jpg"
-              alt="Berlin, Germany"
+              alt={t.imageAlt}
               fill
               sizes="(max-width: 900px) 100vw, 45vw"
               className={styles.image}
             />
 
-            <div className={styles.imageOverlay}></div>
+            <div className={styles.imageOverlay} />
 
             <div className={styles.locationCard}>
               <div className={styles.locationTop}>
@@ -197,43 +345,39 @@ export default function GermanyGatewaySection() {
                 </div>
 
                 <span className={styles.locationTitle}>
-                  Germany Focus
+                  {t.locationTitle}
                 </span>
               </div>
 
               <p className={styles.locationText}>
-                Western Bridge places Germany at the center of many
-                international professional, training, and business
-                pathways.
+                {t.locationText}
               </p>
             </div>
           </div>
 
-          {/* Content */}
-
           <div className={styles.content}>
             <div className={styles.eyebrow}>
-              <span className={styles.eyebrowLine}></span>
-              Germany as Your Gateway
+              <span className={styles.eyebrowLine} />
+              {t.eyebrow}
             </div>
 
             <h2 className={styles.title}>
-              Connecting You With{" "}
-              <span className={styles.goldText}>Germany</span>
+              {t.titleBefore}{" "}
+              <span className={styles.goldText}>
+                {t.highlightedTitle}
+              </span>
+
               <br />
-              and Beyond
+
+              {t.titleAfter}
             </h2>
 
             <p className={styles.description}>
-              Germany is one of Western Bridge&apos;s primary international
-              markets. We support individuals, medical professionals,
-              and businesses in understanding the preparation,
-              qualification, and strategic steps that may help them
-              pursue suitable pathways connected to Germany and Europe.
+              {t.description}
             </p>
 
             <div className={styles.reasonsGrid}>
-              {reasons.map((reason) => (
+              {t.reasons.map((reason) => (
                 <article
                   key={reason.id}
                   className={styles.reasonCard}
@@ -258,15 +402,8 @@ export default function GermanyGatewaySection() {
                 href="/germany"
                 className={styles.primaryButton}
               >
-                Explore Germany Pathways
+                {t.primaryButton}
               </Link>
-
-              <button
-                type="button"
-                className={styles.secondaryButton}
-              >
-                Ask AI Advisor ✦
-              </button>
             </div>
           </div>
         </div>

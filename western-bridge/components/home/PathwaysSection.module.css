@@ -3,7 +3,8 @@
 
   padding: 110px 0;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 
   overflow: hidden;
 }
@@ -11,7 +12,7 @@
 
 /* ========================================
    Section Header
-   ======================================== */
+======================================== */
 
 .header {
   max-width: 760px;
@@ -29,7 +30,8 @@
 
   margin-bottom: 16px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.8rem;
   font-weight: 800;
@@ -42,17 +44,25 @@
   width: 28px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 }
 
 .title {
   margin-bottom: 18px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.25rem, 4vw, 3.6rem);
+  font-size:
+    clamp(
+      2.25rem,
+      4vw,
+      3.6rem
+    );
 
   letter-spacing: -0.045em;
 }
@@ -62,7 +72,8 @@
 
   margin: 0 auto;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 1.05rem;
 
@@ -72,12 +83,16 @@
 
 /* ========================================
    Cards Grid
-   ======================================== */
+======================================== */
 
 .grid {
   display: grid;
 
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
 
   gap: 24px;
 }
@@ -85,7 +100,7 @@
 
 /* ========================================
    Pathway Card
-   ======================================== */
+======================================== */
 
 .card {
   position: relative;
@@ -97,33 +112,45 @@
 
   padding: 34px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-lg);
+  border:
+    1px solid
+    var(--color-border-light);
 
-  box-shadow: var(--shadow-sm);
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-sm);
 
   overflow: hidden;
 
   transition:
-    transform var(--transition-normal),
-    box-shadow var(--transition-normal),
-    border-color var(--transition-normal);
+    transform
+      var(--transition-normal),
+    box-shadow
+      var(--transition-normal),
+    border-color
+      var(--transition-normal);
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform:
+    translateY(-8px);
 
-  border-color: rgba(199, 162, 74, 0.45);
+  border-color:
+    rgba(199, 162, 74, 0.45);
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 
 /* ========================================
    Accent
-   ======================================== */
+======================================== */
 
 .cardAccent {
   position: absolute;
@@ -145,7 +172,7 @@
 
 /* ========================================
    Icon
-   ======================================== */
+======================================== */
 
 .iconWrapper {
   width: 62px;
@@ -156,35 +183,46 @@
 
   margin-bottom: 28px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: rgba(199, 162, 74, 0.1);
+  background:
+    rgba(199, 162, 74, 0.1);
 
-  border: 1px solid rgba(199, 162, 74, 0.24);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.24);
+
+  border-radius:
+    var(--radius-md);
 
   font-size: 1.65rem;
 
   transition:
-    transform var(--transition-normal),
-    background var(--transition-normal);
+    transform
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .card:hover .iconWrapper {
-  transform: scale(1.06);
+  transform:
+    scale(1.06);
 
-  background: rgba(199, 162, 74, 0.16);
+  background:
+    rgba(199, 162, 74, 0.16);
 }
 
 
 /* ========================================
    Card Content
-   ======================================== */
+======================================== */
 
 .cardLabel {
   margin-bottom: 10px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.75rem;
   font-weight: 800;
@@ -196,7 +234,8 @@
 .cardTitle {
   margin-bottom: 16px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.65rem;
 
@@ -206,7 +245,8 @@
 .cardDescription {
   margin-bottom: 26px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.95rem;
 
@@ -216,7 +256,7 @@
 
 /* ========================================
    Features
-   ======================================== */
+======================================== */
 
 .features {
   display: flex;
@@ -233,7 +273,8 @@
 
   gap: 10px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.88rem;
 }
@@ -249,9 +290,13 @@
 
   margin-top: 1px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
-  border: 1px solid rgba(199, 162, 74, 0.38);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.38);
+
   border-radius: 50%;
 
   font-size: 0.62rem;
@@ -261,7 +306,7 @@
 
 /* ========================================
    Card Link
-   ======================================== */
+======================================== */
 
 .cardLink {
   width: fit-content;
@@ -273,18 +318,22 @@
 
   margin-top: auto;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.9rem;
   font-weight: 800;
 
   transition:
-    color var(--transition-fast),
-    gap var(--transition-fast);
+    color
+      var(--transition-fast),
+    gap
+      var(--transition-fast);
 }
 
 .cardLink:hover {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   gap: 14px;
 }
@@ -296,101 +345,89 @@
 
 /* ========================================
    Medical Highlight
-   ======================================== */
+======================================== */
 
 .featuredCard {
   background:
     linear-gradient(
       145deg,
-      var(--color-navy-dark) 0%,
-      var(--color-navy) 100%
+      var(--color-navy-dark)
+        0%,
+      var(--color-navy)
+        100%
     );
 
   border-color: transparent;
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 .featuredCard .cardLabel {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 }
 
 .featuredCard .cardTitle {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 }
 
 .featuredCard .cardDescription {
-  color: rgba(255, 255, 255, 0.72);
+  color:
+    rgba(255, 255, 255, 0.72);
 }
 
 .featuredCard .feature {
-  color: rgba(255, 255, 255, 0.78);
+  color:
+    rgba(255, 255, 255, 0.78);
 }
 
 .featuredCard .check {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
-  border-color: rgba(219, 193, 118, 0.45);
+  border-color:
+    rgba(219, 193, 118, 0.45);
 }
 
 .featuredCard .iconWrapper {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    rgba(255, 255, 255, 0.08);
 
-  border-color: rgba(255, 255, 255, 0.12);
+  border-color:
+    rgba(255, 255, 255, 0.12);
 }
 
 .featuredCard .cardLink {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 }
 
 .featuredCard:hover {
   border-color: transparent;
 
-  box-shadow: 0 24px 60px rgba(13, 49, 88, 0.24);
-}
-
-
-/* ========================================
-   Bottom Note
-   ======================================== */
-
-.bottomNote {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
-
-  margin-top: 42px;
-
-  color: var(--color-text-light);
-
-  text-align: center;
-
-  font-size: 0.84rem;
-}
-
-.bottomDot {
-  width: 6px;
-  height: 6px;
-
-  background: var(--color-gold);
-
-  border-radius: 50%;
+  box-shadow:
+    0 24px 60px
+    rgba(13, 49, 88, 0.24);
 }
 
 
 /* ========================================
    Decorative Background
-   ======================================== */
+======================================== */
 
 .decorationOne,
 .decorationTwo {
   position: absolute;
 
-  border: 1px solid rgba(199, 162, 74, 0.1);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.1);
+
   border-radius: 50%;
 
   pointer-events: none;
@@ -414,12 +451,79 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  text-align: center;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .card {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .cardAccent {
+  left: auto;
+  right: 0;
+}
+
+:global(html[dir="rtl"]) .cardLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .cardTitle {
+  letter-spacing: -0.015em;
+
+  line-height: 1.45;
+}
+
+:global(html[dir="rtl"]) .cardDescription {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .feature {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .cardLink {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .decorationOne {
+  right: auto;
+  left: -100px;
+}
+
+:global(html[dir="rtl"]) .decorationTwo {
+  left: auto;
+  right: -90px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
   }
 
   .featuredCard {
@@ -470,6 +574,10 @@
     text-align: left;
   }
 
+  :global(html[dir="rtl"]) .header {
+    text-align: right;
+  }
+
   .header .description {
     margin: 0;
   }
@@ -481,7 +589,8 @@
   .card {
     padding: 24px;
 
-    border-radius: var(--radius-md);
+    border-radius:
+      var(--radius-md);
   }
 
   .iconWrapper {
@@ -495,13 +604,5 @@
 
   .cardTitle {
     font-size: 1.45rem;
-  }
-
-  .bottomNote {
-    align-items: flex-start;
-
-    margin-top: 30px;
-
-    text-align: left;
   }
 }

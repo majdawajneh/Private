@@ -308,3 +308,29 @@ select:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+html[dir="rtl"] {
+  direction: rtl;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+}
+
+body.arabic-site {
+  font-family: var(--font-primary-arabic);
+}
+
+body.western-site {
+  font-family: var(--font-primary);
+}
+
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] input,
+html[dir="rtl"] textarea,
+html[dir="rtl"] select,
+html[dir="rtl"] button {
+  font-family: var(--font-primary-arabic);
+}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Container from "../ui/Container";
+import Container from "@/components/ui/Container";
 import styles from "./AboutHero.module.css";
 
 const principles = [

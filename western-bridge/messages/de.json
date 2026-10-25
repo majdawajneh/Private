@@ -1,0 +1,26 @@
+{
+  "Navigation": {
+    "home": "Startseite",
+    "individuals": "Privatpersonen",
+    "businesses": "Unternehmen",
+    "education": "Bildung",
+    "medical": "Gesundheitswesen",
+    "germany": "Deutschland",
+    "services": "Leistungen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "aiAdvisor": "WB Assistent"
+  },
+  "Languages": {
+    "german": "Deutsch",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "Common": {
+    "learnMore": "Mehr erfahren",
+    "contactUs": "Kontakt aufnehmen",
+    "close": "Schließen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  }
+}

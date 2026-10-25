@@ -3,7 +3,6 @@ import IndividualOptionsSection from "@/components/individuals/IndividualOptions
 import GermanyJourneySection from "@/components/individuals/GermanyJourneySection";
 import ProfessionPathsSection from "@/components/individuals/ProfessionPathsSection";
 import PreparationBoardSection from "@/components/individuals/PreparationBoardSection";
-import IndividualAISection from "@/components/individuals/IndividualAISection";
 
 import { createPageMetadata } from "@/lib/seo";
 
@@ -32,7 +31,6 @@ export default function IndividualsPage() {
 
       <PreparationBoardSection />
 
-      <IndividualAISection />
     </main>
   );
 }

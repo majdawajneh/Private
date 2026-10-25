@@ -1,0 +1,26 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "individuals": "Individuals",
+    "businesses": "Businesses",
+    "education": "Education",
+    "medical": "Medical",
+    "germany": "Germany",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "aiAdvisor": "WB Assistant"
+  },
+  "Languages": {
+    "german": "Deutsch",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "Common": {
+    "learnMore": "Learn more",
+    "contactUs": "Contact us",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  }
+}

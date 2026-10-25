@@ -1,88 +1,159 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-import Container from "../ui/Container";
+import Image from "next/image";
+import { useLocale } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+import Container from "@/components/ui/Container";
+
 import styles from "./Hero.module.css";
 
+const content = {
+  de: {
+    badge: "Deutschland im Fokus. International vernetzt.",
+
+    titleBefore: "Ihre Brücke nach",
+    highlightedTitle: "Deutschland",
+    titleAfter: "& zu internationalem Wachstum",
+
+    description:
+      "Western Bridge begleitet Privatpersonen, medizinische Fachkräfte und Unternehmen auf internationalen Wegen – mit Beratung, Qualifizierung, Weiterbildung, strategischer Orientierung und internationalen Partnerschaften.",
+
+    primaryButton: "Ihre Möglichkeiten entdecken",
+
+    focusAreas: [
+      "Privatpersonen",
+      "Medizinische Fachkräfte",
+      "Unternehmen",
+    ],
+
+    imageAlt:
+      "Brandenburger Tor in Berlin, Deutschland",
+  },
+
+  en: {
+    badge: "Germany-Focused. Internationally Connected.",
+
+    titleBefore: "Your Bridge to",
+    highlightedTitle: "Germany",
+    titleAfter: "& Global Growth",
+
+    description:
+      "Western Bridge supports individuals, medical professionals, and businesses in navigating international pathways through consulting, qualification, training, strategic guidance, and international partnerships.",
+
+    primaryButton: "Explore Your Path",
+
+    focusAreas: [
+      "Individuals",
+      "Medical Professionals",
+      "Businesses",
+    ],
+
+    imageAlt:
+      "Brandenburg Gate in Berlin, Germany",
+  },
+
+  ar: {
+    badge: "ألمانيا محورنا. وشبكتنا دولية.",
+
+    titleBefore: "جسرك نحو",
+    highlightedTitle: "ألمانيا",
+    titleAfter: "والنمو الدولي",
+
+    description:
+      "تدعم Western Bridge الأفراد والمتخصصين في القطاع الطبي والشركات في استكشاف المسارات الدولية من خلال الاستشارات والتأهيل والتدريب والتوجيه الاستراتيجي وبناء الشراكات الدولية.",
+
+    primaryButton: "استكشف مسارك",
+
+    focusAreas: [
+      "الأفراد",
+      "المتخصصون في القطاع الطبي",
+      "الشركات",
+    ],
+
+    imageAlt:
+      "بوابة براندنبورغ في برلين، ألمانيا",
+  },
+} as const;
+
+type Locale = keyof typeof content;
+
 export default function Hero() {
+  const locale = useLocale() as Locale;
+
+  const t = content[locale] ?? content.de;
+
   return (
     <section className={styles.hero}>
       <Container className={styles.heroContainer}>
         <div className={styles.content}>
-          {/* Badge */}
           <div className={styles.badge}>
-            <span className={styles.badgeDot}></span>
-            Germany-Focused. Internationally Connected.
+            <span className={styles.badgeDot} />
+            {t.badge}
           </div>
 
-          {/* Main Heading */}
           <h1 className={styles.title}>
-            Your Bridge to{" "}
-            <span className={styles.goldText}>Germany</span>
+            {t.titleBefore}{" "}
+            <span className={styles.goldText}>
+              {t.highlightedTitle}
+            </span>
+
             <br />
-            & Global Growth
+
+            {t.titleAfter}
           </h1>
 
-          {/* Description */}
           <p className={styles.description}>
-            Western Bridge helps individuals, medical professionals,
-            and businesses navigate international pathways through
-            consulting, qualification, training, strategic guidance,
-            and global partnerships.
+            {t.description}
           </p>
 
-          {/* Actions */}
           <div className={styles.actions}>
             <Link
               href="#pathways"
               className={styles.primaryButton}
             >
-              Explore Your Path
+              {t.primaryButton}
             </Link>
-
-            <button
-              type="button"
-              className={styles.secondaryButton}
-            >
-              Ask AI Advisor ✦
-            </button>
           </div>
 
-          {/* Trust / Focus Areas */}
           <div className={styles.trustRow}>
-            <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>✓</span>
-              Individuals
-            </div>
+            {t.focusAreas.map((item) => (
+              <div
+                key={item}
+                className={styles.trustItem}
+              >
+                <span
+                  className={styles.trustIcon}
+                  aria-hidden="true"
+                >
+                  ✓
+                </span>
 
-            <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>✓</span>
-              Medical Professionals
-            </div>
-
-            <div className={styles.trustItem}>
-              <span className={styles.trustIcon}>✓</span>
-              Businesses
-            </div>
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </Container>
 
-      {/* Brandenburg Gate */}
       <div className={styles.background}>
         <Image
           src="/images/brandenburg-gate.jpg"
-          alt="Brandenburg Gate in Berlin, Germany"
+          alt={t.imageAlt}
           fill
           priority
           sizes="(max-width: 900px) 100vw, 58vw"
           className={styles.backgroundImage}
         />
 
-        <div className={styles.backgroundOverlay}></div>
+        <div
+          className={styles.backgroundOverlay}
+        />
       </div>
 
-      <div className={styles.decorativeLine}></div>
+      <div
+        className={styles.decorativeLine}
+      />
     </section>
   );
 }

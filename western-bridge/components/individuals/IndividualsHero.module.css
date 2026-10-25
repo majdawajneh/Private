@@ -16,7 +16,9 @@
 .wrapper {
   display: grid;
 
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
 
   align-items: center;
 
@@ -26,7 +28,7 @@
 
 /* ========================================
    Content
-   ======================================== */
+======================================== */
 
 .content {
   position: relative;
@@ -44,7 +46,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.78rem;
   font-weight: 800;
@@ -57,17 +60,25 @@
   width: 30px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 }
 
 .title {
   margin-bottom: 24px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4.8rem
+    );
 
   line-height: 1.03;
 
@@ -75,7 +86,8 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .description {
@@ -83,7 +95,8 @@
 
   margin-bottom: 34px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 1.05rem;
 
@@ -93,7 +106,7 @@
 
 /* ========================================
    Actions
-   ======================================== */
+======================================== */
 
 .actions {
   display: flex;
@@ -105,8 +118,7 @@
   margin-bottom: 38px;
 }
 
-.primaryButton,
-.secondaryButton {
+.primaryButton {
   min-height: 54px;
 
   display: inline-flex;
@@ -115,52 +127,45 @@
 
   padding: 0 24px;
 
-  border-radius: var(--radius-sm);
+  color:
+    var(--color-white);
+
+  background:
+    var(--color-navy);
+
+  border-radius:
+    var(--radius-sm);
+
+  box-shadow:
+    var(--shadow-sm);
 
   font-size: 0.9rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
-}
-
-.primaryButton {
-  color: var(--color-white);
-
-  background: var(--color-navy);
-
-  box-shadow: var(--shadow-sm);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .primaryButton:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
-}
-
-.secondaryButton {
-  color: var(--color-navy);
-
-  background: var(--color-white);
-
-  border: 1px solid var(--color-border);
-}
-
-.secondaryButton:hover {
-  border-color: var(--color-gold);
-
-  transform: translateY(-2px);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Focus Points
-   ======================================== */
+======================================== */
 
 .focusList {
   display: flex;
@@ -177,43 +182,55 @@
 
   padding: 9px 12px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-full);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-full);
 
   font-size: 0.8rem;
   font-weight: 700;
 
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    var(--shadow-sm);
 }
 
 .focusDot {
   width: 7px;
   height: 7px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
   border-radius: 50%;
+
+  flex-shrink: 0;
 }
 
 
 /* ========================================
    Visual
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
 
   min-height: 560px;
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
   overflow: hidden;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
@@ -237,7 +254,7 @@
 
 /* ========================================
    Floating Card
-   ======================================== */
+======================================== */
 
 .pathCard {
   position: absolute;
@@ -248,11 +265,14 @@
 
   padding: 22px;
 
-  background: rgba(255, 255, 255, 0.96);
+  background:
+    rgba(255, 255, 255, 0.96);
 
-  border-radius: var(--radius-md);
+  border-radius:
+    var(--radius-md);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -263,7 +283,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.72rem;
   font-weight: 800;
@@ -275,14 +296,16 @@
 .pathTitle {
   margin-bottom: 8px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.08rem;
   font-weight: 800;
 }
 
 .pathText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.84rem;
 
@@ -292,13 +315,16 @@
 
 /* ========================================
    Decorative
-   ======================================== */
+======================================== */
 
 .circleOne,
 .circleTwo {
   position: absolute;
 
-  border: 1px solid rgba(199, 162, 74, 0.1);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.1);
+
   border-radius: 50%;
 
   pointer-events: none;
@@ -322,8 +348,71 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .wrapper {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .content {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.22;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .focusList {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .focusItem {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .pathCard {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .pathLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .pathText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .circleOne {
+  left: auto;
+  right: -150px;
+}
+
+:global(html[dir="rtl"]) .circleTwo {
+  right: auto;
+  left: -120px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .wrapper {
@@ -334,6 +423,7 @@
     min-height: 500px;
   }
 }
+
 
 @media (max-width: 900px) {
   .hero {
@@ -355,6 +445,7 @@
   }
 }
 
+
 @media (max-width: 650px) {
   .hero {
     padding: 68px 0 62px;
@@ -365,8 +456,7 @@
     flex-direction: column;
   }
 
-  .primaryButton,
-  .secondaryButton {
+  .primaryButton {
     width: 100%;
   }
 
@@ -379,9 +469,15 @@
   }
 }
 
+
 @media (max-width: 480px) {
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.5rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.5rem
+      );
   }
 
   .description {
@@ -391,7 +487,8 @@
   .visual {
     min-height: 340px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .pathCard {

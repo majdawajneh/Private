@@ -2,6 +2,7 @@ import AboutHero from "@/components/about/AboutHero";
 import AboutPurposeSection from "@/components/about/AboutPurposeSection";
 import AboutValuesSection from "@/components/about/AboutValuesSection";
 
+
 import { createPageMetadata } from "@/lib/seo";
 
 export const metadata = createPageMetadata({

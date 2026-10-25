@@ -1,7 +1,13 @@
-import Link from "next/link";
+"use client";
 
-import Container from "../ui/Container";
+import { useLocale } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+import Container from "@/components/ui/Container";
+
 import styles from "./PathwaysSection.module.css";
+
+type Locale = "de" | "en" | "ar";
 
 type Pathway = {
   id: string;
@@ -13,50 +19,188 @@ type Pathway = {
   featured?: boolean;
 };
 
-const pathways: Pathway[] = [
-  {
-    id: "individuals",
-    label: "For Individuals",
-    title: "Build Your International Path",
+const content = {
+  de: {
+    eyebrow: "Wählen Sie Ihren Weg",
+
+    titleLineOne: "Ihr Ziel. Ihr Weg.",
+    titleLineTwo: "Unsere Orientierung.",
+
     description:
-      "Explore guidance, qualification, training, and international pathways designed around your professional goals.",
-    features: [
-      "International career guidance",
-      "Qualification and readiness support",
-      "Training and language pathways",
+      "Ob Sie Ihre berufliche Zukunft gestalten, sich auf einen Weg im Gesundheitswesen vorbereiten oder Ihr Unternehmen international ausrichten möchten – Western Bridge unterstützt Sie dabei, die nächsten Schritte klar zu verstehen.",
+
+    explorePathway: "Weg entdecken",
+
+    pathways: [
+      {
+        id: "individuals",
+        label: "Für Privatpersonen",
+        title: "Gestalten Sie Ihren internationalen Weg",
+        description:
+          "Entdecken Sie Beratung, Qualifizierung, Weiterbildung und internationale Möglichkeiten, die sich an Ihren beruflichen Zielen orientieren.",
+        features: [
+          "Internationale Karriereorientierung",
+          "Unterstützung bei Qualifikation und Vorbereitung",
+          "Weiterbildungs- und Sprachwege",
+        ],
+        href: "/individuals",
+      },
+
+      {
+        id: "medical",
+        label: "Schwerpunkt Gesundheitswesen",
+        title: "Medizinische Fachkräfte",
+        description:
+          "Spezialisierte Unterstützung für medizinische Fachkräfte, die sich auf Deutschland und internationale berufliche Wege vorbereiten.",
+        features: [
+          "Deutsch und medizinisches Deutsch",
+          "Orientierung bei beruflicher Anerkennung",
+          "Vorbereitung auf Qualifikation und Zulassung",
+        ],
+        href: "/medical",
+        featured: true,
+      },
+
+      {
+        id: "businesses",
+        label: "Für Unternehmen",
+        title: "Wachstum über Grenzen hinweg",
+        description:
+          "Unterstützen Sie Ihre internationale Expansion mit Marktkenntnissen, strategischer Beratung, Partnerschaften und internationaler Vernetzung.",
+        features: [
+          "Beratung zur Geschäftsentwicklung",
+          "Markt- und Machbarkeitsstudien",
+          "Internationale Partnerschaften",
+        ],
+        href: "/businesses",
+      },
     ],
-    href: "/individuals",
   },
 
-  {
-    id: "medical",
-    label: "Healthcare Focus",
-    title: "Medical Professionals",
+  en: {
+    eyebrow: "Choose Your Path",
+
+    titleLineOne: "Your Goal. Your Path.",
+    titleLineTwo: "Our Guidance.",
+
     description:
-      "Specialized support for healthcare professionals preparing for Germany and international professional pathways.",
-    features: [
-      "German & Medical German preparation",
-      "Professional recognition guidance",
-      "Licensing and qualification preparation",
+      "Whether you are building your professional future, preparing for a healthcare pathway, or expanding your business internationally, Western Bridge helps you understand the next step.",
+
+    explorePathway: "Explore Pathway",
+
+    pathways: [
+      {
+        id: "individuals",
+        label: "For Individuals",
+        title: "Build Your International Path",
+        description:
+          "Explore guidance, qualification, training, and international pathways designed around your professional goals.",
+        features: [
+          "International career guidance",
+          "Qualification and readiness support",
+          "Training and language pathways",
+        ],
+        href: "/individuals",
+      },
+
+      {
+        id: "medical",
+        label: "Healthcare Focus",
+        title: "Medical Professionals",
+        description:
+          "Specialized support for healthcare professionals preparing for Germany and international professional pathways.",
+        features: [
+          "German & Medical German preparation",
+          "Professional recognition guidance",
+          "Licensing and qualification preparation",
+        ],
+        href: "/medical",
+        featured: true,
+      },
+
+      {
+        id: "businesses",
+        label: "For Businesses",
+        title: "Grow Beyond Borders",
+        description:
+          "Support your business expansion through market insight, strategic consulting, partnerships, and international networking.",
+        features: [
+          "Business development consulting",
+          "Market and feasibility studies",
+          "International partnerships",
+        ],
+        href: "/businesses",
+      },
     ],
-    href: "/medical",
-    featured: true,
   },
 
-  {
-    id: "businesses",
-    label: "For Businesses",
-    title: "Grow Beyond Borders",
+  ar: {
+    eyebrow: "اختر مسارك",
+
+    titleLineOne: "هدفك. مسارك.",
+    titleLineTwo: "وتوجيهنا إلى جانبك.",
+
     description:
-      "Support your business expansion through market insight, strategic consulting, partnerships, and international networking.",
-    features: [
-      "Business development consulting",
-      "Market and feasibility studies",
-      "International partnerships",
+      "سواء كنت تبني مستقبلك المهني، أو تستعد لمسار في القطاع الطبي، أو تعمل على توسيع نشاطك دوليًا، تساعدك Western Bridge على فهم الخطوة التالية بوضوح.",
+
+    explorePathway: "استكشف المسار",
+
+    pathways: [
+      {
+        id: "individuals",
+        label: "للأفراد",
+        title: "ابنِ مسارك الدولي",
+        description:
+          "استكشف الاستشارات والتأهيل والتدريب والمسارات الدولية المصممة بما يتناسب مع أهدافك المهنية.",
+        features: [
+          "توجيه مهني دولي",
+          "دعم التأهيل والاستعداد",
+          "مسارات التدريب واللغة",
+        ],
+        href: "/individuals",
+      },
+
+      {
+        id: "medical",
+        label: "التركيز على القطاع الطبي",
+        title: "المتخصصون في القطاع الطبي",
+        description:
+          "دعم متخصص للعاملين في القطاع الطبي الراغبين في الاستعداد لألمانيا والمسارات المهنية الدولية.",
+        features: [
+          "اللغة الألمانية والألمانية الطبية",
+          "التوجيه في إجراءات الاعتراف المهني",
+          "الاستعداد لمتطلبات التأهيل والترخيص",
+        ],
+        href: "/medical",
+        featured: true,
+      },
+
+      {
+        id: "businesses",
+        label: "للشركات",
+        title: "نمِّ أعمالك عبر الحدود",
+        description:
+          "ادعم توسع أعمالك من خلال فهم الأسواق والاستشارات الاستراتيجية والشراكات وبناء العلاقات الدولية.",
+        features: [
+          "استشارات تطوير الأعمال",
+          "دراسات السوق والجدوى",
+          "الشراكات الدولية",
+        ],
+        href: "/businesses",
+      },
     ],
-    href: "/businesses",
   },
-];
+} satisfies Record<
+  Locale,
+  {
+    eyebrow: string;
+    titleLineOne: string;
+    titleLineTwo: string;
+    description: string;
+    explorePathway: string;
+    pathways: Pathway[];
+  }
+>;
 
 function PathwayIcon({ id }: { id: string }) {
   if (id === "medical") {
@@ -144,51 +288,50 @@ function PathwayIcon({ id }: { id: string }) {
 }
 
 export default function PathwaysSection() {
+  const locale = useLocale() as Locale;
+
+  const t = content[locale] ?? content.de;
+
   return (
     <section
       id="pathways"
       className={styles.section}
     >
-      <div className={styles.decorationOne}></div>
-      <div className={styles.decorationTwo}></div>
+      <div className={styles.decorationOne} />
+      <div className={styles.decorationTwo} />
 
       <Container>
-        {/* Section Heading */}
-
         <div className={styles.header}>
           <div className={styles.eyebrow}>
-            <span className={styles.eyebrowLine}></span>
+            <span className={styles.eyebrowLine} />
 
-            Choose Your Path
+            {t.eyebrow}
 
-            <span className={styles.eyebrowLine}></span>
+            <span className={styles.eyebrowLine} />
           </div>
 
           <h2 className={styles.title}>
-            Your Goal. Your Path.
+            {t.titleLineOne}
             <br />
-            Our Guidance.
+            {t.titleLineTwo}
           </h2>
 
           <p className={styles.description}>
-            Whether you are building your professional future,
-            preparing for a healthcare pathway, or expanding your
-            business internationally, Western Bridge helps you
-            understand the next step.
+            {t.description}
           </p>
         </div>
 
-        {/* Cards */}
-
         <div className={styles.grid}>
-          {pathways.map((pathway) => (
+          {t.pathways.map((pathway) => (
             <article
               key={pathway.id}
               className={`${styles.card} ${
-                pathway.featured ? styles.featuredCard : ""
+                pathway.featured
+                  ? styles.featuredCard
+                  : ""
               }`}
             >
-              <div className={styles.cardAccent}></div>
+              <div className={styles.cardAccent} />
 
               <div className={styles.iconWrapper}>
                 <PathwayIcon id={pathway.id} />
@@ -212,7 +355,12 @@ export default function PathwaysSection() {
                     key={feature}
                     className={styles.feature}
                   >
-                    <span className={styles.check}>✓</span>
+                    <span
+                      className={styles.check}
+                      aria-hidden="true"
+                    >
+                      ✓
+                    </span>
 
                     <span>{feature}</span>
                   </li>
@@ -223,26 +371,17 @@ export default function PathwaysSection() {
                 href={pathway.href}
                 className={styles.cardLink}
               >
-                Explore Pathway
+                {t.explorePathway}
 
                 <span
                   className={styles.arrow}
                   aria-hidden="true"
                 >
-                  →
+                  {locale === "ar" ? "←" : "→"}
                 </span>
               </Link>
             </article>
           ))}
-        </div>
-
-        {/* Bottom Note */}
-
-        <div className={styles.bottomNote}>
-          <span className={styles.bottomDot}></span>
-
-          Not sure which path fits you? The Western Bridge AI Advisor
-          will help you explore your options.
         </div>
       </Container>
     </section>

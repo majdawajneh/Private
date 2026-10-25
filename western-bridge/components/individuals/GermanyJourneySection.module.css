@@ -16,12 +16,14 @@
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .wrapper {
   display: grid;
 
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  grid-template-columns:
+    minmax(0, 0.78fr)
+    minmax(0, 1.22fr);
 
   gap: 90px;
 
@@ -31,7 +33,7 @@
 
 /* ========================================
    Left Side
-   ======================================== */
+======================================== */
 
 .intro {
   position: sticky;
@@ -47,7 +49,8 @@
 
   margin-bottom: 22px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.76rem;
   font-weight: 800;
@@ -57,7 +60,8 @@
 }
 
 .eyebrowNumber {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.78rem;
 }
@@ -66,22 +70,29 @@
   width: 34px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 
 /* ========================================
    Headline
-   ======================================== */
+======================================== */
 
 .title {
   max-width: 520px;
 
   margin-bottom: 26px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(3rem, 5vw, 5.2rem);
+  font-size:
+    clamp(
+      3rem,
+      5vw,
+      5.2rem
+    );
 
   line-height: 0.98;
 
@@ -89,7 +100,8 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .description {
@@ -97,7 +109,8 @@
 
   margin-bottom: 34px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 1rem;
 
@@ -107,7 +120,7 @@
 
 /* ========================================
    Germany Identity Block
-   ======================================== */
+======================================== */
 
 .germanyBlock {
   position: relative;
@@ -116,9 +129,11 @@
 
   padding: 22px 26px;
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-md);
+  border-radius:
+    var(--radius-md);
 
   overflow: hidden;
 }
@@ -126,7 +141,8 @@
 .germanyLabel {
   display: block;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -140,9 +156,16 @@
 
   margin-top: 4px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-size: clamp(2rem, 3vw, 3.1rem);
+  font-size:
+    clamp(
+      2rem,
+      3vw,
+      3.1rem
+    );
+
   font-weight: 800;
 
   letter-spacing: -0.05em;
@@ -153,7 +176,8 @@
 
   margin-top: 5px;
 
-  color: rgba(255, 255, 255, 0.58);
+  color:
+    rgba(255, 255, 255, 0.58);
 
   font-size: 0.74rem;
 }
@@ -182,16 +206,13 @@
 
 /* ========================================
    Journey
-   ======================================== */
+======================================== */
 
 .journey {
   position: relative;
 
   padding-left: 72px;
 }
-
-
-/* vertical route */
 
 .journey::before {
   content: "";
@@ -216,7 +237,7 @@
 
 /* ========================================
    Journey Step
-   ======================================== */
+======================================== */
 
 .step {
   position: relative;
@@ -227,9 +248,6 @@
 .step:last-child {
   padding-bottom: 0;
 }
-
-
-/* route node */
 
 .node {
   position: absolute;
@@ -243,13 +261,18 @@
   display: grid;
   place-items: center;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 3px solid var(--color-gold);
+  border:
+    3px solid
+    var(--color-gold);
+
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 7px rgba(199, 162, 74, 0.09);
+    0 0 0 7px
+    rgba(199, 162, 74, 0.09);
 
   z-index: 2;
 }
@@ -258,7 +281,8 @@
   width: 6px;
   height: 6px;
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
   border-radius: 50%;
 }
@@ -266,7 +290,7 @@
 
 /* ========================================
    Step Content
-   ======================================== */
+======================================== */
 
 .stepTop {
   display: flex;
@@ -278,18 +302,27 @@
 }
 
 .stepNumber {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.76rem;
   font-weight: 800;
 
   letter-spacing: 0.1em;
+
+  flex-shrink: 0;
 }
 
 .stepTitle {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-size:
+    clamp(
+      1.35rem,
+      2vw,
+      1.8rem
+    );
 
   font-weight: 800;
 
@@ -301,7 +334,8 @@
 
   margin-left: 52px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.92rem;
 
@@ -311,7 +345,7 @@
 
 /* ========================================
    Tags
-   ======================================== */
+======================================== */
 
 .tags {
   display: flex;
@@ -326,12 +360,18 @@
 .tag {
   padding: 7px 10px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-full);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-full);
 
   font-size: 0.72rem;
   font-weight: 700;
@@ -340,10 +380,11 @@
 
 /* ========================================
    Highlight Step
-   ======================================== */
+======================================== */
 
 .highlightStep {
   margin-bottom: 58px;
+
   padding: 28px 30px 30px;
 
   background:
@@ -353,9 +394,11 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 .highlightStep .node {
@@ -363,29 +406,35 @@
 }
 
 .highlightStep .stepNumber {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 }
 
 .highlightStep .stepTitle {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 }
 
 .highlightStep .stepText {
-  color: rgba(255, 255, 255, 0.68);
+  color:
+    rgba(255, 255, 255, 0.68);
 }
 
 .highlightStep .tag {
-  color: rgba(255, 255, 255, 0.8);
+  color:
+    rgba(255, 255, 255, 0.8);
 
-  background: rgba(255, 255, 255, 0.06);
+  background:
+    rgba(255, 255, 255, 0.06);
 
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color:
+    rgba(255, 255, 255, 0.1);
 }
 
 
 /* ========================================
    Final Destination
-   ======================================== */
+======================================== */
 
 .destination {
   position: relative;
@@ -400,12 +449,18 @@
 
   gap: 28px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid rgba(199, 162, 74, 0.3);
-  border-radius: var(--radius-lg);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.3);
 
-  box-shadow: var(--shadow-sm);
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-sm);
 }
 
 .destinationContent {
@@ -417,7 +472,8 @@
 
   margin-bottom: 7px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -429,14 +485,16 @@
 .destinationTitle {
   margin-bottom: 8px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.25rem;
   font-weight: 800;
 }
 
 .destinationText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.86rem;
 
@@ -454,33 +512,44 @@
 
   padding: 0 22px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.85rem;
   font-weight: 800;
 
+  text-align: center;
+
   transition:
-    background var(--transition-fast),
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast);
+    background
+      var(--transition-fast),
+    transform
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .destinationButton:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Large Decorative Text
-   ======================================== */
+======================================== */
 
 .backgroundWord {
   position: absolute;
@@ -488,21 +557,138 @@
   right: -30px;
   bottom: -35px;
 
-  color: rgba(13, 49, 88, 0.025);
+  color:
+    rgba(13, 49, 88, 0.025);
 
-  font-size: clamp(7rem, 17vw, 16rem);
+  font-size:
+    clamp(
+      7rem,
+      17vw,
+      16rem
+    );
+
   font-weight: 900;
 
   letter-spacing: -0.08em;
 
   pointer-events: none;
+
   user-select: none;
 }
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .wrapper {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .intro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.2;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .germanyLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .germanyWord {
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .germanyAccent {
+  right: auto;
+  left: 0;
+}
+
+:global(html[dir="rtl"]) .journey {
+  padding-left: 0;
+  padding-right: 72px;
+}
+
+:global(html[dir="rtl"]) .journey::before {
+  left: auto;
+  right: 24px;
+}
+
+:global(html[dir="rtl"]) .node {
+  left: auto;
+  right: -59px;
+}
+
+:global(html[dir="rtl"]) .stepTop {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .stepNumber {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .stepTitle {
+  letter-spacing: -0.01em;
+
+  line-height: 1.45;
+}
+
+:global(html[dir="rtl"]) .stepText {
+  margin-left: 0;
+  margin-right: 52px;
+
+  text-align: right;
+
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .tags {
+  direction: rtl;
+
+  margin-left: 0;
+  margin-right: 52px;
+}
+
+:global(html[dir="rtl"]) .destination {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .destinationLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .destinationText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .backgroundWord {
+  right: auto;
+  left: -30px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .wrapper {
@@ -547,6 +733,26 @@
     margin-left: 0;
   }
 
+  :global(html[dir="rtl"]) .journey {
+    padding-left: 0;
+    padding-right: 54px;
+  }
+
+  :global(html[dir="rtl"]) .journey::before {
+    left: auto;
+    right: 17px;
+  }
+
+  :global(html[dir="rtl"]) .node {
+    left: auto;
+    right: -48px;
+  }
+
+  :global(html[dir="rtl"]) .stepText,
+  :global(html[dir="rtl"]) .tags {
+    margin-right: 0;
+  }
+
   .destination {
     align-items: flex-start;
     flex-direction: column;
@@ -564,7 +770,12 @@
   }
 
   .title {
-    font-size: clamp(2.6rem, 13vw, 3.8rem);
+    font-size:
+      clamp(
+        2.6rem,
+        13vw,
+        3.8rem
+      );
   }
 
   .description {
@@ -590,6 +801,21 @@
     height: 22px;
   }
 
+  :global(html[dir="rtl"]) .journey {
+    padding-left: 0;
+    padding-right: 44px;
+  }
+
+  :global(html[dir="rtl"]) .journey::before {
+    left: auto;
+    right: 13px;
+  }
+
+  :global(html[dir="rtl"]) .node {
+    left: auto;
+    right: -42px;
+  }
+
   .step {
     padding-bottom: 46px;
   }
@@ -608,6 +834,16 @@
 
   .highlightStep .node {
     left: -32px;
+  }
+
+  :global(html[dir="rtl"]) .highlightStep {
+    margin-left: 0;
+    margin-right: -10px;
+  }
+
+  :global(html[dir="rtl"]) .highlightStep .node {
+    left: auto;
+    right: -32px;
   }
 
   .destination {

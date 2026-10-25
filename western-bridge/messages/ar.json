@@ -1,0 +1,26 @@
+{
+  "Navigation": {
+    "home": "الرئيسية",
+    "individuals": "الأفراد",
+    "businesses": "الأعمال",
+    "education": "التعليم",
+    "medical": "القطاع الطبي",
+    "germany": "ألمانيا",
+    "services": "الخدمات",
+    "about": "من نحن",
+    "contact": "تواصل معنا",
+    "aiAdvisor": "مساعد WB"
+  },
+  "Languages": {
+    "german": "Deutsch",
+    "english": "English",
+    "arabic": "العربية"
+  },
+  "Common": {
+    "learnMore": "اعرف المزيد",
+    "contactUs": "تواصل معنا",
+    "close": "إغلاق",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة"
+  }
+}
