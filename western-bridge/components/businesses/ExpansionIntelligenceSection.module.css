@@ -1,43 +1,56 @@
 .section {
   position: relative;
-  padding: 130px 0;
-  background: var(--color-white);
+
+  padding: 100px 0;
+
+  background:
+    var(--color-white);
+
   overflow: hidden;
 }
 
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+
+  grid-template-columns:
+    minmax(0, 0.72fr)
+    minmax(0, 1.28fr);
+
   gap: 90px;
+
   align-items: start;
 }
 
 
 /* ========================================
    Left Side
-   ======================================== */
+======================================== */
 
 .intro {
   position: sticky;
+
   top: 125px;
 }
 
 .eyebrow {
   display: inline-flex;
   align-items: center;
+
   gap: 10px;
 
   margin-bottom: 20px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
+
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -46,89 +59,123 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 540px;
+
   margin-bottom: 24px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
+
   line-height: 1;
+
   letter-spacing: -0.055em;
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .description {
   max-width: 520px;
+
   margin-bottom: 32px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.98rem;
+
   line-height: 1.85;
 }
 
 
 /* ========================================
    Strategic Principle
-   ======================================== */
+======================================== */
 
 .principle {
   padding: 23px 24px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border-left: 4px solid var(--color-gold);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  border-left:
+    4px solid
+    var(--color-gold);
+
+  border-radius:
+    0
+    var(--radius-md)
+    var(--radius-md)
+    0;
 }
 
 .principleLabel {
   display: block;
+
   margin-bottom: 7px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.68rem;
   font-weight: 800;
+
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .principleText {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.93rem;
   font-weight: 700;
+
   line-height: 1.65;
 }
 
 
 /* ========================================
    Intelligence Matrix
-   ======================================== */
+======================================== */
 
 .matrix {
   position: relative;
 
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 
 /* ========================================
    Row
-   ======================================== */
+======================================== */
 
 .row {
   position: relative;
 
   display: grid;
-  grid-template-columns: 85px minmax(0, 1fr) 165px;
+
+  grid-template-columns:
+    85px
+    minmax(0, 1fr)
+    165px;
+
   gap: 28px;
 
   align-items: center;
@@ -137,45 +184,55 @@
 
   padding: 28px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .row:hover {
   padding-left: 18px;
   padding-right: 18px;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 }
 
 
 /* ========================================
    Number
-   ======================================== */
+======================================== */
 
 .number {
-  color: rgba(13, 49, 88, 0.12);
+  color:
+    rgba(13, 49, 88, 0.12);
 
   font-size: 3.2rem;
   font-weight: 900;
 
   line-height: 1;
+
   letter-spacing: -0.06em;
 
-  transition: color var(--transition-normal);
+  transition:
+    color
+      var(--transition-normal);
 }
 
 .row:hover .number {
-  color: var(--color-gold);
+  color:
+    var(--color-gold);
 }
 
 
 /* ========================================
    Row Content
-   ======================================== */
+======================================== */
 
 .rowContent {
   min-width: 0;
@@ -183,12 +240,15 @@
 
 .rowLabel {
   display: block;
+
   margin-bottom: 7px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.66rem;
   font-weight: 800;
+
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -196,26 +256,36 @@
 .rowTitle {
   margin-bottom: 10px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-size:
+    clamp(
+      1.25rem,
+      2vw,
+      1.7rem
+    );
+
   font-weight: 800;
+
   letter-spacing: -0.025em;
 }
 
 .rowText {
   max-width: 630px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.86rem;
+
   line-height: 1.7;
 }
 
 
 /* ========================================
    Strategic Meter
-   ======================================== */
+======================================== */
 
 .meter {
   min-width: 0;
@@ -232,16 +302,20 @@
 }
 
 .meterLabel {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.65rem;
   font-weight: 700;
+
   text-transform: uppercase;
+
   letter-spacing: 0.07em;
 }
 
 .meterValue {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.72rem;
   font-weight: 900;
@@ -250,9 +324,11 @@
 .track {
   height: 6px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 
   overflow: hidden;
 }
@@ -269,9 +345,6 @@
 
   border-radius: inherit;
 }
-
-
-/* Different visual lengths */
 
 .fillMarket {
   width: 92%;
@@ -292,13 +365,18 @@
 
 /* ========================================
    Bottom Decision Strip
-   ======================================== */
+======================================== */
 
 .decisionStrip {
   margin-top: 42px;
 
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    auto
+    minmax(0, 1fr)
+    auto;
+
   align-items: center;
 
   gap: 24px;
@@ -312,34 +390,51 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
-.decisionMark {
-  width: 50px;
-  height: 50px;
+.decisionLogo {
+  width: 56px;
+  height: 56px;
 
   display: grid;
   place-items: center;
 
-  color: var(--color-navy-dark);
+  flex-shrink: 0;
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-white);
+
+  border:
+    4px solid
+    rgba(199, 162, 74, 0.18);
 
   border-radius: 50%;
 
-  font-size: 1rem;
-  font-weight: 900;
+  overflow: hidden;
+}
+
+.decisionLogoImage {
+  width: 48px;
+  height: 48px;
+
+  display: block;
+
+  object-fit: contain;
 }
 
 .decisionLabel {
   display: block;
+
   margin-bottom: 5px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.65rem;
   font-weight: 800;
+
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
@@ -347,16 +442,19 @@
 .decisionTitle {
   margin-bottom: 5px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.08rem;
   font-weight: 800;
 }
 
 .decisionText {
-  color: rgba(255, 255, 255, 0.65);
+  color:
+    rgba(255, 255, 255, 0.65);
 
   font-size: 0.8rem;
+
   line-height: 1.55;
 }
 
@@ -369,90 +467,184 @@
 
   flex-shrink: 0;
 
+  gap: 8px;
+
   padding: 0 20px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.82rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .decisionButton:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
-   Decorative Index
-   ======================================== */
+   RTL
+======================================== */
 
-.sideIndex {
-  position: absolute;
-
-  top: 50%;
-  right: -58px;
-
-  transform: translateY(-50%) rotate(90deg);
-
-  color: rgba(13, 49, 88, 0.05);
-
-  font-size: 0.68rem;
-  font-weight: 900;
-
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-
-  pointer-events: none;
+:global(html[dir="rtl"]) .wrapper {
+  direction: rtl;
 }
 
+:global(html[dir="rtl"]) .intro {
+  text-align: right;
+}
 
-/* ========================================
-   Background Decoration
-   ======================================== */
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
 
-.backgroundNumber {
-  position: absolute;
+  letter-spacing: 0;
+  text-transform: none;
+}
 
-  left: -25px;
-  bottom: -70px;
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
 
-  color: rgba(13, 49, 88, 0.025);
+  line-height: 1.25;
+}
 
-  font-size: clamp(10rem, 20vw, 20rem);
-  font-weight: 900;
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
 
-  line-height: 1;
+:global(html[dir="rtl"]) .principle {
+  border-left: 0;
 
-  pointer-events: none;
-  user-select: none;
+  border-right:
+    4px solid
+    var(--color-gold);
+
+  border-radius:
+    var(--radius-md)
+    0
+    0
+    var(--radius-md);
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .principleLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .principleText {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .matrix {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .row {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .number {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .rowContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .rowLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .rowTitle {
+  letter-spacing: 0;
+
+  line-height: 1.4;
+}
+
+:global(html[dir="rtl"]) .rowText {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .meter {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .meterLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .fill {
+  margin-left: auto;
+
+  background:
+    linear-gradient(
+      270deg,
+      var(--color-gold),
+      var(--color-navy)
+    );
+}
+
+:global(html[dir="rtl"]) .decisionStrip {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .decisionStrip > div:nth-child(2) {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .decisionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .decisionText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .decisionButton {
+  direction: rtl;
 }
 
 
 /* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .wrapper {
     grid-template-columns: 1fr;
+
     gap: 65px;
   }
 
   .intro {
     position: relative;
+
     top: auto;
 
     max-width: 760px;
@@ -466,21 +658,32 @@
   }
 
   .row {
-    grid-template-columns: 60px minmax(0, 1fr);
+    grid-template-columns:
+      60px
+      minmax(0, 1fr);
+
     gap: 20px;
   }
 
   .meter {
     grid-column: 2;
+
     max-width: 320px;
   }
 
+  :global(html[dir="rtl"]) .meter {
+    grid-column: 2;
+  }
+
   .decisionStrip {
-    grid-template-columns: auto 1fr;
+    grid-template-columns:
+      auto
+      1fr;
   }
 
   .decisionButton {
     grid-column: 1 / -1;
+
     width: 100%;
   }
 }
@@ -492,7 +695,12 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .row {
@@ -507,14 +715,16 @@
     padding-left: 0;
     padding-right: 0;
 
-    background: transparent;
+    background:
+      transparent;
   }
 
   .number {
     font-size: 2.3rem;
   }
 
-  .meter {
+  .meter,
+  :global(html[dir="rtl"]) .meter {
     grid-column: auto;
 
     max-width: 100%;
@@ -526,13 +736,13 @@
     padding: 24px;
   }
 
-  .decisionMark {
-    width: 46px;
-    height: 46px;
+  .decisionLogo {
+    width: 52px;
+    height: 52px;
   }
 
-  .backgroundNumber,
-  .sideIndex {
-    display: none;
+  .decisionLogoImage {
+    width: 44px;
+    height: 44px;
   }
 }

@@ -1,7 +1,8 @@
 .section {
-  padding: 135px 0;
+  padding: 90px 0;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
   overflow: hidden;
 }
@@ -9,10 +10,11 @@
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .layout {
   display: grid;
+
   grid-template-columns:
     minmax(380px, 0.92fr)
     minmax(0, 1.08fr);
@@ -25,10 +27,11 @@
 
 /* ========================================
    Visual Column
-   ======================================== */
+======================================== */
 
 .visualColumn {
   position: sticky;
+
   top: 110px;
 }
 
@@ -39,23 +42,28 @@
 
   overflow: hidden;
 
-  border-radius: 30px 30px 100px 30px;
+  border-radius:
+    30px 30px 100px 30px;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.9s ease;
+  transition:
+    transform 0.9s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -70,7 +78,7 @@
 
 /* ========================================
    Image Typography
-   ======================================== */
+======================================== */
 
 .imageTop {
   position: absolute;
@@ -85,7 +93,8 @@
   align-items: center;
   justify-content: space-between;
 
-  color: rgba(255, 255, 255, 0.7);
+  color:
+    rgba(255, 255, 255, 0.7);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -108,7 +117,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -120,9 +130,16 @@
 .imageContent h3 {
   max-width: 480px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-size: clamp(1.45rem, 2.6vw, 2.2rem);
+  font-size:
+    clamp(
+      1.45rem,
+      2.6vw,
+      2.2rem
+    );
+
   font-weight: 800;
 
   line-height: 1.22;
@@ -133,29 +150,36 @@
 
 /* ========================================
    Visual Foot
-   ======================================== */
+======================================== */
 
 .visualFoot {
   display: grid;
-  grid-template-columns: auto minmax(80px, 1fr) auto;
+
+  grid-template-columns:
+    auto
+    minmax(80px, 1fr)
+    auto;
 
   align-items: center;
 
   gap: 14px;
 
-  padding: 18px 4px 0;
+  padding:
+    18px 4px 0;
 }
 
 .visualFoot span,
 .visualFoot strong {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.64rem;
   font-weight: 700;
 }
 
 .visualFoot strong {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 }
 
 .routeLine {
@@ -163,7 +187,8 @@
 
   height: 1px;
 
-  background: var(--color-border);
+  background:
+    var(--color-border);
 }
 
 .routeLine span {
@@ -175,17 +200,19 @@
   width: 7px;
   height: 7px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
   border-radius: 50%;
 
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
 }
 
 
 /* ========================================
    Story
-   ======================================== */
+======================================== */
 
 .story {
   padding-top: 12px;
@@ -199,7 +226,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -212,7 +240,8 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
@@ -220,9 +249,15 @@
 
   margin-bottom: 24px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.9rem, 5vw, 4.9rem);
+  font-size:
+    clamp(
+      2.9rem,
+      5vw,
+      4rem
+    );
 
   line-height: 0.98;
 
@@ -230,7 +265,12 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
+  display: block;
+
+  margin-top: 6px;
+
+  color:
+    var(--color-gold-dark);
 }
 
 .lead {
@@ -238,7 +278,8 @@
 
   margin-bottom: 24px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.18rem;
   font-weight: 700;
@@ -251,7 +292,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.88rem;
 
@@ -261,20 +303,31 @@
 
 /* ========================================
    Statement
-   ======================================== */
+======================================== */
 
 .statement {
   max-width: 650px;
 
-  margin: 31px 0;
+  margin:
+    31px 0;
 
-  padding: 7px 0 7px 24px;
+  padding:
+    7px 0 7px 24px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  border-left: 3px solid var(--color-gold);
+  border-left:
+    3px solid
+    var(--color-gold);
 
-  font-size: clamp(1.4rem, 2.5vw, 2.05rem);
+  font-size:
+    clamp(
+      1.4rem,
+      2.5vw,
+      2.05rem
+    );
+
   font-weight: 800;
 
   line-height: 1.35;
@@ -285,7 +338,7 @@
 
 /* ========================================
    Link
-   ======================================== */
+======================================== */
 
 .link {
   display: inline-flex;
@@ -295,38 +348,47 @@
 
   margin-top: 10px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.76rem;
   font-weight: 800;
 
   transition:
-    gap var(--transition-fast),
-    color var(--transition-fast);
+    gap
+      var(--transition-fast),
+    color
+      var(--transition-fast);
 }
 
 .link:hover {
   gap: 13px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 
 /* ========================================
    Bridge Logic
-   ======================================== */
+======================================== */
 
 .logic {
   margin-top: 95px;
 
   padding-top: 50px;
 
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .logicIntro {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr);
 
   align-items: start;
 
@@ -336,7 +398,8 @@
 }
 
 .logicIntro > span {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.59rem;
   font-weight: 900;
@@ -347,9 +410,16 @@
 .logicIntro h3 {
   max-width: 650px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  font-size:
+    clamp(
+      1.7rem,
+      3vw,
+      2.5rem
+    );
+
   font-weight: 800;
 
   line-height: 1.2;
@@ -360,33 +430,53 @@
 
 /* ========================================
    Logic Flow
-   ======================================== */
+======================================== */
 
 .logicFlow {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 
-  border-top: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    var(--color-border);
+
+  border-left:
+    1px solid
+    var(--color-border);
 }
 
 .logicItem {
   min-height: 300px;
 
-  padding: 27px 25px;
+  padding:
+    27px 25px;
 
-  border-right: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border-right:
+    1px solid
+    var(--color-border);
+
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   transition:
-    background var(--transition-normal),
-    transform var(--transition-normal);
+    background
+      var(--transition-normal),
+    transform
+      var(--transition-normal);
 }
 
 .logicItem:hover {
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 
-  transform: translateY(-3px);
+  transform:
+    translateY(-3px);
 }
 
 .logicHead {
@@ -400,14 +490,16 @@
 }
 
 .number {
-  color: rgba(13, 49, 88, 0.14);
+  color:
+    rgba(13, 49, 88, 0.14);
 
   font-size: 1.9rem;
   font-weight: 900;
 }
 
 .logicLabel {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.56rem;
   font-weight: 800;
@@ -419,7 +511,8 @@
 .logicItem h4 {
   margin-bottom: 11px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1rem;
   font-weight: 800;
@@ -428,7 +521,8 @@
 }
 
 .logicItem p {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.71rem;
 
@@ -437,8 +531,150 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    30px 30px 30px 100px;
+}
+
+:global(html[dir="rtl"]) .imageTop {
+  direction: rtl;
+
+  letter-spacing: 0.08em;
+}
+
+:global(html[dir="rtl"]) .imageContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .imageLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .imageContent h3 {
+  line-height: 1.5;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .visualFoot {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .story {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .lead {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .copy {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .statement {
+  padding:
+    7px 24px 7px 0;
+
+  border-left: 0;
+
+  border-right:
+    3px solid
+    var(--color-gold);
+
+  line-height: 1.6;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .link {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .logic {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .logicIntro {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .logicIntro > span {
+  text-align: right;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .logicIntro h3 {
+  text-align: right;
+
+  line-height: 1.5;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .logicFlow {
+  direction: rtl;
+
+  border-left: 0;
+
+  border-right:
+    1px solid
+    var(--color-border);
+}
+
+:global(html[dir="rtl"]) .logicItem {
+  text-align: right;
+
+  border-right: 0;
+
+  border-left:
+    1px solid
+    var(--color-border);
+}
+
+:global(html[dir="rtl"]) .logicHead {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .logicLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .logicItem h4 {
+  line-height: 1.6;
+}
+
+:global(html[dir="rtl"]) .logicItem p {
+  line-height: 1.9;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .layout {
@@ -464,7 +700,11 @@
   }
 
   .logicFlow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
   }
 }
 
@@ -474,10 +714,12 @@
     padding: 95px 0;
   }
 
-  .visual {
+  .visual,
+  :global(html[dir="rtl"]) .visual {
     min-height: 450px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
   }
 
   .logicIntro {
@@ -494,7 +736,12 @@
   }
 
   .title {
-    font-size: clamp(2.5rem, 12vw, 3.8rem);
+    font-size:
+      clamp(
+        2.5rem,
+        12vw,
+        3.8rem
+      );
   }
 
   .visual {

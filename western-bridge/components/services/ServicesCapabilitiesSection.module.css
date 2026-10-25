@@ -1,17 +1,21 @@
 .section {
-  padding: 135px 0;
+  padding: 90px 0;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 }
 
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.65fr);
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.65fr);
 
   align-items: end;
 
@@ -28,7 +32,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -41,13 +46,20 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 4.9vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      4.9vw,
+      4rem
+    );
 
   line-height: 0.98;
 
@@ -55,13 +67,15 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .intro {
   max-width: 620px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.93rem;
 
@@ -71,7 +85,7 @@
 
 /* ========================================
    Visual
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
@@ -82,24 +96,29 @@
 
   overflow: hidden;
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 .image {
   object-fit: cover;
   object-position: center;
 
-  transition: transform 0.9s ease;
+  transition:
+    transform 0.9s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.02);
+  transform:
+    scale(1.02);
 }
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -127,7 +146,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -137,9 +157,16 @@
 }
 
 .visualContent h3 {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-size:
+    clamp(
+      1.6rem,
+      3vw,
+      2.5rem
+    );
+
   font-weight: 800;
 
   line-height: 1.12;
@@ -150,23 +177,31 @@
 
 /* ========================================
    Ledger
-   ======================================== */
+======================================== */
 
 .ledger {
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .ledgerHeader {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+
+  grid-template-columns:
+    minmax(280px, 0.85fr)
+    minmax(0, 1.15fr);
 
   gap: 60px;
 
   padding: 13px 0;
 
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -177,7 +212,10 @@
 
 .row {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr);
+
+  grid-template-columns:
+    minmax(280px, 0.85fr)
+    minmax(0, 1.15fr);
 
   align-items: center;
 
@@ -185,28 +223,36 @@
 
   padding: 27px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .row:hover {
   padding-left: 18px;
   padding-right: 18px;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 }
 
 
 /* ========================================
    Identity
-   ======================================== */
+======================================== */
 
 .identity {
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
+
+  grid-template-columns:
+    52px
+    minmax(0, 1fr);
 
   align-items: center;
 
@@ -214,7 +260,8 @@
 }
 
 .number {
-  color: rgba(13, 49, 88, 0.14);
+  color:
+    rgba(13, 49, 88, 0.14);
 
   font-size: 1.9rem;
   font-weight: 900;
@@ -223,7 +270,8 @@
 }
 
 .identity h3 {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.05rem;
   font-weight: 800;
@@ -234,7 +282,8 @@
 .row > p {
   max-width: 760px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.77rem;
 
@@ -244,19 +293,23 @@
 
 /* ========================================
    Bottom CTA
-   ======================================== */
+======================================== */
 
 .bottom {
   margin-top: 55px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
   gap: 40px;
 
-  padding: 31px 33px;
+  padding:
+    31px 33px;
 
   background:
     linear-gradient(
@@ -265,7 +318,8 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
 .bottomLabel {
@@ -273,7 +327,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -285,7 +340,8 @@
 .bottom h3 {
   margin-bottom: 6px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.08rem;
   font-weight: 800;
@@ -294,7 +350,8 @@
 .bottom p {
   max-width: 760px;
 
-  color: rgba(255, 255, 255, 0.63);
+  color:
+    rgba(255, 255, 255, 0.63);
 
   font-size: 0.74rem;
 
@@ -310,13 +367,17 @@
 
   gap: 8px;
 
-  padding: 0 20px;
+  padding:
+    0 20px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.77rem;
   font-weight: 800;
@@ -324,20 +385,139 @@
   white-space: nowrap;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast);
 }
 
 .button:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
+}
+
+
+/* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .top {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .heading,
+:global(html[dir="rtl"]) .intro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  line-height: 1.22;
+
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .intro {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .overlay {
+  background:
+    linear-gradient(
+      270deg,
+      rgba(6, 28, 48, 0.88) 0%,
+      rgba(7, 31, 54, 0.56) 48%,
+      rgba(7, 31, 54, 0.12) 100%
+    );
+}
+
+:global(html[dir="rtl"]) .visualContent {
+  left: auto;
+  right: 38px;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .visualContent span {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .visualContent h3 {
+  line-height: 1.4;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .ledger {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .ledgerHeader {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .row {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .identity {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .identity h3 {
+  text-align: right;
+
+  line-height: 1.5;
+}
+
+:global(html[dir="rtl"]) .row > p {
+  text-align: right;
+
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .bottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .bottom > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .bottomLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .bottom h3 {
+  line-height: 1.5;
+}
+
+:global(html[dir="rtl"]) .bottom p {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .button {
+  direction: rtl;
 }
 
 
 /* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 950px) {
   .top {
@@ -371,7 +551,8 @@
     min-height: 360px;
   }
 
-  .overlay {
+  .overlay,
+  :global(html[dir="rtl"]) .overlay {
     background:
       linear-gradient(
         180deg,
@@ -396,16 +577,23 @@
   }
 
   .title {
-    font-size: clamp(2.45rem, 12vw, 3.7rem);
+    font-size:
+      clamp(
+        2.45rem,
+        12vw,
+        3.7rem
+      );
   }
 
   .visual {
     min-height: 320px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
-  .visualContent {
+  .visualContent,
+  :global(html[dir="rtl"]) .visualContent {
     left: 21px;
     right: 21px;
     bottom: 22px;
@@ -425,10 +613,12 @@
     padding-left: 0;
     padding-right: 0;
 
-    background: transparent;
+    background:
+      transparent;
   }
 
   .bottom {
-    padding: 24px 21px;
+    padding:
+      24px 21px;
   }
 }

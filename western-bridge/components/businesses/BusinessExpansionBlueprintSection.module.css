@@ -1,14 +1,18 @@
 .section {
   position: relative;
-  padding: 135px 0;
-  background: var(--color-white);
+
+  padding: 100px 0;
+
+  background:
+    var(--color-white);
+
   overflow: hidden;
 }
 
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: flex;
@@ -32,7 +36,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
@@ -45,15 +50,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 760px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -61,13 +73,15 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .headerText {
   max-width: 470px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.96rem;
 
@@ -77,7 +91,7 @@
 
 /* ========================================
    Blueprint
-   ======================================== */
+======================================== */
 
 .blueprint {
   position: relative;
@@ -91,8 +105,12 @@
       #f8fafc 100%
     );
 
-  border: 1px solid #dfe7ed;
-  border-radius: var(--radius-xl);
+  border:
+    1px solid
+    #dfe7ed;
+
+  border-radius:
+    var(--radius-xl);
 
   overflow: hidden;
 }
@@ -100,7 +118,7 @@
 
 /* ========================================
    Technical Grid
-   ======================================== */
+======================================== */
 
 .grid {
   position: absolute;
@@ -119,7 +137,8 @@
       transparent 1px
     );
 
-  background-size: 30px 30px;
+  background-size:
+    30px 30px;
 
   pointer-events: none;
 }
@@ -127,10 +146,11 @@
 
 /* ========================================
    Blueprint Header
-   ======================================== */
+======================================== */
 
 .blueprintTop {
   position: relative;
+
   z-index: 3;
 
   display: flex;
@@ -143,7 +163,9 @@
 
   padding-bottom: 20px;
 
-  border-bottom: 1px solid rgba(13, 49, 88, 0.13);
+  border-bottom:
+    1px solid
+    rgba(13, 49, 88, 0.13);
 }
 
 .blueprintIdentity {
@@ -153,21 +175,34 @@
   gap: 12px;
 }
 
-.blueprintMark {
-  width: 42px;
-  height: 42px;
+.blueprintLogo {
+  width: 52px;
+  height: 52px;
 
   display: grid;
   place-items: center;
 
-  color: var(--color-white);
+  flex-shrink: 0;
 
-  background: var(--color-navy);
+  background:
+    var(--color-white);
 
-  border-radius: 10px;
+  border:
+    4px solid
+    rgba(199, 162, 74, 0.18);
 
-  font-size: 0.72rem;
-  font-weight: 900;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.blueprintLogoImage {
+  width: 46px;
+  height: 46px;
+
+  display: block;
+
+  object-fit: contain;
 }
 
 .blueprintLabel {
@@ -175,7 +210,8 @@
 
   margin-bottom: 3px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -185,14 +221,16 @@
 }
 
 .blueprintName {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.9rem;
   font-weight: 800;
 }
 
 .blueprintCode {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.64rem;
   font-weight: 700;
@@ -203,20 +241,23 @@
 
 /* ========================================
    Blueprint Flow
-   ======================================== */
+======================================== */
 
 .flow {
   position: relative;
+
   z-index: 3;
 
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      5,
+      minmax(0, 1fr)
+    );
 
   gap: 0;
 }
-
-
-/* Main line */
 
 .flow::before {
   content: "";
@@ -245,13 +286,15 @@
 
 /* ========================================
    Step
-   ======================================== */
+======================================== */
 
 .step {
   position: relative;
+
   z-index: 2;
 
-  padding: 0 18px;
+  padding:
+    0 18px;
 
   text-align: center;
 }
@@ -263,31 +306,47 @@
   display: grid;
   place-items: center;
 
-  margin: 0 auto 22px;
+  margin:
+    0 auto 22px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 2px solid rgba(13, 49, 88, 0.16);
+  border:
+    2px solid
+    rgba(13, 49, 88, 0.16);
+
   border-radius: 50%;
 
-  box-shadow: var(--shadow-sm);
+  box-shadow:
+    var(--shadow-sm);
 
   transition:
-    transform var(--transition-normal),
-    border-color var(--transition-normal),
-    background var(--transition-normal);
+    transform
+      var(--transition-normal),
+    border-color
+      var(--transition-normal),
+    background
+      var(--transition-normal),
+    color
+      var(--transition-normal);
 }
 
 .step:hover .stepNode {
-  transform: translateY(-5px);
+  transform:
+    translateY(-5px);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  border-color: var(--color-navy);
+  border-color:
+    var(--color-navy);
 }
 
 .stepNumber {
@@ -295,7 +354,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.64rem;
   font-weight: 900;
@@ -306,7 +366,8 @@
 .stepTitle {
   margin-bottom: 9px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1rem;
   font-weight: 800;
@@ -315,7 +376,8 @@
 }
 
 .stepText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.73rem;
 
@@ -325,10 +387,11 @@
 
 /* ========================================
    Highlight Step
-   ======================================== */
+======================================== */
 
 .featured .stepNode {
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
   background:
     linear-gradient(
@@ -337,14 +400,17 @@
       var(--color-gold)
     );
 
-  border-color: transparent;
+  border-color:
+    transparent;
 
   box-shadow:
-    0 10px 25px rgba(199, 162, 74, 0.22);
+    0 10px 25px
+    rgba(199, 162, 74, 0.22);
 }
 
 .featured:hover .stepNode {
-  color: var(--navy-dark);
+  color:
+    var(--color-navy-dark);
 
   background:
     linear-gradient(
@@ -352,21 +418,30 @@
       var(--color-gold-light),
       var(--color-gold)
     );
+
+  border-color:
+    transparent;
 }
 
 
 /* ========================================
    Blueprint Detail Strip
-   ======================================== */
+======================================== */
 
 .detailStrip {
   position: relative;
+
   z-index: 3;
 
   margin-top: 44px;
 
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
 
   gap: 14px;
 }
@@ -374,12 +449,21 @@
 .detail {
   padding: 20px;
 
-  background: rgba(255, 255, 255, 0.82);
+  background:
+    rgba(255, 255, 255, 0.82);
 
-  border: 1px solid rgba(13, 49, 88, 0.09);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    rgba(13, 49, 88, 0.09);
 
-  backdrop-filter: blur(8px);
+  border-radius:
+    var(--radius-md);
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
 }
 
 .detailLabel {
@@ -387,7 +471,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.61rem;
   font-weight: 800;
@@ -399,14 +484,16 @@
 .detailTitle {
   margin-bottom: 6px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.88rem;
   font-weight: 800;
 }
 
 .detailText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.7rem;
 
@@ -416,15 +503,17 @@
 
 /* ========================================
    Final Action
-   ======================================== */
+======================================== */
 
 .finalAction {
   position: relative;
+
   z-index: 3;
 
   margin-top: 22px;
 
-  padding: 25px 28px;
+  padding:
+    25px 28px;
 
   display: flex;
   align-items: center;
@@ -439,7 +528,8 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
 .actionContent {
@@ -451,7 +541,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.64rem;
   font-weight: 800;
@@ -463,14 +554,16 @@
 .actionTitle {
   margin-bottom: 6px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.13rem;
   font-weight: 800;
 }
 
 .actionText {
-  color: rgba(255, 255, 255, 0.63);
+  color:
+    rgba(255, 255, 255, 0.63);
 
   font-size: 0.8rem;
 
@@ -488,35 +581,45 @@
 
   gap: 9px;
 
-  padding: 0 22px;
+  padding:
+    0 22px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.82rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .actionButton:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Decorative
-   ======================================== */
+======================================== */
 
 .blueprintStamp {
   position: absolute;
@@ -524,14 +627,16 @@
   right: 25px;
   bottom: 18px;
 
-  color: rgba(13, 49, 88, 0.035);
+  color:
+    rgba(13, 49, 88, 0.035);
 
   font-size: 4.8rem;
   font-weight: 900;
 
   letter-spacing: -0.05em;
 
-  transform: rotate(-8deg);
+  transform:
+    rotate(-8deg);
 
   pointer-events: none;
   user-select: none;
@@ -539,8 +644,128 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .headerLeft,
+:global(html[dir="rtl"]) .headerText {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .headerText {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .blueprint {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .blueprintTop {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .blueprintIdentity {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .blueprintIdentity > div:last-child {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .blueprintLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .blueprintCode {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .flow {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .stepNumber {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .stepTitle {
+  line-height: 1.45;
+}
+
+:global(html[dir="rtl"]) .stepText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .detailStrip {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .detail {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .detailLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .detailText {
+  line-height: 1.75;
+}
+
+:global(html[dir="rtl"]) .finalAction {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .actionContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .actionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .actionText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .actionButton {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .blueprintStamp {
+  right: auto;
+  left: 25px;
+
+  letter-spacing: 0;
+
+  transform:
+    rotate(8deg);
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .header {
@@ -555,9 +780,14 @@
   }
 
   .flow {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
 
-    gap: 34px 10px;
+    gap:
+      34px 10px;
   }
 
   .flow::before {
@@ -572,11 +802,16 @@
   }
 
   .blueprint {
-    padding: 34px 26px;
+    padding:
+      34px 26px;
   }
 
   .flow {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
   }
 
   .detailStrip {
@@ -600,13 +835,20 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .blueprint {
-    padding: 28px 20px;
+    padding:
+      28px 20px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .blueprintTop {
@@ -626,8 +868,18 @@
     text-align: left;
   }
 
+  :global(html[dir="rtl"]) .step {
+    text-align: right;
+  }
+
   .stepNode {
-    margin: 0 0 18px;
+    margin:
+      0 0 18px;
+  }
+
+  :global(html[dir="rtl"]) .stepNode {
+    margin:
+      0 0 18px auto;
   }
 
   .finalAction {

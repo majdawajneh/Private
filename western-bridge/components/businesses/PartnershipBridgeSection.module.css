@@ -1,7 +1,7 @@
 .section {
   position: relative;
 
-  padding: 135px 0;
+  padding: 90px 0;
 
   background:
     linear-gradient(
@@ -16,7 +16,7 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   max-width: 860px;
@@ -32,7 +32,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
@@ -45,7 +46,8 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
@@ -53,9 +55,15 @@
 
   margin-bottom: 22px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -63,13 +71,15 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .description {
   max-width: 720px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.98rem;
 
@@ -79,14 +89,17 @@
 
 /* ========================================
    Bridge Stage
-   ======================================== */
+======================================== */
 
 .bridgeStage {
   position: relative;
 
   min-height: 560px;
 
-  padding: 55px 45px 40px;
+  padding:
+    55px
+    45px
+    40px;
 
   background:
     linear-gradient(
@@ -96,10 +109,12 @@
       #123f69 100%
     );
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
   box-shadow:
-    0 30px 70px rgba(8, 38, 65, 0.2);
+    0 30px 70px
+    rgba(8, 38, 65, 0.2);
 
   overflow: hidden;
 }
@@ -107,11 +122,10 @@
 
 /* ========================================
    Grid Background
-   ======================================== */
+======================================== */
 
 .grid {
   position: absolute;
-
   inset: 0;
 
   opacity: 0.035;
@@ -127,7 +141,8 @@
       transparent 1px
     );
 
-  background-size: 45px 45px;
+  background-size:
+    45px 45px;
 
   pointer-events: none;
 }
@@ -135,7 +150,7 @@
 
 /* ========================================
    Top End Points
-   ======================================== */
+======================================== */
 
 .endpoints {
   position: relative;
@@ -162,7 +177,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.66rem;
   font-weight: 800;
@@ -172,7 +188,8 @@
 }
 
 .endpointTitle {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.12rem;
   font-weight: 800;
@@ -183,7 +200,8 @@
 .endpointText {
   margin-top: 6px;
 
-  color: rgba(255, 255, 255, 0.48);
+  color:
+    rgba(255, 255, 255, 0.48);
 
   font-size: 0.7rem;
 
@@ -193,7 +211,7 @@
 
 /* ========================================
    Bridge Structure
-   ======================================== */
+======================================== */
 
 .bridge {
   position: relative;
@@ -206,7 +224,9 @@
 }
 
 
-/* Main deck */
+/* ========================================
+   Main Deck
+======================================== */
 
 .deck {
   position: absolute;
@@ -225,16 +245,18 @@
       var(--color-gold)
     );
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 
   box-shadow:
-    0 0 18px rgba(199, 162, 74, 0.25);
+    0 0 18px
+    rgba(199, 162, 74, 0.25);
 }
 
 
 /* ========================================
    Main Pylons
-   ======================================== */
+======================================== */
 
 .pylonLeft,
 .pylonRight {
@@ -252,7 +274,8 @@
       rgba(199, 162, 74, 0.3)
     );
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 }
 
 .pylonLeft {
@@ -275,21 +298,27 @@
   width: 18px;
   height: 18px;
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border: 5px solid rgba(255, 255, 255, 0.08);
+  border:
+    5px solid
+    rgba(255, 255, 255, 0.08);
+
   border-radius: 50%;
 
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
 
   box-shadow:
-    0 0 0 7px rgba(199, 162, 74, 0.06);
+    0 0 0 7px
+    rgba(199, 162, 74, 0.06);
 }
 
 
 /* ========================================
    Bridge Cables
-   ======================================== */
+======================================== */
 
 .cable {
   position: absolute;
@@ -303,7 +332,8 @@
       rgba(219, 193, 118, 0.12)
     );
 
-  transform-origin: left center;
+  transform-origin:
+    left center;
 
   opacity: 0.75;
 }
@@ -314,7 +344,8 @@
 
   width: 240px;
 
-  transform: rotate(16deg);
+  transform:
+    rotate(16deg);
 }
 
 .cableTwo {
@@ -323,7 +354,8 @@
 
   width: 175px;
 
-  transform: rotate(31deg);
+  transform:
+    rotate(31deg);
 }
 
 .cableThree {
@@ -332,8 +364,11 @@
 
   width: 240px;
 
-  transform-origin: right center;
-  transform: rotate(-16deg);
+  transform-origin:
+    right center;
+
+  transform:
+    rotate(-16deg);
 }
 
 .cableFour {
@@ -342,14 +377,17 @@
 
   width: 175px;
 
-  transform-origin: right center;
-  transform: rotate(-31deg);
+  transform-origin:
+    right center;
+
+  transform:
+    rotate(-31deg);
 }
 
 
 /* ========================================
    Ecosystem Nodes
-   ======================================== */
+======================================== */
 
 .nodes {
   position: absolute;
@@ -359,7 +397,12 @@
   top: 87px;
 
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      5,
+      minmax(0, 1fr)
+    );
 
   gap: 15px;
 
@@ -380,30 +423,40 @@
 
   margin-bottom: 21px;
 
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  border: 4px solid var(--color-gold-light);
+  border:
+    4px solid
+    var(--color-gold-light);
+
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 6px rgba(199, 162, 74, 0.08);
+    0 0 0 6px
+    rgba(199, 162, 74, 0.08);
 
   transition:
-    transform var(--transition-normal),
-    box-shadow var(--transition-normal);
+    transform
+      var(--transition-normal),
+    box-shadow
+      var(--transition-normal);
 }
 
 .node:hover .nodeDot {
-  transform: scale(1.18);
+  transform:
+    scale(1.18);
 
   box-shadow:
-    0 0 0 10px rgba(199, 162, 74, 0.1);
+    0 0 0 10px
+    rgba(199, 162, 74, 0.1);
 }
 
 .nodeTitle {
   margin-bottom: 5px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 0.76rem;
   font-weight: 800;
@@ -412,7 +465,8 @@
 .nodeText {
   max-width: 130px;
 
-  color: rgba(255, 255, 255, 0.42);
+  color:
+    rgba(255, 255, 255, 0.42);
 
   font-size: 0.62rem;
 
@@ -422,7 +476,7 @@
 
 /* ========================================
    Western Bridge Layer
-   ======================================== */
+======================================== */
 
 .connectionLayer {
   position: absolute;
@@ -430,7 +484,8 @@
   left: 50%;
   bottom: 10px;
 
-  width: min(640px, 90%);
+  width:
+    min(640px, 90%);
 
   padding: 18px 24px;
 
@@ -440,15 +495,24 @@
 
   gap: 24px;
 
-  background: rgba(255, 255, 255, 0.07);
+  background:
+    rgba(255, 255, 255, 0.07);
 
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.09);
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius:
+    var(--radius-md);
 
-  transform: translateX(-50%);
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
+
+  transform:
+    translateX(-50%);
 
   z-index: 5;
 }
@@ -460,28 +524,34 @@
   gap: 12px;
 }
 
-.connectionMark {
-  width: 40px;
-  height: 40px;
+.connectionLogo {
+  width: 46px;
+  height: 46px;
 
   display: grid;
   place-items: center;
 
   flex-shrink: 0;
 
-  color: var(--color-navy-dark);
-
   background:
-    linear-gradient(
-      135deg,
-      var(--color-gold-light),
-      var(--color-gold)
-    );
+    rgba(255, 255, 255, 0.96);
 
-  border-radius: 10px;
+  border:
+    3px solid
+    rgba(199, 162, 74, 0.2);
 
-  font-size: 0.7rem;
-  font-weight: 900;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.connectionLogoImage {
+  width: 40px;
+  height: 40px;
+
+  display: block;
+
+  object-fit: contain;
 }
 
 .connectionLabel {
@@ -489,7 +559,8 @@
 
   margin-bottom: 3px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -499,7 +570,8 @@
 }
 
 .connectionTitle {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 0.82rem;
   font-weight: 800;
@@ -508,7 +580,8 @@
 .connectionText {
   max-width: 260px;
 
-  color: rgba(255, 255, 255, 0.5);
+  color:
+    rgba(255, 255, 255, 0.5);
 
   font-size: 0.65rem;
 
@@ -520,13 +593,16 @@
 
 /* ========================================
    Bottom Strategy Area
-   ======================================== */
+======================================== */
 
 .bottom {
   margin-top: 35px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
@@ -536,7 +612,8 @@
 .bottomText {
   max-width: 760px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.88rem;
 
@@ -554,33 +631,42 @@
 
   padding: 0 22px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.84rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .button:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Decorative Word
-   ======================================== */
+======================================== */
 
 .backgroundWord {
   position: absolute;
@@ -588,14 +674,22 @@
   left: 50%;
   bottom: -45px;
 
-  color: rgba(255, 255, 255, 0.025);
+  color:
+    rgba(255, 255, 255, 0.025);
 
-  font-size: clamp(7rem, 15vw, 14rem);
+  font-size:
+    clamp(
+      7rem,
+      15vw,
+      14rem
+    );
+
   font-weight: 900;
 
   letter-spacing: -0.08em;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 
   pointer-events: none;
   user-select: none;
@@ -603,8 +697,113 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .bridgeStage {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .endpoints {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .endpoint {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .endpoint:last-child {
+  text-align: left;
+}
+
+:global(html[dir="rtl"]) .endpointLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .endpointText {
+  line-height: 1.7;
+}
+
+:global(html[dir="rtl"]) .nodes {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .nodeTitle,
+:global(html[dir="rtl"]) .nodeText {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .nodeText {
+  line-height: 1.65;
+}
+
+:global(html[dir="rtl"]) .connectionLayer {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .connectionIdentity {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .connectionIdentity > div:last-child {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .connectionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .connectionText {
+  text-align: left;
+
+  line-height: 1.7;
+}
+
+:global(html[dir="rtl"]) .bottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .bottomText {
+  text-align: right;
+
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .button {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .backgroundWord {
+  letter-spacing: 0;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 950px) {
   .bridgeStage {
@@ -630,7 +829,9 @@
   .bridgeStage {
     min-height: auto;
 
-    padding: 35px 26px;
+    padding:
+      35px
+      26px;
   }
 
   .endpoints {
@@ -640,6 +841,11 @@
 
   .endpoint:last-child {
     text-align: left;
+  }
+
+  :global(html[dir="rtl"]) .endpoint,
+  :global(html[dir="rtl"]) .endpoint:last-child {
+    text-align: right;
   }
 
   .bridge {
@@ -670,12 +876,23 @@
 
     padding: 16px 18px;
 
-    background: rgba(255, 255, 255, 0.055);
+    background:
+      rgba(255, 255, 255, 0.055);
 
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    border-radius: var(--radius-sm);
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.07);
+
+    border-radius:
+      var(--radius-sm);
 
     text-align: left;
+  }
+
+  :global(html[dir="rtl"]) .node {
+    align-items: flex-start;
+
+    text-align: right;
   }
 
   .nodeDot {
@@ -727,13 +944,21 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .bridgeStage {
-    padding: 28px 20px;
+    padding:
+      28px
+      20px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .connectionLayer {
@@ -741,9 +966,10 @@
     flex-direction: column;
   }
 
-  .connectionText {
+  .connectionText,
+  :global(html[dir="rtl"]) .connectionText {
     max-width: 100%;
 
-    text-align: left;
+    text-align: right;
   }
 }

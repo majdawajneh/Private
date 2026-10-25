@@ -1,5 +1,5 @@
 .section {
-  padding: 135px 0;
+  padding: 90px 0;
 
   background:
     linear-gradient(
@@ -12,11 +12,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.64fr);
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.64fr);
 
   align-items: end;
 
@@ -33,7 +36,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -46,13 +50,20 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 4.9vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      4.9vw,
+      4rem
+    );
 
   line-height: 0.98;
 
@@ -60,13 +71,15 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .intro {
   max-width: 620px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.93rem;
 
@@ -76,10 +89,11 @@
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .layout {
   display: grid;
+
   grid-template-columns:
     minmax(320px, 0.72fr)
     minmax(0, 1.28fr);
@@ -92,7 +106,7 @@
 
 /* ========================================
    Visual Column
-   ======================================== */
+======================================== */
 
 .visualColumn {
   position: sticky;
@@ -105,25 +119,30 @@
 
   min-height: 610px;
 
-  border-radius: 30px 30px 95px 30px;
+  border-radius:
+    30px 30px 95px 30px;
 
   overflow: hidden;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.9s ease;
+  transition:
+    transform 0.9s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -150,7 +169,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -162,7 +182,8 @@
 .visualContent h3 {
   max-width: 440px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.45rem;
   font-weight: 800;
@@ -173,28 +194,38 @@
 
 /* ========================================
    Scope Note
-   ======================================== */
+======================================== */
 
 .scopeNote {
   margin-top: 17px;
 
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+
+  grid-template-columns:
+    auto
+    minmax(0, 1fr);
 
   align-items: center;
 
   gap: 17px;
 
-  padding: 20px 21px;
+  padding:
+    20px 21px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-md);
 }
 
 .scopeNumber {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 1.7rem;
   font-weight: 900;
@@ -207,14 +238,16 @@
 
   margin-bottom: 4px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.78rem;
   font-weight: 800;
 }
 
 .scopeNote p {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.65rem;
 
@@ -224,39 +257,49 @@
 
 /* ========================================
    Divisions
-   ======================================== */
+======================================== */
 
 .divisions {
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .division {
   padding: 34px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   scroll-margin-top: 120px;
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .division:hover {
   padding-left: 18px;
   padding-right: 18px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 }
 
 
 /* ========================================
    Division Heading
-   ======================================== */
+======================================== */
 
 .divisionHeading {
   display: grid;
-  grid-template-columns: 65px minmax(0, 1fr);
+
+  grid-template-columns:
+    65px
+    minmax(0, 1fr);
 
   gap: 20px;
 
@@ -266,7 +309,8 @@
 }
 
 .number {
-  color: rgba(13, 49, 88, 0.14);
+  color:
+    rgba(13, 49, 88, 0.14);
 
   font-size: 2.2rem;
   font-weight: 900;
@@ -281,7 +325,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -293,7 +338,8 @@
 .divisionTitle {
   max-width: 650px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.45rem;
   font-weight: 800;
@@ -306,14 +352,16 @@
 
 /* ========================================
    Description
-   ======================================== */
+======================================== */
 
 .description {
   max-width: 700px;
 
-  margin: 0 0 21px 85px;
+  margin:
+    0 0 21px 85px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.8rem;
 
@@ -323,15 +371,21 @@
 
 /* ========================================
    Service List
-   ======================================== */
+======================================== */
 
 .serviceList {
   margin-left: 85px;
 
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 
-  gap: 10px 24px;
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    10px 24px;
 }
 
 .serviceItem {
@@ -340,7 +394,8 @@
 
   gap: 9px;
 
-  color: var(--color-text);
+  color:
+    var(--color-text);
 
   font-size: 0.71rem;
   font-weight: 700;
@@ -352,47 +407,54 @@
 
   flex-shrink: 0;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 
 /* ========================================
    Link
-   ======================================== */
+======================================== */
 
 .link {
-  margin: 24px 0 0 85px;
+  margin:
+    24px 0 0 85px;
 
   display: inline-flex;
   align-items: center;
 
   gap: 8px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.71rem;
   font-weight: 800;
 
   transition:
-    gap var(--transition-fast),
-    color var(--transition-fast);
+    gap
+      var(--transition-fast),
+    color
+      var(--transition-fast);
 }
 
 .link:hover {
   gap: 12px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 
 /* ========================================
    Supporting Capabilities
-   ======================================== */
+======================================== */
 
 .support {
   margin-top: 70px;
 
   display: grid;
+
   grid-template-columns:
     minmax(260px, 0.7fr)
     minmax(0, 1.3fr);
@@ -401,7 +463,8 @@
 
   gap: 50px;
 
-  padding: 31px 34px;
+  padding:
+    31px 34px;
 
   background:
     linear-gradient(
@@ -410,7 +473,8 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
 .supportLabel {
@@ -418,7 +482,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -430,7 +495,8 @@
 .supportIntro h3 {
   max-width: 380px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.05rem;
   font-weight: 800;
@@ -441,11 +507,16 @@
 
 /* ========================================
    Capability Index
-   ======================================== */
+======================================== */
 
 .capabilities {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
 
   gap: 8px;
 }
@@ -456,13 +527,19 @@
   display: flex;
   align-items: center;
 
-  padding: 10px 12px;
+  padding:
+    10px 12px;
 
-  color: rgba(255, 255, 255, 0.76);
+  color:
+    rgba(255, 255, 255, 0.76);
 
-  background: rgba(255, 255, 255, 0.055);
+  background:
+    rgba(255, 255, 255, 0.055);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
   border-radius: 6px;
 
   font-size: 0.64rem;
@@ -473,8 +550,160 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .header > div,
+:global(html[dir="rtl"]) .intro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  line-height: 1.22;
+
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .intro {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    30px 30px 30px 95px;
+}
+
+:global(html[dir="rtl"]) .visualContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .visualLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .visualContent h3 {
+  line-height: 1.55;
+}
+
+:global(html[dir="rtl"]) .scopeNote {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .scopeNote > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .scopeNumber {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .scopeNote p {
+  line-height: 1.7;
+}
+
+:global(html[dir="rtl"]) .divisions {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .divisionHeading {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .divisionHeading > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .number {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .divisionTitle {
+  letter-spacing: 0;
+
+  line-height: 1.45;
+}
+
+:global(html[dir="rtl"]) .description {
+  margin:
+    0 85px 21px 0;
+
+  text-align: right;
+
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .serviceList {
+  margin-left: 0;
+  margin-right: 85px;
+}
+
+:global(html[dir="rtl"]) .serviceItem {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .link {
+  margin:
+    24px 85px 0 0;
+
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .support {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .supportIntro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .supportLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .supportIntro h3 {
+  line-height: 1.65;
+}
+
+:global(html[dir="rtl"]) .capabilities {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .capability {
+  justify-content: flex-start;
+
+  text-align: right;
+
+  line-height: 1.6;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .header {
@@ -506,7 +735,11 @@
   }
 
   .capabilities {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
   }
 }
 
@@ -516,16 +749,24 @@
     padding: 95px 0;
   }
 
-  .visual {
+  .visual,
+  :global(html[dir="rtl"]) .visual {
     min-height: 450px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
   }
 
   .description,
   .serviceList,
   .link {
     margin-left: 0;
+  }
+
+  :global(html[dir="rtl"]) .description,
+  :global(html[dir="rtl"]) .serviceList,
+  :global(html[dir="rtl"]) .link {
+    margin-right: 0;
   }
 
   .serviceList {
@@ -546,7 +787,12 @@
   }
 
   .title {
-    font-size: clamp(2.45rem, 12vw, 3.7rem);
+    font-size:
+      clamp(
+        2.45rem,
+        12vw,
+        3.7rem
+      );
   }
 
   .visual {
@@ -569,11 +815,13 @@
     padding-left: 0;
     padding-right: 0;
 
-    background: transparent;
+    background:
+      transparent;
   }
 
   .support {
-    padding: 24px 20px;
+    padding:
+      24px 20px;
   }
 
   .capabilities {

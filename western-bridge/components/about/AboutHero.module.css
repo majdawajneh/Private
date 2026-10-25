@@ -1,7 +1,8 @@
 .hero {
   position: relative;
 
-  padding: 115px 0 125px;
+  padding:
+    115px 0 125px;
 
   background:
     radial-gradient(
@@ -21,10 +22,11 @@
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .layout {
   display: grid;
+
   grid-template-columns:
     minmax(0, 0.92fr)
     minmax(420px, 1.08fr);
@@ -37,7 +39,7 @@
 
 /* ========================================
    Content
-   ======================================== */
+======================================== */
 
 .content {
   max-width: 690px;
@@ -51,7 +53,8 @@
 
   margin-bottom: 19px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -64,7 +67,8 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
@@ -72,9 +76,15 @@
 
   margin-bottom: 26px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(3.2rem, 5.5vw, 5.4rem);
+  font-size:
+    clamp(
+      3.2rem,
+      5.5vw,
+      4.5rem
+    );
 
   line-height: 0.97;
 
@@ -82,7 +92,12 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
+  display: block;
+
+  margin-top: 6px;
+
+  color:
+    var(--color-gold-dark);
 }
 
 .lead {
@@ -90,7 +105,8 @@
 
   margin-bottom: 17px;
 
-  color: var(--color-text);
+  color:
+    var(--color-text);
 
   font-size: 1rem;
 
@@ -102,7 +118,8 @@
 
   margin-bottom: 31px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.88rem;
 
@@ -112,7 +129,7 @@
 
 /* ========================================
    Actions
-   ======================================== */
+======================================== */
 
 .actions {
   display: flex;
@@ -131,49 +148,64 @@
 
   gap: 9px;
 
-  padding: 0 21px;
+  padding:
+    0 21px;
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.8rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    border-color var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    border-color
+      var(--transition-fast);
 }
 
 .primaryButton {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 }
 
 .primaryButton:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 .secondaryButton {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: transparent;
+  background:
+    transparent;
 
-  border: 1px solid var(--color-border);
+  border:
+    1px solid
+    var(--color-border);
 }
 
 .secondaryButton:hover {
-  border-color: var(--color-gold);
+  border-color:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 
 /* ========================================
    Main Image
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
@@ -182,24 +214,29 @@
 
   overflow: hidden;
 
-  border-radius: 34px 34px 100px 34px;
+  border-radius:
+    34px 34px 100px 34px;
 
   box-shadow:
-    0 28px 65px rgba(8, 38, 65, 0.17);
+    0 28px 65px
+    rgba(8, 38, 65, 0.17);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.9s ease;
+  transition:
+    transform 0.9s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -226,7 +263,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -238,7 +276,8 @@
 .imageContent h2 {
   max-width: 480px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.55rem;
   font-weight: 800;
@@ -251,12 +290,13 @@
 
 /* ========================================
    Position
-   ======================================== */
+======================================== */
 
 .position {
   margin-top: 90px;
 
   display: grid;
+
   grid-template-columns:
     minmax(280px, 0.68fr)
     minmax(0, 1.32fr);
@@ -265,7 +305,9 @@
 
   padding-top: 55px;
 
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 
   scroll-margin-top: 120px;
 }
@@ -275,7 +317,8 @@
 
   margin-bottom: 11px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -285,9 +328,16 @@
 }
 
 .positionIntro h2 {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-size:
+    clamp(
+      1.8rem,
+      3vw,
+      2.7rem
+    );
+
   font-weight: 700;
 
   line-height: 1.25;
@@ -296,7 +346,8 @@
 }
 
 .positionIntro strong {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-weight: 800;
 }
@@ -304,28 +355,43 @@
 
 /* ========================================
    Principles
-   ======================================== */
+======================================== */
 
 .principles {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      3,
+      minmax(0, 1fr)
+    );
 
   gap: 0;
 
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .principle {
   min-height: 220px;
 
-  padding: 24px 26px;
+  padding:
+    24px 26px;
 
-  border-right: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  border-right:
+    1px solid
+    var(--color-border);
+
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .principle:first-child {
-  border-left: 1px solid var(--color-border);
+  border-left:
+    1px solid
+    var(--color-border);
 }
 
 .number {
@@ -333,7 +399,8 @@
 
   margin-bottom: 34px;
 
-  color: rgba(13, 49, 88, 0.15);
+  color:
+    rgba(13, 49, 88, 0.15);
 
   font-size: 2rem;
   font-weight: 900;
@@ -344,14 +411,16 @@
 .principle h3 {
   margin-bottom: 8px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.96rem;
   font-weight: 800;
 }
 
 .principle p {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.71rem;
 
@@ -360,8 +429,127 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .hero {
+  background:
+    radial-gradient(
+      circle at 92% 8%,
+      rgba(199, 162, 74, 0.08),
+      transparent 26%
+    ),
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      var(--color-background-soft) 100%
+    );
+}
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .content {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .lead {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .secondary {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .actions {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    34px 34px 34px 100px;
+}
+
+:global(html[dir="rtl"]) .imageContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .imageLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .imageContent h2 {
+  line-height: 1.5;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .position {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .positionIntro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .positionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .positionIntro h2 {
+  line-height: 1.5;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .principles {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .principle {
+  text-align: right;
+
+  border-right:
+    1px solid
+    var(--color-border);
+
+  border-left: 0;
+}
+
+:global(html[dir="rtl"]) .principle:first-child {
+  border-left: 0;
+}
+
+:global(html[dir="rtl"]) .principle:last-child {
+  border-left:
+    1px solid
+    var(--color-border);
+}
+
+:global(html[dir="rtl"]) .principle p {
+  line-height: 1.8;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .layout {
@@ -390,7 +578,8 @@
 
 @media (max-width: 760px) {
   .hero {
-    padding: 90px 0 95px;
+    padding:
+      90px 0 95px;
   }
 
   .actions {
@@ -402,10 +591,12 @@
     width: 100%;
   }
 
-  .visual {
+  .visual,
+  :global(html[dir="rtl"]) .visual {
     min-height: 450px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
   }
 
   .principles {
@@ -413,19 +604,34 @@
   }
 
   .principle,
-  .principle:first-child {
-    border-left: 1px solid var(--color-border);
+  .principle:first-child,
+  :global(html[dir="rtl"]) .principle,
+  :global(html[dir="rtl"]) .principle:first-child,
+  :global(html[dir="rtl"]) .principle:last-child {
+    border-left:
+      1px solid
+      var(--color-border);
+
+    border-right:
+      1px solid
+      var(--color-border);
   }
 }
 
 
 @media (max-width: 480px) {
   .hero {
-    padding: 70px 0 75px;
+    padding:
+      70px 0 75px;
   }
 
   .title {
-    font-size: clamp(2.6rem, 12vw, 3.8rem);
+    font-size:
+      clamp(
+        2.6rem,
+        12vw,
+        3.8rem
+      );
   }
 
   .lead {
@@ -451,7 +657,8 @@
   .principle {
     min-height: auto;
 
-    padding: 23px 20px;
+    padding:
+      23px 20px;
   }
 
   .number {

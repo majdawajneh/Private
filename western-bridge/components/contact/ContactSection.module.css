@@ -1,5 +1,6 @@
 .section {
-  padding: 120px 0 110px;
+  padding:
+    50px 0 110px;
 
   background:
     linear-gradient(
@@ -12,11 +13,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.62fr);
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.62fr);
 
   align-items: end;
 
@@ -33,7 +37,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -46,15 +51,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 760px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(3rem, 5.3vw, 5.1rem);
+  font-size:
+    clamp(
+      3rem,
+      5.3vw,
+      3.5rem
+    );
 
   line-height: 0.98;
 
@@ -62,13 +74,19 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
+  display: block;
+
+  margin-top: 6px;
+
+  color:
+    var(--color-gold-dark);
 }
 
 .intro {
   max-width: 610px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.93rem;
 
@@ -78,11 +96,14 @@
 
 /* ========================================
    Layout
-   ======================================== */
+======================================== */
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(330px, 0.72fr) minmax(0, 1.28fr);
+
+  grid-template-columns:
+    minmax(330px, 0.72fr)
+    minmax(0, 1.28fr);
 
   align-items: start;
 
@@ -92,7 +113,7 @@
 
 /* ========================================
    Sidebar
-   ======================================== */
+======================================== */
 
 .sidebar {
   display: flex;
@@ -108,23 +129,28 @@
 
   overflow: hidden;
 
-  border-radius: 28px 28px 90px 28px;
+  border-radius:
+    28px 28px 90px 28px;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.9s ease;
+  transition:
+    transform 0.9s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -151,7 +177,8 @@
 
   margin-bottom: 7px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -163,7 +190,8 @@
 .visualContent h2 {
   max-width: 420px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.6rem;
   font-weight: 800;
@@ -174,15 +202,20 @@
 
 /* ========================================
    Before Send
-   ======================================== */
+======================================== */
 
 .beforeYouSend {
   padding: 24px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-lg);
 }
 
 .smallLabel {
@@ -190,7 +223,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.57rem;
   font-weight: 800;
@@ -202,7 +236,8 @@
 .beforeYouSend h3 {
   margin-bottom: 18px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1rem;
   font-weight: 800;
@@ -215,13 +250,18 @@
 
 .infoRows div {
   display: grid;
-  grid-template-columns: 30px minmax(0, 1fr);
+
+  grid-template-columns:
+    30px
+    minmax(0, 1fr);
 
   gap: 10px;
 
   padding: 10px 0;
 
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom:
+    1px solid
+    var(--color-border-light);
 }
 
 .infoRows div:last-child {
@@ -229,33 +269,43 @@
 }
 
 .infoRows span {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.6rem;
   font-weight: 900;
 }
 
 .infoRows p {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.69rem;
   font-weight: 700;
+
+  line-height: 1.5;
 }
 
 
 /* ========================================
    Form Panel
-   ======================================== */
+======================================== */
 
 .formPanel {
   padding: 34px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-xl);
+  border:
+    1px solid
+    var(--color-border);
 
-  box-shadow: var(--shadow-md);
+  border-radius:
+    var(--radius-xl);
+
+  box-shadow:
+    var(--shadow-md);
 }
 
 .formHeader {
@@ -269,7 +319,9 @@
 
   padding-bottom: 23px;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .formLabel {
@@ -277,7 +329,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -287,25 +340,31 @@
 }
 
 .formHeader h2 {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.35rem;
   font-weight: 800;
+
+  line-height: 1.35;
 }
 
 .formCode {
-  color: rgba(13, 49, 88, 0.27);
+  color:
+    rgba(13, 49, 88, 0.27);
 
   font-size: 0.58rem;
   font-weight: 900;
 
   letter-spacing: 0.08em;
+
+  white-space: nowrap;
 }
 
 
 /* ========================================
    Form
-   ======================================== */
+======================================== */
 
 .form {
   display: flex;
@@ -316,7 +375,12 @@
 
 .fieldRow {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap: 18px;
 }
@@ -330,7 +394,8 @@
 
 .field label,
 .requestField legend {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -340,27 +405,37 @@
 .field textarea {
   width: 100%;
 
-  color: var(--color-text);
+  color:
+    var(--color-text);
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-sm);
 
   font: inherit;
 
   outline: none;
 
   transition:
-    border-color var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    border-color
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .field input {
   height: 50px;
 
-  padding: 0 14px;
+  padding:
+    0 14px;
 }
 
 .field textarea {
@@ -373,25 +448,29 @@
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.75rem;
 }
 
 .field input:focus,
 .field textarea:focus {
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border-color: var(--color-gold);
+  border-color:
+    var(--color-gold);
 
   box-shadow:
-    0 0 0 3px rgba(199, 162, 74, 0.09);
+    0 0 0 3px
+    rgba(199, 162, 74, 0.09);
 }
 
 
 /* ========================================
    Request Type
-   ======================================== */
+======================================== */
 
 .requestField {
   padding: 0;
@@ -405,7 +484,12 @@
 
 .requestOptions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap: 9px;
 }
@@ -430,22 +514,34 @@
   display: flex;
   align-items: center;
 
-  padding: 0 13px;
+  padding:
+    0 13px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
+  border:
+    1px solid
+    var(--color-border);
+
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.7rem;
   font-weight: 700;
 
+  line-height: 1.35;
+
   transition:
-    color var(--transition-fast),
-    border-color var(--transition-fast),
-    background var(--transition-fast);
+    color
+      var(--transition-fast),
+    border-color
+      var(--transition-fast),
+    background
+      var(--transition-fast);
 }
 
 .requestOption span::before {
@@ -458,32 +554,44 @@
 
   margin-right: 9px;
 
-  background: var(--color-border);
+  background:
+    var(--color-border);
 
   border-radius: 50%;
+
+  transition:
+    background
+      var(--transition-fast);
 }
 
 .requestOption input:checked + span {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: rgba(199, 162, 74, 0.08);
+  background:
+    rgba(199, 162, 74, 0.08);
 
-  border-color: var(--color-gold);
+  border-color:
+    var(--color-gold);
 }
 
 .requestOption input:checked + span::before {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .requestOption input:focus-visible + span {
-  outline: 2px solid var(--color-navy);
+  outline:
+    2px solid
+    var(--color-navy);
+
   outline-offset: 2px;
 }
 
 
 /* ========================================
    Bottom
-   ======================================== */
+======================================== */
 
 .formBottom {
   display: flex;
@@ -498,7 +606,8 @@
 .formBottom p {
   max-width: 510px;
 
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.63rem;
 
@@ -516,14 +625,19 @@
 
   flex-shrink: 0;
 
-  padding: 0 22px;
+  padding:
+    0 22px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
   border: 0;
-  border-radius: var(--radius-sm);
+
+  border-radius:
+    var(--radius-sm);
 
   cursor: pointer;
 
@@ -532,15 +646,20 @@
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    opacity var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    opacity
+      var(--transition-fast);
 }
 
 .submitButton:hover:not(:disabled) {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 .submitButton:disabled {
@@ -552,7 +671,7 @@
 
 /* ========================================
    Status
-   ======================================== */
+======================================== */
 
 .success,
 .error {
@@ -561,27 +680,37 @@
 
   gap: 4px;
 
-  padding: 14px 16px;
+  padding:
+    14px 16px;
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.72rem;
+
+  line-height: 1.55;
 }
 
 .success {
   color: #175b2b;
 
-  background: rgba(35, 134, 54, 0.08);
+  background:
+    rgba(35, 134, 54, 0.08);
 
-  border: 1px solid rgba(35, 134, 54, 0.2);
+  border:
+    1px solid
+    rgba(35, 134, 54, 0.2);
 }
 
 .error {
   color: #8f2824;
 
-  background: rgba(201, 60, 55, 0.08);
+  background:
+    rgba(201, 60, 55, 0.08);
 
-  border: 1px solid rgba(201, 60, 55, 0.2);
+  border:
+    1px solid
+    rgba(201, 60, 55, 0.2);
 }
 
 .success strong,
@@ -592,7 +721,7 @@
 
 /* ========================================
    Honeypot
-   ======================================== */
+======================================== */
 
 .honeypot {
   position: absolute !important;
@@ -602,16 +731,193 @@
 
   overflow: hidden;
 
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  clip:
+    rect(0 0 0 0);
+
+  clip-path:
+    inset(50%);
 
   white-space: nowrap;
 }
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .header > div,
+:global(html[dir="rtl"]) .intro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .intro {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    28px 28px 28px 90px;
+}
+
+:global(html[dir="rtl"]) .visualContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .visualContent > span {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .visualContent h2 {
+  line-height: 1.55;
+}
+
+:global(html[dir="rtl"]) .beforeYouSend {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .smallLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .infoRows {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .infoRows div {
+  direction: rtl;
+
+  grid-template-columns:
+    30px
+    minmax(0, 1fr);
+}
+
+:global(html[dir="rtl"]) .infoRows p {
+  text-align: right;
+
+  line-height: 1.7;
+}
+
+:global(html[dir="rtl"]) .formPanel {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .formHeader {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .formHeader > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .formLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .formCode {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .form {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .field {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .field input,
+:global(html[dir="rtl"]) .field textarea {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .field input[type="email"],
+:global(html[dir="rtl"]) .field input[type="tel"] {
+  direction: ltr;
+
+  text-align: left;
+}
+
+:global(html[dir="rtl"]) .field input[type="email"]::placeholder,
+:global(html[dir="rtl"]) .field input[type="tel"]::placeholder {
+  direction: ltr;
+
+  text-align: left;
+}
+
+:global(html[dir="rtl"]) .requestField {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .requestOptions {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .requestOption span {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .requestOption span::before {
+  margin-right: 0;
+  margin-left: 9px;
+}
+
+:global(html[dir="rtl"]) .formBottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .formBottom p {
+  text-align: right;
+
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .submitButton {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .success,
+:global(html[dir="rtl"]) .error {
+  direction: rtl;
+
+  text-align: right;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .header {
@@ -634,13 +940,16 @@
 
 @media (max-width: 700px) {
   .section {
-    padding: 90px 0 85px;
+    padding:
+      90px 0 85px;
   }
 
-  .visual {
+  .visual,
+  :global(html[dir="rtl"]) .visual {
     min-height: 430px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
   }
 
   .fieldRow {
@@ -660,11 +969,17 @@
 
 @media (max-width: 480px) {
   .section {
-    padding: 70px 0;
+    padding:
+      70px 0;
   }
 
   .title {
-    font-size: clamp(2.5rem, 12vw, 3.8rem);
+    font-size:
+      clamp(
+        2.5rem,
+        12vw,
+        3.8rem
+      );
   }
 
   .visual {
@@ -672,9 +987,11 @@
   }
 
   .formPanel {
-    padding: 24px 18px;
+    padding:
+      24px 18px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .formHeader {

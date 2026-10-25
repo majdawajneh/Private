@@ -1,7 +1,7 @@
 .section {
   position: relative;
 
-  padding: 135px 0;
+  padding: 90px 0;
 
   background:
     linear-gradient(
@@ -16,12 +16,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
 
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
 
   align-items: end;
 
@@ -38,7 +40,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
@@ -51,15 +54,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 700px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -67,13 +77,15 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .headerText {
   max-width: 660px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.98rem;
 
@@ -83,7 +95,7 @@
 
 /* ========================================
    System Stage
-   ======================================== */
+======================================== */
 
 .system {
   position: relative;
@@ -100,10 +112,12 @@
       #123f69
     );
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
   box-shadow:
-    0 30px 70px rgba(8, 38, 65, 0.2);
+    0 30px 70px
+    rgba(8, 38, 65, 0.2);
 
   overflow: hidden;
 }
@@ -111,7 +125,7 @@
 
 /* ========================================
    Grid Background
-   ======================================== */
+======================================== */
 
 .systemGrid {
   position: absolute;
@@ -130,7 +144,8 @@
       transparent 1px
     );
 
-  background-size: 44px 44px;
+  background-size:
+    44px 44px;
 
   pointer-events: none;
 }
@@ -138,26 +153,20 @@
 
 /* ========================================
    Center Core
-   ======================================== */
+======================================== */
 
 .core {
   position: absolute;
-
   top: 48.5%;
   left: 50%;
-
   z-index: 10;
-
-  width: 180px;
-  height: 180px;
-
+  width: 100px;
+  height: 100px;
   display: grid;
   place-items: center;
-
   padding: 25px;
-
-  color: var(--color-white);
-
+  color:
+    var(--color-white);
   background:
     radial-gradient(
       circle at 35% 30%,
@@ -165,50 +174,60 @@
       var(--color-navy) 55%,
       var(--color-navy-dark)
     );
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.12);
 
-  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 16px rgba(199, 162, 74, 0.05),
-    0 0 0 32px rgba(255, 255, 255, 0.025),
-    0 24px 55px rgba(0, 0, 0, 0.24);
+    0 0 0 16px
+      rgba(199, 162, 74, 0.05),
+    0 0 0 32px
+      rgba(255, 255, 255, 0.025),
+    0 24px 55px
+      rgba(0, 0, 0, 0.24);
 
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
 
   text-align: center;
 }
 
-.coreMark {
-  width: 50px;
-  height: 50px;
+.coreLogo {
+  width: 90px;
+  height: 90px;
 
   display: grid;
   place-items: center;
 
-  margin: 0 auto 12px;
-
-  color: var(--color-navy-dark);
+  margin:
+    -20px -20px;
 
   background:
-    linear-gradient(
-      135deg,
-      var(--color-gold-light),
-      var(--color-gold)
-    );
+    rgba(255, 255, 255, 0.96);
+  border:
+    4px solid
+    rgba(199, 162, 74, 0.2);
+  border-radius: 50%;
+  overflow: hidden;
+}
 
-  border-radius: 14px;
+.coreLogoImage {
+  width: 80px;
+  height: 80px;
+  display: block;
 
-  font-size: 0.82rem;
-  font-weight: 900;
+  object-fit: contain;
 }
 
 .coreLabel {
-  display: block;
+  display:none;
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -218,10 +237,9 @@
 }
 
 
-
 /* ========================================
    Modules
-   ======================================== */
+======================================== */
 
 .module {
   position: absolute;
@@ -232,86 +250,120 @@
 
   padding: 23px;
 
-  background: rgba(255, 255, 255, 0.075);
+  background:
+    rgba(255, 255, 255, 0.075);
 
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.1);
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius:
+    var(--radius-md);
+
+  backdrop-filter:
+    blur(12px);
+
+  -webkit-backdrop-filter:
+    blur(12px);
 
   transition:
-    transform var(--transition-normal),
-    background var(--transition-normal),
-    border-color var(--transition-normal);
+    transform
+      var(--transition-normal),
+    background
+      var(--transition-normal),
+    border-color
+      var(--transition-normal);
 }
 
 .module:hover {
-  transform: translateY(-5px);
+  transform:
+    translateY(-5px);
 
-  background: rgba(255, 255, 255, 0.1);
+  background:
+    rgba(255, 255, 255, 0.1);
 
-  border-color: rgba(219, 193, 118, 0.35);
+  border-color:
+    rgba(219, 193, 118, 0.35);
 }
 
 
-/* positions */
+/* ========================================
+   Module Positions
+======================================== */
 
 .digital {
   top: 22px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 }
 
 .digital:hover {
-  transform: translateX(-50%) translateY(-5px);
+  transform:
+    translateX(-50%)
+    translateY(-5px);
 }
 
 .people {
   left: 45px;
   top: 50%;
 
-  transform: translateY(-50%);
+  transform:
+    translateY(-50%);
 }
 
 .people:hover {
-  transform: translateY(calc(-50% - 5px));
+  transform:
+    translateY(
+      calc(-50% - 5px)
+    );
 }
 
 .education {
   right: 45px;
   top: 50%;
 
-  transform: translateY(-50%);
+  transform:
+    translateY(-50%);
+
+  border-color:
+    rgba(219, 193, 118, 0.24);
 }
 
 .education:hover {
-  transform: translateY(calc(-50% - 5px));
+  transform:
+    translateY(
+      calc(-50% - 5px)
+    );
 }
 
 .market {
   bottom: 22px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 }
 
 .market:hover {
-  transform: translateX(-50%) translateY(-5px);
+  transform:
+    translateX(-50%)
+    translateY(-5px);
 }
 
 
 /* ========================================
    Module Content
-   ======================================== */
+======================================== */
 
 .moduleNumber {
   display: block;
 
   margin-bottom: 14px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.65rem;
   font-weight: 900;
@@ -322,14 +374,16 @@
 .moduleTitle {
   margin-bottom: 8px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1rem;
   font-weight: 800;
 }
 
 .moduleText {
-  color: rgba(255, 255, 255, 0.55);
+  color:
+    rgba(255, 255, 255, 0.55);
 
   font-size: 0.72rem;
 
@@ -339,7 +393,7 @@
 
 /* ========================================
    Connection Lines
-   ======================================== */
+======================================== */
 
 .connector {
   position: absolute;
@@ -388,17 +442,19 @@
 }
 
 .connectorLeft {
-  left: calc(50% - 230px);
+  left:
+    calc(50% - 230px);
 }
 
 .connectorRight {
-  right: calc(50% - 230px);
+  right:
+    calc(50% - 230px);
 }
 
 
 /* ========================================
    Connection Nodes
-   ======================================== */
+======================================== */
 
 .connectionDot {
   position: absolute;
@@ -408,51 +464,60 @@
   width: 11px;
   height: 11px;
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border: 3px solid var(--color-navy-dark);
+  border:
+    3px solid
+    var(--color-navy-dark);
+
   border-radius: 50%;
 
   box-shadow:
-    0 0 0 5px rgba(199, 162, 74, 0.08);
+    0 0 0 5px
+    rgba(199, 162, 74, 0.08);
 }
 
 .dotTop {
   top: 255px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 }
 
 .dotBottom {
   bottom: 255px;
   left: 50%;
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 }
 
 .dotLeft {
   top: 50%;
-  left: calc(50% - 118px);
 
-  transform: translateY(-50%);
+  left:
+    calc(50% - 118px);
+
+  transform:
+    translateY(-50%);
 }
 
 .dotRight {
   top: 50%;
-  right: calc(50% - 118px);
 
-  transform: translateY(-50%);
+  right:
+    calc(50% - 118px);
+
+  transform:
+    translateY(-50%);
 }
 
 
 /* ========================================
    Education Accent
-   ======================================== */
-
-.education {
-  border-color: rgba(219, 193, 118, 0.24);
-}
+======================================== */
 
 .educationBadge {
   display: inline-flex;
@@ -464,12 +529,18 @@
 
   padding: 6px 9px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
-  background: rgba(199, 162, 74, 0.08);
+  background:
+    rgba(199, 162, 74, 0.08);
 
-  border: 1px solid rgba(199, 162, 74, 0.15);
-  border-radius: var(--radius-full);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.15);
+
+  border-radius:
+    var(--radius-full);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -478,13 +549,16 @@
 
 /* ========================================
    Bottom Capability Strip
-   ======================================== */
+======================================== */
 
 .capabilityStrip {
   margin-top: 34px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
@@ -492,10 +566,15 @@
 
   padding: 26px 30px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-lg);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-lg);
 }
 
 .capabilityLabel {
@@ -503,7 +582,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.66rem;
   font-weight: 800;
@@ -515,7 +595,8 @@
 .capabilityTitle {
   margin-bottom: 7px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.1rem;
   font-weight: 800;
@@ -524,7 +605,8 @@
 .capabilityText {
   max-width: 800px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.82rem;
 
@@ -544,33 +626,42 @@
 
   padding: 0 21px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.82rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .capabilityButton:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Decorative
-   ======================================== */
+======================================== */
 
 .glow {
   position: absolute;
@@ -581,19 +672,141 @@
   top: -160px;
   right: -120px;
 
-  background: rgba(199, 162, 74, 0.06);
+  background:
+    rgba(199, 162, 74, 0.06);
 
   border-radius: 50%;
 
-  filter: blur(18px);
+  filter:
+    blur(18px);
 
   pointer-events: none;
 }
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .header > div,
+:global(html[dir="rtl"]) .headerText {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .headerText {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .system {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .coreLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .module {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .moduleNumber {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .moduleText {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .educationBadge {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .people {
+  left: auto;
+  right: 45px;
+}
+
+:global(html[dir="rtl"]) .education {
+  right: auto;
+  left: 45px;
+}
+
+:global(html[dir="rtl"]) .connectorLeft {
+  left: auto;
+
+  right:
+    calc(50% - 230px);
+}
+
+:global(html[dir="rtl"]) .connectorRight {
+  right: auto;
+
+  left:
+    calc(50% - 230px);
+}
+
+:global(html[dir="rtl"]) .dotLeft {
+  left: auto;
+
+  right:
+    calc(50% - 118px);
+}
+
+:global(html[dir="rtl"]) .dotRight {
+  right: auto;
+
+  left:
+    calc(50% - 118px);
+}
+
+:global(html[dir="rtl"]) .capabilityStrip {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .capabilityStrip > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .capabilityLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .capabilityText {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .capabilityButton {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .glow {
+  right: auto;
+  left: -120px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .header {
@@ -612,6 +825,16 @@
 
   .education {
     right: 25px;
+  }
+
+  :global(html[dir="rtl"]) .people {
+    left: auto;
+    right: 25px;
+  }
+
+  :global(html[dir="rtl"]) .education {
+    right: auto;
+    left: 25px;
   }
 }
 
@@ -636,12 +859,14 @@
     width: 190px;
     height: 190px;
 
-    margin: 0 auto 30px;
+    margin:
+      0 auto 30px;
 
     transform: none;
   }
 
-  .module {
+  .module,
+  :global(html[dir="rtl"]) .module {
     position: relative;
 
     inset: auto;
@@ -651,6 +876,12 @@
     margin-bottom: 14px;
 
     transform: none;
+
+    text-align: left;
+  }
+
+  :global(html[dir="rtl"]) .module {
+    text-align: right;
   }
 
   .module:hover,
@@ -658,7 +889,8 @@
   .people:hover,
   .education:hover,
   .market:hover {
-    transform: translateY(-3px);
+    transform:
+      translateY(-3px);
   }
 
   .connector,
@@ -682,18 +914,36 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .system {
-    padding: 24px 20px;
+    padding:
+      24px
+      20px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .core {
     width: 170px;
     height: 170px;
+  }
+
+  .coreLogo {
+    width: 54px;
+    height: 54px;
+  }
+
+  .coreLogoImage {
+    width: 48px;
+    height: 48px;
   }
 
   .module {

@@ -1,5 +1,6 @@
 .section {
-  padding: 135px 0 110px;
+  padding:
+    90px 0 110px;
 
   background:
     linear-gradient(
@@ -12,11 +13,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.65fr);
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.65fr);
 
   align-items: end;
 
@@ -33,7 +37,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -46,15 +51,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 720px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 4.9vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      4.9vw,
+      4rem
+    );
 
   line-height: 0.98;
 
@@ -62,27 +74,25 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
-}
+  display: block;
 
-.intro {
-  max-width: 620px;
+  margin-top: 6px;
 
-  color: var(--color-text-secondary);
-
-  font-size: 0.93rem;
-
-  line-height: 1.82;
+  color:
+    var(--color-gold-dark);
 }
 
 
 /* ========================================
    Main Grid
-   ======================================== */
+======================================== */
 
 .mainGrid {
   display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
+
+  grid-template-columns:
+    minmax(360px, 0.95fr)
+    minmax(0, 1.05fr);
 
   align-items: stretch;
 
@@ -92,7 +102,7 @@
 
 /* ========================================
    Image
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
@@ -101,23 +111,28 @@
 
   overflow: hidden;
 
-  border-radius: 30px 30px 95px 30px;
+  border-radius:
+    30px 30px 95px 30px;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.9s ease;
+  transition:
+    transform 0.9s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -144,7 +159,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -156,9 +172,16 @@
 .imageContent h3 {
   max-width: 470px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-size: clamp(1.45rem, 2.7vw, 2.2rem);
+  font-size:
+    clamp(
+      1.45rem,
+      2.7vw,
+      2.2rem
+    );
+
   font-weight: 800;
 
   line-height: 1.24;
@@ -169,28 +192,36 @@
 
 /* ========================================
    Mission / Vision
-   ======================================== */
+======================================== */
 
 .direction {
   display: flex;
   flex-direction: column;
 
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .directionBlock {
   display: grid;
-  grid-template-columns: 65px minmax(0, 1fr);
+
+  grid-template-columns:
+    65px
+    minmax(0, 1fr);
 
   gap: 22px;
 
   padding: 35px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .directionNumber {
-  color: rgba(13, 49, 88, 0.13);
+  color:
+    rgba(13, 49, 88, 0.13);
 
   font-size: 2.8rem;
   font-weight: 900;
@@ -203,7 +234,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -217,9 +249,16 @@
 
   margin-bottom: 12px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.45rem, 2.5vw, 2.05rem);
+  font-size:
+    clamp(
+      1.45rem,
+      2.5vw,
+      2.05rem
+    );
+
   font-weight: 800;
 
   line-height: 1.3;
@@ -230,7 +269,8 @@
 .directionBlock p {
   max-width: 640px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.78rem;
 
@@ -240,12 +280,13 @@
 
 /* ========================================
    Positioning
-   ======================================== */
+======================================== */
 
 .positioning {
   margin-top: 10px;
 
-  padding: 25px 27px;
+  padding:
+    25px 27px;
 
   background:
     linear-gradient(
@@ -254,7 +295,8 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
 .positioningLabel {
@@ -262,7 +304,8 @@
 
   margin-bottom: 7px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -274,7 +317,8 @@
 .positioning p {
   max-width: 620px;
 
-  color: rgba(255, 255, 255, 0.78);
+  color:
+    rgba(255, 255, 255, 0.78);
 
   font-size: 0.82rem;
   font-weight: 700;
@@ -285,19 +329,24 @@
 
 /* ========================================
    Standards
-   ======================================== */
+======================================== */
 
 .standards {
   margin-top: 90px;
 
   padding-top: 50px;
 
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .standardsIntro {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+
+  grid-template-columns:
+    180px
+    minmax(0, 1fr);
 
   gap: 35px;
 
@@ -305,7 +354,8 @@
 }
 
 .standardsIntro span {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.59rem;
   font-weight: 900;
@@ -315,9 +365,16 @@
 }
 
 .standardsIntro h3 {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-size:
+    clamp(
+      1.6rem,
+      2.8vw,
+      2.3rem
+    );
+
   font-weight: 800;
 
   letter-spacing: -0.035em;
@@ -326,15 +383,21 @@
 
 /* ========================================
    Standard List
-   ======================================== */
+======================================== */
 
 .standardList {
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .standard {
   display: grid;
-  grid-template-columns: 70px minmax(220px, 0.65fr) minmax(0, 1.35fr);
+
+  grid-template-columns:
+    70px
+    minmax(220px, 0.65fr)
+    minmax(0, 1.35fr);
 
   align-items: start;
 
@@ -342,18 +405,22 @@
 
   padding: 25px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .standardNumber {
-  color: rgba(13, 49, 88, 0.14);
+  color:
+    rgba(13, 49, 88, 0.14);
 
   font-size: 1.8rem;
   font-weight: 900;
 }
 
 .standard h4 {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.95rem;
   font-weight: 800;
@@ -364,7 +431,8 @@
 .standard p {
   max-width: 760px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.75rem;
 
@@ -374,24 +442,33 @@
 
 /* ========================================
    Final CTA
-   ======================================== */
+======================================== */
 
 .final {
   margin-top: 70px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
   gap: 40px;
 
-  padding: 34px 36px;
+  padding:
+    34px 36px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-xl);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-xl);
 }
 
 .finalLabel {
@@ -399,7 +476,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -411,7 +489,8 @@
 .final h3 {
   margin-bottom: 7px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.2rem;
   font-weight: 800;
@@ -420,7 +499,8 @@
 .final p {
   max-width: 760px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.75rem;
 
@@ -444,9 +524,11 @@
 
   gap: 8px;
 
-  padding: 0 20px;
+  padding:
+    0 20px;
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.76rem;
   font-weight: 800;
@@ -454,41 +536,217 @@
   white-space: nowrap;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    border-color var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    border-color
+      var(--transition-fast);
 }
 
 .primaryButton {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 }
 
 .primaryButton:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 .secondaryButton {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border);
+  border:
+    1px solid
+    var(--color-border);
 }
 
 .secondaryButton:hover {
-  border-color: var(--color-gold);
+  border-color:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
+}
+
+
+/* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .header > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  line-height: 1.2;
+
+  letter-spacing: -0.02em;
+}
+
+:global(html[dir="rtl"]) .mainGrid {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    30px 30px 30px 95px;
+}
+
+:global(html[dir="rtl"]) .imageContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .imageContent span {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .imageContent h3 {
+  line-height: 1.5;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .direction {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .directionBlock {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .directionBlock > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .directionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .directionBlock h3 {
+  line-height: 1.55;
+
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .directionBlock p {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .positioning {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .positioningLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .positioning p {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .standards {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .standardsIntro {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .standardsIntro span {
+  text-align: right;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .standardsIntro h3 {
+  text-align: right;
+
+  letter-spacing: 0;
+
+  line-height: 1.5;
+}
+
+:global(html[dir="rtl"]) .standardList {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .standard {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .standard h4,
+:global(html[dir="rtl"]) .standard p {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .standard h4 {
+  line-height: 1.55;
+}
+
+:global(html[dir="rtl"]) .standard p {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .final {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .final > div:first-child {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .finalLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .final h3 {
+  line-height: 1.5;
+}
+
+:global(html[dir="rtl"]) .final p {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .finalActions {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .primaryButton {
+  direction: rtl;
 }
 
 
 /* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .header {
@@ -516,18 +774,25 @@
   .finalActions {
     justify-content: flex-start;
   }
+
+  :global(html[dir="rtl"]) .finalActions {
+    justify-content: flex-start;
+  }
 }
 
 
 @media (max-width: 700px) {
   .section {
-    padding: 95px 0 85px;
+    padding:
+      95px 0 85px;
   }
 
-  .visual {
+  .visual,
+  :global(html[dir="rtl"]) .visual {
     min-height: 450px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
   }
 
   .standardsIntro {
@@ -537,10 +802,16 @@
   }
 
   .standard {
-    grid-template-columns: 50px minmax(0, 1fr);
+    grid-template-columns:
+      50px
+      minmax(0, 1fr);
   }
 
   .standard p {
+    grid-column: 2;
+  }
+
+  :global(html[dir="rtl"]) .standard p {
     grid-column: 2;
   }
 
@@ -561,7 +832,12 @@
   }
 
   .title {
-    font-size: clamp(2.45rem, 12vw, 3.7rem);
+    font-size:
+      clamp(
+        2.45rem,
+        12vw,
+        3.7rem
+      );
   }
 
   .visual {
@@ -586,13 +862,16 @@
     gap: 8px;
   }
 
-  .standard p {
+  .standard p,
+  :global(html[dir="rtl"]) .standard p {
     grid-column: auto;
   }
 
   .final {
-    padding: 25px 21px;
+    padding:
+      25px 21px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 }
