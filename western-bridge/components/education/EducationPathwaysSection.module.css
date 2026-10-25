@@ -1,7 +1,7 @@
 .section {
   position: relative;
 
-  padding: 135px 0;
+  padding: 90px 0;
 
   background:
     linear-gradient(
@@ -16,11 +16,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
 
   align-items: end;
 
@@ -37,7 +40,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
@@ -50,15 +54,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 720px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -66,13 +77,15 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .headerText {
   max-width: 650px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.98rem;
 
@@ -82,11 +95,14 @@
 
 /* ========================================
    Main Layout
-   ======================================== */
+======================================== */
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+
+  grid-template-columns:
+    minmax(0, 0.8fr)
+    minmax(0, 1.2fr);
 
   align-items: stretch;
 
@@ -96,7 +112,7 @@
 
 /* ========================================
    Image Side
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
@@ -109,12 +125,14 @@
 
   inset: 0 40px 0 0;
 
-  border-radius: 32px 32px 110px 32px;
+  border-radius:
+    32px 32px 110px 32px;
 
   overflow: hidden;
 
   box-shadow:
-    0 28px 60px rgba(8, 38, 65, 0.18);
+    0 28px 60px
+    rgba(8, 38, 65, 0.18);
 }
 
 .image {
@@ -125,7 +143,8 @@
 }
 
 .imageWrapper:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .imageOverlay {
@@ -144,7 +163,7 @@
 
 /* ========================================
    Image Caption
-   ======================================== */
+======================================== */
 
 .imageCaption {
   position: absolute;
@@ -161,7 +180,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.65rem;
   font-weight: 800;
@@ -175,7 +195,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.35rem;
   font-weight: 800;
@@ -186,7 +207,8 @@
 .captionText {
   max-width: 380px;
 
-  color: rgba(255, 255, 255, 0.64);
+  color:
+    rgba(255, 255, 255, 0.64);
 
   font-size: 0.75rem;
 
@@ -196,7 +218,7 @@
 
 /* ========================================
    Germany Badge
-   ======================================== */
+======================================== */
 
 .germanyBadge {
   position: absolute;
@@ -210,12 +232,18 @@
 
   padding: 17px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-md);
+  border:
+    1px solid
+    var(--color-border-light);
 
-  box-shadow: var(--shadow-md);
+  border-radius:
+    var(--radius-md);
+
+  box-shadow:
+    var(--shadow-md);
 }
 
 .badgeLabel {
@@ -223,7 +251,8 @@
 
   margin-bottom: 4px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.56rem;
   font-weight: 800;
@@ -233,7 +262,8 @@
 }
 
 .badgeTitle {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.93rem;
   font-weight: 800;
@@ -260,22 +290,28 @@
 
 /* ========================================
    Pathways List
-   ======================================== */
+======================================== */
 
 .pathways {
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 
 /* ========================================
    Pathway
-   ======================================== */
+======================================== */
 
 .pathway {
   position: relative;
 
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    72px
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
@@ -285,27 +321,33 @@
 
   padding: 24px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .pathway:hover {
   padding-left: 16px;
   padding-right: 16px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 }
 
 
 /* ========================================
    Number
-   ======================================== */
+======================================== */
 
 .number {
-  color: rgba(13, 49, 88, 0.13);
+  color:
+    rgba(13, 49, 88, 0.13);
 
   font-size: 2.4rem;
   font-weight: 900;
@@ -315,24 +357,27 @@
   letter-spacing: -0.06em;
 
   transition:
-    color var(--transition-normal);
+    color
+      var(--transition-normal);
 }
 
 .pathway:hover .number {
-  color: var(--color-gold);
+  color:
+    var(--color-gold);
 }
 
 
 /* ========================================
    Pathway Content
-   ======================================== */
+======================================== */
 
 .pathwayLabel {
   display: block;
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -344,7 +389,8 @@
 .pathwayTitle {
   margin-bottom: 7px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.15rem;
   font-weight: 800;
@@ -355,7 +401,8 @@
 .pathwayText {
   max-width: 570px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.8rem;
 
@@ -365,7 +412,7 @@
 
 /* ========================================
    Arrow
-   ======================================== */
+======================================== */
 
 .arrow {
   width: 40px;
@@ -374,32 +421,40 @@
   display: grid;
   place-items: center;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
   border-radius: 50%;
 
   font-size: 0.95rem;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    color var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    color
+      var(--transition-fast);
 }
 
 .pathway:hover .arrow {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  transform: translateX(4px);
+  transform:
+    translateX(4px);
 }
 
 
 /* ========================================
    Bottom CTA
-   ======================================== */
+======================================== */
 
 .bottom {
   margin-top: 34px;
@@ -412,9 +467,11 @@
 
   gap: 28px;
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
 .bottomContent {
@@ -426,7 +483,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.63rem;
   font-weight: 800;
@@ -438,14 +496,16 @@
 .bottomTitle {
   margin-bottom: 5px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.05rem;
   font-weight: 800;
 }
 
 .bottomText {
-  color: rgba(255, 255, 255, 0.62);
+  color:
+    rgba(255, 255, 255, 0.62);
 
   font-size: 0.78rem;
 
@@ -465,33 +525,42 @@
 
   padding: 0 20px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.8rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .button:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Decorative
-   ======================================== */
+======================================== */
 
 .backgroundWord {
   position: absolute;
@@ -499,9 +568,16 @@
   left: -40px;
   bottom: -55px;
 
-  color: rgba(13, 49, 88, 0.022);
+  color:
+    rgba(13, 49, 88, 0.022);
 
-  font-size: clamp(9rem, 18vw, 18rem);
+  font-size:
+    clamp(
+      9rem,
+      18vw,
+      18rem
+    );
+
   font-weight: 900;
 
   letter-spacing: -0.08em;
@@ -512,8 +588,151 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .header > div,
+:global(html[dir="rtl"]) .headerText {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .headerText {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .imageWrapper {
+  inset: 0 0 0 40px;
+
+  border-radius:
+    32px 32px 32px 110px;
+}
+
+:global(html[dir="rtl"]) .imageCaption {
+  left: 60px;
+  right: 30px;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .captionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .captionTitle {
+  line-height: 1.55;
+}
+
+:global(html[dir="rtl"]) .captionText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .germanyBadge {
+  right: auto;
+  left: 0;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .badgeLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .badgeLine {
+  margin-left: auto;
+
+  transform:
+    scaleX(-1);
+}
+
+:global(html[dir="rtl"]) .pathways {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .pathway {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .number {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .pathway > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .pathwayLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .pathwayTitle {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .pathwayText {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .pathway:hover .arrow {
+  transform:
+    translateX(-4px);
+}
+
+:global(html[dir="rtl"]) .bottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .bottomContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .bottomLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .bottomText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .button {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .backgroundWord {
+  left: auto;
+  right: -40px;
+
+  letter-spacing: 0;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .header {
@@ -552,6 +771,10 @@
   .imageWrapper {
     inset: 0 55px 0 0;
   }
+
+  :global(html[dir="rtl"]) .imageWrapper {
+    inset: 0 0 0 55px;
+  }
 }
 
 
@@ -563,12 +786,25 @@
   .imageWrapper {
     inset: 0;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
+  }
+
+  :global(html[dir="rtl"]) .imageWrapper {
+    inset: 0;
+
+    border-radius:
+      var(--radius-xl);
   }
 
   .germanyBadge {
     top: 18px;
     right: 14px;
+  }
+
+  :global(html[dir="rtl"]) .germanyBadge {
+    right: auto;
+    left: 14px;
   }
 
   .imageCaption {
@@ -577,8 +813,15 @@
     bottom: 25px;
   }
 
+  :global(html[dir="rtl"]) .imageCaption {
+    right: 25px;
+    left: 25px;
+  }
+
   .pathway {
-    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
   }
 
   .arrow {
@@ -587,7 +830,12 @@
     width: 100%;
     height: 38px;
 
-    border-radius: var(--radius-sm);
+    border-radius:
+      var(--radius-sm);
+  }
+
+  :global(html[dir="rtl"]) .arrow {
+    grid-column: 2;
   }
 
   .bottom {
@@ -607,7 +855,12 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .visual {
@@ -638,14 +891,16 @@
     padding-left: 0;
     padding-right: 0;
 
-    background: transparent;
+    background:
+      transparent;
   }
 
   .number {
     font-size: 2rem;
   }
 
-  .arrow {
+  .arrow,
+  :global(html[dir="rtl"]) .arrow {
     grid-column: auto;
   }
 

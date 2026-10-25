@@ -1,14 +1,16 @@
 .hero {
   position: relative;
 
-  min-height: calc(100vh - 84px);
+  min-height:
+    calc(100vh - 84px);
 
   display: flex;
   align-items: center;
 
   padding: 105px 0;
 
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
   overflow: hidden;
 }
@@ -16,7 +18,7 @@
 
 /* ========================================
    Background Photo
-   ======================================== */
+======================================== */
 
 .photo {
   position: absolute;
@@ -29,7 +31,8 @@
   object-fit: cover;
   object-position: center;
 
-  transform: scale(1.01);
+  transform:
+    scale(1.01);
 }
 
 .overlay {
@@ -49,7 +52,7 @@
 
 /* ========================================
    Layout
-   ======================================== */
+======================================== */
 
 .layout {
   position: relative;
@@ -57,7 +60,10 @@
   z-index: 2;
 
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(390px, 0.72fr);
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(390px, 0.72fr);
 
   align-items: center;
 
@@ -67,7 +73,7 @@
 
 /* ========================================
    Main Content
-   ======================================== */
+======================================== */
 
 .content {
   max-width: 760px;
@@ -81,9 +87,10 @@
 
   margin-bottom: 24px;
 
-  color: rgba(255, 255, 255, 0.72);
+  color:
+    rgba(255, 255, 255, 0.72);
 
-  font-size: 0.72rem;
+  font-size: 0.80rem;
   font-weight: 800;
 
   letter-spacing: 0.12em;
@@ -93,7 +100,7 @@
 
 /* ========================================
    German Flag
-   ======================================== */
+======================================== */
 
 .flag {
   width: 34px;
@@ -106,7 +113,9 @@
 
   border-radius: 3px;
 
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 0 0 1px
+    rgba(255, 255, 255, 0.14);
 }
 
 .flag i {
@@ -128,16 +137,23 @@
 
 /* ========================================
    Title
-   ======================================== */
+======================================== */
 
 .title {
   max-width: 790px;
 
   margin-bottom: 28px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-size: clamp(3.8rem, 7vw, 7.1rem);
+  font-size:
+    clamp(
+      4rem,
+      6vw,
+      6.5rem
+    );
+
   font-weight: 800;
 
   line-height: 0.91;
@@ -146,7 +162,8 @@
 }
 
 .title span {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 }
 
 .description {
@@ -154,7 +171,8 @@
 
   margin-bottom: 33px;
 
-  color: rgba(255, 255, 255, 0.68);
+  color:
+    rgba(255, 255, 255, 0.68);
 
   font-size: 1rem;
 
@@ -164,7 +182,7 @@
 
 /* ========================================
    Actions
-   ======================================== */
+======================================== */
 
 .actions {
   display: flex;
@@ -187,52 +205,72 @@
 
   padding: 0 23px;
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.82rem;
   font-weight: 800;
 
+  text-align: center;
+
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    border-color var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    border-color
+      var(--transition-fast);
 }
 
 .primaryButton {
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 }
 
 .primaryButton:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 .secondaryButton {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: rgba(255, 255, 255, 0.07);
+  background:
+    rgba(255, 255, 255, 0.07);
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
 }
 
 .secondaryButton:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background:
+    rgba(255, 255, 255, 0.12);
 
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color:
+    rgba(255, 255, 255, 0.3);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 }
 
 
 /* ========================================
    Principle
-   ======================================== */
+======================================== */
 
 .principle {
   max-width: 620px;
@@ -251,11 +289,13 @@
 
   margin-top: 8px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .principle p {
-  color: rgba(255, 255, 255, 0.45);
+  color:
+    rgba(255, 255, 255, 0.45);
 
   font-size: 0.67rem;
 
@@ -265,23 +305,31 @@
 
 /* ========================================
    Germany Route Panel
-   ======================================== */
+======================================== */
 
 .routePanel {
   position: relative;
 
   padding: 28px;
 
-  background: rgba(255, 255, 255, 0.96);
+  background:
+    rgba(255, 255, 255, 0.96);
 
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.2);
+
   border-radius: 26px;
 
   box-shadow:
-    0 30px 80px rgba(0, 0, 0, 0.25);
+    0 30px 80px
+    rgba(0, 0, 0, 0.25);
 
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter:
+    blur(14px);
+
+  -webkit-backdrop-filter:
+    blur(14px);
 }
 
 .panelHeader {
@@ -293,7 +341,9 @@
 
   padding-bottom: 22px;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .panelLabel {
@@ -301,7 +351,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -311,7 +362,8 @@
 }
 
 .panelTitle {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.3rem;
   font-weight: 800;
@@ -320,7 +372,8 @@
 }
 
 .panelCode {
-  color: rgba(13, 49, 88, 0.27);
+  color:
+    rgba(13, 49, 88, 0.27);
 
   font-size: 0.68rem;
   font-weight: 900;
@@ -333,7 +386,7 @@
 
 /* ========================================
    Route List
-   ======================================== */
+======================================== */
 
 .routes {
   display: flex;
@@ -342,7 +395,11 @@
 
 .route {
   display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    42px
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
@@ -350,22 +407,28 @@
 
   padding: 20px 0;
 
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom:
+    1px solid
+    var(--color-border-light);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .route:hover {
   padding-left: 12px;
   padding-right: 12px;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 }
 
 .routeNumber {
-  color: rgba(13, 49, 88, 0.19);
+  color:
+    rgba(13, 49, 88, 0.19);
 
   font-size: 1.55rem;
   font-weight: 900;
@@ -378,7 +441,8 @@
 .routeContent h3 {
   margin-bottom: 4px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.91rem;
   font-weight: 800;
@@ -387,7 +451,8 @@
 .routeContent p {
   max-width: 280px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.67rem;
 
@@ -401,32 +466,40 @@
   display: grid;
   place-items: center;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
   border-radius: 50%;
 
   font-size: 0.8rem;
 
   transition:
-    transform var(--transition-fast),
-    color var(--transition-fast),
-    background var(--transition-fast);
+    transform
+      var(--transition-fast),
+    color
+      var(--transition-fast),
+    background
+      var(--transition-fast);
 }
 
 .route:hover .arrow {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  transform: translateX(3px);
+  transform:
+    translateX(3px);
 }
 
 
 /* ========================================
    Panel Bottom
-   ======================================== */
+======================================== */
 
 .panelBottom {
   padding-top: 20px;
@@ -437,7 +510,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.56rem;
   font-weight: 800;
@@ -447,7 +521,8 @@
 }
 
 .panelBottom p {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.62rem;
 
@@ -457,7 +532,7 @@
 
 /* ========================================
    Background DE
-   ======================================== */
+======================================== */
 
 .countryMark {
   position: absolute;
@@ -467,9 +542,16 @@
 
   z-index: 1;
 
-  color: rgba(255, 255, 255, 0.035);
+  color:
+    rgba(255, 255, 255, 0.035);
 
-  font-size: clamp(12rem, 25vw, 28rem);
+  font-size:
+    clamp(
+      12rem,
+      25vw,
+      28rem
+    );
+
   font-weight: 900;
 
   line-height: 1;
@@ -477,19 +559,119 @@
   letter-spacing: -0.1em;
 
   pointer-events: none;
+
   user-select: none;
 }
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .overlay {
+  background:
+    linear-gradient(
+      270deg,
+      rgba(5, 24, 42, 0.97) 0%,
+      rgba(7, 31, 54, 0.91) 38%,
+      rgba(7, 31, 54, 0.66) 68%,
+      rgba(7, 31, 54, 0.48) 100%
+    );
+}
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .content {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.16;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .actions {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .principle {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .principle p {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .routePanel {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .panelLabel,
+:global(html[dir="rtl"]) .panelBottomLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .panelCode {
+  letter-spacing: 0.06em;
+}
+
+:global(html[dir="rtl"]) .route {
+  grid-template-columns:
+    42px
+    minmax(0, 1fr)
+    auto;
+}
+
+:global(html[dir="rtl"]) .routeNumber {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .routeContent p {
+  line-height: 1.7;
+}
+
+:global(html[dir="rtl"]) .route:hover .arrow {
+  transform:
+    translateX(-3px);
+}
+
+:global(html[dir="rtl"]) .countryMark {
+  right: auto;
+  left: -18px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .hero {
     min-height: auto;
 
-    padding: 105px 0 95px;
+    padding:
+      105px
+      0
+      95px;
   }
 
   .layout {
@@ -510,7 +692,10 @@
 
 @media (max-width: 700px) {
   .hero {
-    padding: 82px 0 80px;
+    padding:
+      82px
+      0
+      80px;
   }
 
   .overlay {
@@ -522,8 +707,22 @@
       );
   }
 
+  :global(html[dir="rtl"]) .overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 24, 42, 0.93) 0%,
+        rgba(7, 31, 54, 0.92) 100%
+      );
+  }
+
   .title {
-    font-size: clamp(3.1rem, 14vw, 5rem);
+    font-size:
+      clamp(
+        3.1rem,
+        14vw,
+        5rem
+      );
   }
 
   .actions {
@@ -539,11 +738,19 @@
 
 @media (max-width: 480px) {
   .hero {
-    padding: 68px 0 70px;
+    padding:
+      68px
+      0
+      70px;
   }
 
   .title {
-    font-size: clamp(2.8rem, 14vw, 4.3rem);
+    font-size:
+      clamp(
+        2.8rem,
+        14vw,
+        4.3rem
+      );
   }
 
   .description {
@@ -553,7 +760,8 @@
   .routePanel {
     padding: 21px 18px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .panelHeader {
@@ -563,7 +771,15 @@
   }
 
   .route {
-    grid-template-columns: 36px minmax(0, 1fr);
+    grid-template-columns:
+      36px
+      minmax(0, 1fr);
+  }
+
+  :global(html[dir="rtl"]) .route {
+    grid-template-columns:
+      36px
+      minmax(0, 1fr);
   }
 
   .arrow {
@@ -572,7 +788,8 @@
     width: 100%;
     height: 36px;
 
-    border-radius: var(--radius-sm);
+    border-radius:
+      var(--radius-sm);
   }
 
   .routeContent p {

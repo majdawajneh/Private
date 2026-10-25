@@ -1,58 +1,205 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-import Container from "../ui/Container";
+import Image from "next/image";
+import { useLocale } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+import Container from "@/components/ui/Container";
+
 import styles from "./EducationHero.module.css";
 
-const audiences = [
-  "Students & Learners",
-  "Universities",
-  "Training Providers",
-  "Educational Institutions",
-];
+type Locale = "de" | "en" | "ar";
+
+const content = {
+  de: {
+    backgroundWord: "BILDUNG",
+
+    eyebrow: "Internationaler Bildungsaustausch",
+
+    titleBefore: "Verbinden Sie Lernen mit",
+    highlightedTitle: "globalen Möglichkeiten",
+
+    description:
+      "Western Bridge unterstützt Studierende, Lernende, Hochschulen, Bildungsanbieter und Institutionen dabei, internationale akademische Wege, berufliche Vorbereitung, institutionelle Zusammenarbeit und grenzüberschreitende Bildungsangebote zu erkunden.",
+
+    audiences: [
+      "Studierende & Lernende",
+      "Hochschulen",
+      "Bildungs- & Trainingsanbieter",
+      "Bildungseinrichtungen",
+    ],
+
+    primaryButton: "Bildungswege entdecken",
+    secondaryButton: "Institutionelle Partnerschaften",
+
+    mainImageAlt:
+      "Internationaler Hochschulcampus und akademisches Umfeld",
+
+    captionLabel: "Internationale Bildung",
+
+    captionTitle:
+      "Akademische Wege und Lernen über Grenzen hinweg.",
+
+    secondaryImageAlt:
+      "Internationale Studierende in einer modernen Lernumgebung",
+
+    secondaryLabel: "Studierende",
+    secondaryTitle: "Internationales Lernen",
+
+    floatingLabels: {
+      germany: "Deutschland",
+      universities: "Hochschulen",
+      training: "Training & Lernen",
+    },
+  },
+
+  en: {
+    backgroundWord: "EDUCATION",
+
+    eyebrow: "Global Education Exchange",
+
+    titleBefore: "Connect Learning With",
+    highlightedTitle: "Global Opportunity",
+
+    description:
+      "Western Bridge supports students, learners, universities, training providers, and educational institutions in exploring international academic pathways, professional preparation, institutional cooperation, and cross-border education opportunities.",
+
+    audiences: [
+      "Students & Learners",
+      "Universities",
+      "Training Providers",
+      "Educational Institutions",
+    ],
+
+    primaryButton: "Explore Education Pathways",
+    secondaryButton: "Institutional Partnerships",
+
+    mainImageAlt:
+      "International university campus and academic environment",
+
+    captionLabel: "International Education",
+
+    captionTitle:
+      "Academic pathways and learning across borders.",
+
+    secondaryImageAlt:
+      "International students in a modern learning environment",
+
+    secondaryLabel: "Students",
+    secondaryTitle: "International Learning",
+
+    floatingLabels: {
+      germany: "Germany",
+      universities: "Universities",
+      training: "Training & Learning",
+    },
+  },
+
+  ar: {
+    backgroundWord: "التعليم",
+
+    eyebrow: "التبادل التعليمي الدولي",
+
+    titleBefore: "اربط التعلم بـ",
+    highlightedTitle: "الفرص العالمية",
+
+    description:
+      "تدعم Western Bridge الطلاب والمتعلمين والجامعات ومقدمي التدريب والمؤسسات التعليمية في استكشاف المسارات الأكاديمية الدولية والاستعداد المهني والتعاون المؤسسي وفرص التعليم عبر الحدود.",
+
+    audiences: [
+      "الطلاب والمتعلمون",
+      "الجامعات",
+      "مقدمو التدريب",
+      "المؤسسات التعليمية",
+    ],
+
+    primaryButton: "استكشف المسارات التعليمية",
+    secondaryButton: "الشراكات المؤسسية",
+
+    mainImageAlt:
+      "حرم جامعي دولي وبيئة أكاديمية حديثة",
+
+    captionLabel: "التعليم الدولي",
+
+    captionTitle:
+      "مسارات أكاديمية وتعلم يتجاوز الحدود.",
+
+    secondaryImageAlt:
+      "طلاب دوليون في بيئة تعليمية حديثة",
+
+    secondaryLabel: "الطلاب",
+    secondaryTitle: "التعلم الدولي",
+
+    floatingLabels: {
+      germany: "ألمانيا",
+      universities: "الجامعات",
+      training: "التدريب والتعلم",
+    },
+  },
+} satisfies Record<
+  Locale,
+  {
+    backgroundWord: string;
+    eyebrow: string;
+    titleBefore: string;
+    highlightedTitle: string;
+    description: string;
+    audiences: string[];
+    primaryButton: string;
+    secondaryButton: string;
+    mainImageAlt: string;
+    captionLabel: string;
+    captionTitle: string;
+    secondaryImageAlt: string;
+    secondaryLabel: string;
+    secondaryTitle: string;
+    floatingLabels: {
+      germany: string;
+      universities: string;
+      training: string;
+    };
+  }
+>;
 
 export default function EducationHero() {
+  const locale = useLocale() as Locale;
+  const t = content[locale] ?? content.de;
+
   return (
     <section className={styles.hero}>
       <span
         className={styles.backgroundWord}
         aria-hidden="true"
       >
-        EDUCATION
+        {t.backgroundWord}
       </span>
 
       <Container>
         <div className={styles.wrapper}>
-          {/* Content */}
-
           <div className={styles.content}>
             <div className={styles.eyebrow}>
-              <span className={styles.eyebrowDot}></span>
-              Global Education Exchange
+              <span className={styles.eyebrowDot} />
+              {t.eyebrow}
             </div>
 
             <h1 className={styles.title}>
-              Connect Learning With{" "}
+              {t.titleBefore}{" "}
               <span className={styles.goldText}>
-                Global Opportunity
+                {t.highlightedTitle}
               </span>
             </h1>
 
             <p className={styles.description}>
-              Western Bridge supports students, learners, universities,
-              training providers, and educational institutions in exploring
-              international academic pathways, professional preparation,
-              institutional cooperation, and cross-border education
-              opportunities.
+              {t.description}
             </p>
 
             <div className={styles.audienceRow}>
-              {audiences.map((audience) => (
+              {t.audiences.map((audience) => (
                 <div
                   key={audience}
                   className={styles.audienceItem}
                 >
-                  <span className={styles.audienceDot}></span>
+                  <span className={styles.audienceDot} />
                   {audience}
                 </div>
               ))}
@@ -63,83 +210,83 @@ export default function EducationHero() {
                 href="#education-pathways"
                 className={styles.primaryButton}
               >
-                Explore Education Pathways
-                <span aria-hidden="true">→</span>
+                {t.primaryButton}
+
+                <span aria-hidden="true">
+                  {locale === "ar" ? "←" : "→"}
+                </span>
               </Link>
 
               <Link
                 href="#institutional-partnerships"
                 className={styles.secondaryButton}
               >
-                Institutional Partnerships
+                {t.secondaryButton}
               </Link>
             </div>
           </div>
-
-          {/* Visual */}
 
           <div className={styles.visual}>
             <span
               className={styles.goldCircle}
               aria-hidden="true"
-            ></span>
-
-            {/* Main Image */}
+            />
 
             <div className={styles.mainImage}>
               <Image
                 src="/images/education-campus.jpg"
-                alt="International university campus and academic environment"
+                alt={t.mainImageAlt}
                 fill
                 priority
                 sizes="(max-width: 900px) 100vw, 48vw"
                 className={styles.image}
               />
 
-              <div className={styles.imageOverlay}></div>
+              <div className={styles.imageOverlay} />
 
               <div className={styles.imageCaption}>
                 <span className={styles.captionLabel}>
-                  International Education
+                  {t.captionLabel}
                 </span>
 
                 <h2 className={styles.captionTitle}>
-                  Academic pathways and learning across borders.
+                  {t.captionTitle}
                 </h2>
               </div>
             </div>
 
-            {/* Secondary Image */}
-
             <div className={styles.secondaryImage}>
               <Image
                 src="/images/education-students.jpg"
-                alt="International students in a modern learning environment"
+                alt={t.secondaryImageAlt}
                 fill
                 sizes="(max-width: 650px) 65vw, 22vw"
                 className={styles.image}
               />
 
-              <div className={styles.secondaryOverlay}></div>
+              <div className={styles.secondaryOverlay} />
 
               <div className={styles.secondaryCaption}>
-                <span>Students</span>
-                <strong>International Learning</strong>
+                <span>
+                  {t.secondaryLabel}
+                </span>
+
+                <strong>
+                  {t.secondaryTitle}
+                </strong>
               </div>
             </div>
 
-            {/* Floating Labels */}
-
             <span className={styles.labelGermany}>
-              Germany
+              {t.floatingLabels.germany}
             </span>
 
             <span className={styles.labelUniversities}>
-              Universities
+              {t.floatingLabels.universities}
             </span>
 
             <span className={styles.labelTraining}>
-              Training & Learning
+              {t.floatingLabels.training}
             </span>
           </div>
         </div>

@@ -1,7 +1,7 @@
 .section {
   position: relative;
 
-  padding: 135px 0;
+  padding: 90px 0;
 
   background:
     linear-gradient(
@@ -16,11 +16,14 @@
 
 /* ========================================
    Layout
-   ======================================== */
+======================================== */
 
 .wrapper {
   display: grid;
-  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+
+  grid-template-columns:
+    minmax(0, 0.78fr)
+    minmax(0, 1.22fr);
 
   align-items: start;
 
@@ -30,7 +33,7 @@
 
 /* ========================================
    Left Content
-   ======================================== */
+======================================== */
 
 .content {
   position: sticky;
@@ -46,7 +49,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
@@ -59,9 +63,11 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 }
 
 .title {
@@ -69,9 +75,15 @@
 
   margin-bottom: 22px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -79,7 +91,8 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .description {
@@ -87,7 +100,8 @@
 
   margin-bottom: 34px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.96rem;
 
@@ -97,28 +111,32 @@
 
 /* ========================================
    Image
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
 
   min-height: 330px;
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
   overflow: hidden;
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.8s ease;
+  transition:
+    transform 0.8s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .imageOverlay {
@@ -149,7 +167,8 @@
 
   margin-bottom: 6px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -161,7 +180,8 @@
 .captionTitle {
   max-width: 370px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.18rem;
   font-weight: 800;
@@ -172,25 +192,31 @@
 
 /* ========================================
    Workspace
-   ======================================== */
+======================================== */
 
 .workspace {
   position: relative;
 
   padding: 34px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-xl);
+  border:
+    1px solid
+    var(--color-border-light);
 
-  box-shadow: var(--shadow-lg);
+  border-radius:
+    var(--radius-xl);
+
+  box-shadow:
+    var(--shadow-lg);
 }
 
 
 /* ========================================
    Workspace Top
-   ======================================== */
+======================================== */
 
 .workspaceTop {
   display: flex;
@@ -207,7 +233,8 @@
 
   margin-bottom: 4px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -217,14 +244,16 @@
 }
 
 .workspaceTitle {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.35rem;
   font-weight: 800;
 }
 
 .workspaceCode {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.64rem;
   font-weight: 700;
@@ -235,7 +264,7 @@
 
 /* ========================================
    Progress
-   ======================================== */
+======================================== */
 
 .progressHeader {
   display: flex;
@@ -244,7 +273,8 @@
 
   margin-bottom: 9px;
 
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.66rem;
   font-weight: 700;
@@ -255,9 +285,11 @@
 
   margin-bottom: 28px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border-radius: var(--radius-full);
+  border-radius:
+    var(--radius-full);
 
   overflow: hidden;
 }
@@ -277,15 +309,21 @@
 
 /* ========================================
    Areas
-   ======================================== */
+======================================== */
 
 .areas {
-  border-top: 1px solid var(--color-border-light);
+  border-top:
+    1px solid
+    var(--color-border-light);
 }
 
 .area {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr) auto;
+
+  grid-template-columns:
+    58px
+    minmax(0, 1fr)
+    auto;
 
   align-items: center;
 
@@ -293,22 +331,28 @@
 
   padding: 23px 0;
 
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom:
+    1px solid
+    var(--color-border-light);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .area:hover {
   padding-left: 14px;
   padding-right: 14px;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 }
 
 .areaNumber {
-  color: rgba(13, 49, 88, 0.13);
+  color:
+    rgba(13, 49, 88, 0.13);
 
   font-size: 2rem;
   font-weight: 900;
@@ -321,7 +365,8 @@
 
   margin-bottom: 4px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -333,7 +378,8 @@
 .areaTitle {
   margin-bottom: 5px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1rem;
   font-weight: 800;
@@ -342,7 +388,8 @@
 .areaText {
   max-width: 590px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.73rem;
 
@@ -352,17 +399,23 @@
 
 /* ========================================
    Status
-   ======================================== */
+======================================== */
 
 .areaStatus {
   padding: 7px 10px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: rgba(199, 162, 74, 0.1);
+  background:
+    rgba(199, 162, 74, 0.1);
 
-  border: 1px solid rgba(199, 162, 74, 0.18);
-  border-radius: var(--radius-full);
+  border:
+    1px solid
+    rgba(199, 162, 74, 0.18);
+
+  border-radius:
+    var(--radius-full);
 
   font-size: 0.58rem;
   font-weight: 800;
@@ -373,7 +426,7 @@
 
 /* ========================================
    Bottom
-   ======================================== */
+======================================== */
 
 .workspaceBottom {
   margin-top: 28px;
@@ -393,7 +446,8 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-lg);
+  border-radius:
+    var(--radius-lg);
 }
 
 .bottomLabel {
@@ -401,7 +455,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -413,7 +468,8 @@
 .bottomText {
   max-width: 580px;
 
-  color: rgba(255, 255, 255, 0.64);
+  color:
+    rgba(255, 255, 255, 0.64);
 
   font-size: 0.75rem;
 
@@ -433,33 +489,161 @@
 
   padding: 0 19px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.77rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .button:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
+}
+
+
+/* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .wrapper {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .content {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .imageCaption {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .captionLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .captionTitle {
+  line-height: 1.55;
+}
+
+:global(html[dir="rtl"]) .workspace {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .workspaceTop {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .workspaceTop > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .workspaceLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .workspaceCode {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .progressHeader {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .progressFill {
+  background:
+    linear-gradient(
+      270deg,
+      var(--color-gold),
+      var(--color-navy)
+    );
+}
+
+:global(html[dir="rtl"]) .area {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .areaContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .areaLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .areaText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .areaStatus {
+  text-align: center;
+}
+
+:global(html[dir="rtl"]) .workspaceBottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .workspaceBottom > div {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .bottomLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .bottomText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .button {
+  direction: rtl;
 }
 
 
 /* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .wrapper {
@@ -492,10 +676,18 @@
   }
 
   .area {
-    grid-template-columns: 48px minmax(0, 1fr);
+    grid-template-columns:
+      48px
+      minmax(0, 1fr);
   }
 
   .areaStatus {
+    grid-column: 2;
+
+    justify-self: start;
+  }
+
+  :global(html[dir="rtl"]) .areaStatus {
     grid-column: 2;
 
     justify-self: start;
@@ -518,19 +710,26 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .visual {
     min-height: 300px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .workspace {
     padding: 22px 18px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .workspaceTop {
@@ -550,11 +749,15 @@
     padding-left: 0;
     padding-right: 0;
 
-    background: transparent;
+    background:
+      transparent;
   }
 
-  .areaStatus {
+  .areaStatus,
+  :global(html[dir="rtl"]) .areaStatus {
     grid-column: auto;
+
+    justify-self: start;
   }
 
   .workspaceBottom {

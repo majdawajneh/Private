@@ -1,9 +1,10 @@
 .section {
   position: relative;
 
-  padding: 130px 0;
+  padding: 80px 0;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
   overflow: hidden;
 }
@@ -11,11 +12,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
 
   align-items: end;
 
@@ -32,7 +36,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.73rem;
   font-weight: 800;
@@ -45,15 +50,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 720px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -61,7 +73,8 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .headerRight {
@@ -69,7 +82,8 @@
 }
 
 .description {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.96rem;
 
@@ -79,7 +93,7 @@
 
 /* ========================================
    Notice
-   ======================================== */
+======================================== */
 
 .notice {
   margin-top: 20px;
@@ -91,10 +105,18 @@
 
   padding: 15px 17px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border-left: 3px solid var(--color-gold);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  border-left:
+    3px solid
+    var(--color-gold);
+
+  border-radius:
+    0
+    var(--radius-sm)
+    var(--radius-sm)
+    0;
 }
 
 .noticeMark {
@@ -106,9 +128,11 @@
 
   flex-shrink: 0;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: rgba(199, 162, 74, 0.16);
+  background:
+    rgba(199, 162, 74, 0.16);
 
   border-radius: 50%;
 
@@ -117,7 +141,8 @@
 }
 
 .notice p {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.75rem;
 
@@ -127,17 +152,23 @@
 
 /* ========================================
    Pathway
-   ======================================== */
+======================================== */
 
 .pathway {
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .stage {
   position: relative;
 
   display: grid;
-  grid-template-columns: 82px minmax(0, 1.1fr) minmax(280px, 0.9fr);
+
+  grid-template-columns:
+    82px
+    minmax(0, 1.1fr)
+    minmax(280px, 0.9fr);
 
   gap: 28px;
 
@@ -145,24 +176,29 @@
 
   padding: 32px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .stage:hover {
   padding-left: 18px;
   padding-right: 18px;
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 }
 
 
 /* ========================================
    Rail
-   ======================================== */
+======================================== */
 
 .stageRail {
   position: relative;
@@ -182,11 +218,16 @@
   display: grid;
   place-items: center;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
-  border: 2px solid var(--color-gold);
+  border:
+    2px solid
+    var(--color-gold);
+
   border-radius: 50%;
 
   font-size: 0.68rem;
@@ -216,14 +257,15 @@
 
 /* ========================================
    Main Stage Content
-   ======================================== */
+======================================== */
 
 .phase {
   display: block;
 
   margin-bottom: 7px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -235,9 +277,16 @@
 .stageTitle {
   margin-bottom: 10px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  font-size:
+    clamp(
+      1.25rem,
+      2vw,
+      1.65rem
+    );
+
   font-weight: 800;
 
   letter-spacing: -0.025em;
@@ -246,7 +295,8 @@
 .stageText {
   max-width: 620px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.82rem;
 
@@ -256,11 +306,16 @@
 
 /* ========================================
    Items
-   ======================================== */
+======================================== */
 
 .stageItems {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   align-content: center;
 
@@ -277,12 +332,18 @@
 
   padding: 9px 10px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
-  background: var(--color-background-soft);
+  background:
+    var(--color-background-soft);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-sm);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.69rem;
   font-weight: 700;
@@ -297,9 +358,11 @@
 
   flex-shrink: 0;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
-  background: rgba(199, 162, 74, 0.11);
+  background:
+    rgba(199, 162, 74, 0.11);
 
   border-radius: 50%;
 
@@ -310,12 +373,13 @@
 
 /* ========================================
    Featured Recognition Stage
-   ======================================== */
+======================================== */
 
 .featured {
   margin: 18px 0;
 
-  padding: 32px 24px;
+  padding:
+    32px 24px;
 
   background:
     linear-gradient(
@@ -325,9 +389,12 @@
     );
 
   border: 0;
-  border-radius: var(--radius-lg);
 
-  box-shadow: var(--shadow-md);
+  border-radius:
+    var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-md);
 }
 
 .featured:hover {
@@ -343,43 +410,54 @@
 }
 
 .featured .stageNode {
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-color: var(--color-gold-light);
+  border-color:
+    var(--color-gold-light);
 }
 
 .featured .phase {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 }
 
 .featured .stageTitle {
-  color: var(--color-white);
+  color:
+    var(--color-white);
 }
 
 .featured .stageText {
-  color: rgba(255, 255, 255, 0.68);
+  color:
+    rgba(255, 255, 255, 0.68);
 }
 
 .featured .item {
-  color: rgba(255, 255, 255, 0.78);
+  color:
+    rgba(255, 255, 255, 0.78);
 
-  background: rgba(255, 255, 255, 0.06);
+  background:
+    rgba(255, 255, 255, 0.06);
 
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color:
+    rgba(255, 255, 255, 0.08);
 }
 
 .featured .itemMark {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
-  background: rgba(199, 162, 74, 0.12);
+  background:
+    rgba(199, 162, 74, 0.12);
 }
 
 
 /* ========================================
    Bottom CTA
-   ======================================== */
+======================================== */
 
 .bottom {
   margin-top: 45px;
@@ -392,10 +470,15 @@
 
   gap: 30px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-lg);
+  border:
+    1px solid
+    var(--color-border-light);
+
+  border-radius:
+    var(--radius-lg);
 }
 
 .bottomContent {
@@ -407,7 +490,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -419,14 +503,16 @@
 .bottomTitle {
   margin-bottom: 6px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.08rem;
   font-weight: 800;
 }
 
 .bottomText {
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.77rem;
 
@@ -446,33 +532,136 @@
 
   padding: 0 20px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.79rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .button:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
+}
+
+
+/* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .headerRight,
+:global(html[dir="rtl"]) .stageMain,
+:global(html[dir="rtl"]) .bottomContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .description {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .notice {
+  direction: rtl;
+
+  border-left: 0;
+
+  border-right:
+    3px solid
+    var(--color-gold);
+
+  border-radius:
+    var(--radius-sm)
+    0
+    0
+    var(--radius-sm);
+}
+
+:global(html[dir="rtl"]) .notice p {
+  line-height: 1.75;
+}
+
+:global(html[dir="rtl"]) .stage {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .phase {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .stageTitle {
+  letter-spacing: -0.01em;
+
+  line-height: 1.45;
+}
+
+:global(html[dir="rtl"]) .stageText {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .stageItems {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .item {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .bottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .bottomLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .bottomText {
+  line-height: 1.8;
 }
 
 
 /* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .header {
@@ -482,10 +671,16 @@
   }
 
   .stage {
-    grid-template-columns: 72px minmax(0, 1fr);
+    grid-template-columns:
+      72px
+      minmax(0, 1fr);
   }
 
   .stageItems {
+    grid-column: 2;
+  }
+
+  :global(html[dir="rtl"]) .stageItems {
     grid-column: 2;
   }
 }
@@ -497,7 +692,9 @@
   }
 
   .stage {
-    grid-template-columns: 50px minmax(0, 1fr);
+    grid-template-columns:
+      50px
+      minmax(0, 1fr);
 
     gap: 16px;
   }
@@ -523,7 +720,12 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .stage {
@@ -545,11 +747,19 @@
     justify-content: flex-start;
   }
 
+  :global(html[dir="rtl"]) .stageRail {
+    justify-content: flex-end;
+  }
+
   .railLine {
     display: none;
   }
 
   .stageItems {
+    grid-column: auto;
+  }
+
+  :global(html[dir="rtl"]) .stageItems {
     grid-column: auto;
   }
 

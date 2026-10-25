@@ -12,11 +12,14 @@
 
 /* ========================================
    Layout
-   ======================================== */
+======================================== */
 
 .layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+
+  grid-template-columns:
+    minmax(0, 0.82fr)
+    minmax(0, 1.18fr);
 
   align-items: start;
 
@@ -26,7 +29,7 @@
 
 /* ========================================
    Left Column
-   ======================================== */
+======================================== */
 
 .visualColumn {
   position: sticky;
@@ -46,7 +49,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.72rem;
   font-weight: 800;
@@ -59,15 +63,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 610px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 4.8vw, 4.6rem);
+  font-size:
+    clamp(
+      2.8rem,
+      4.8vw,
+      4.4rem
+    );
 
   line-height: 0.98;
 
@@ -75,13 +86,14 @@
 }
 
 .title span {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 
 /* ========================================
    Image
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
@@ -90,19 +102,23 @@
 
   overflow: hidden;
 
-  border-radius: 28px 28px 90px 28px;
+  border-radius:
+    28px 28px 90px 28px;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.8s ease;
+  transition:
+    transform 0.8s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .overlay {
@@ -133,7 +149,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.6rem;
   font-weight: 800;
@@ -147,7 +164,8 @@
 
   margin-bottom: 9px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.4rem;
   font-weight: 800;
@@ -158,7 +176,8 @@
 .imageContent p {
   max-width: 420px;
 
-  color: rgba(255, 255, 255, 0.67);
+  color:
+    rgba(255, 255, 255, 0.67);
 
   font-size: 0.73rem;
 
@@ -168,7 +187,7 @@
 
 /* ========================================
    System
-   ======================================== */
+======================================== */
 
 .system {
   padding-top: 5px;
@@ -176,7 +195,10 @@
 
 .systemIntro {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+
+  grid-template-columns:
+    auto
+    minmax(0, 1fr);
 
   align-items: start;
 
@@ -184,11 +206,14 @@
 
   padding-bottom: 26px;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .systemCode {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.6rem;
   font-weight: 900;
@@ -201,7 +226,8 @@
 .systemIntro p {
   max-width: 600px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.81rem;
 
@@ -211,25 +237,34 @@
 
 /* ========================================
    Points
-   ======================================== */
+======================================== */
 
 .points {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .point {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
+
+  grid-template-columns:
+    70px
+    minmax(0, 1fr);
 
   gap: 22px;
 
   padding: 27px 0;
 
-  border-bottom: 1px solid var(--color-border-light);
+  border-bottom:
+    1px solid
+    var(--color-border-light);
 
   transition:
-    padding var(--transition-normal),
-    background var(--transition-normal);
+    padding
+      var(--transition-normal),
+    background
+      var(--transition-normal);
 }
 
 .point:last-child {
@@ -240,11 +275,13 @@
   padding-left: 15px;
   padding-right: 15px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 }
 
 .pointNumber {
-  color: rgba(13, 49, 88, 0.14);
+  color:
+    rgba(13, 49, 88, 0.14);
 
   font-size: 2rem;
   font-weight: 900;
@@ -257,7 +294,8 @@
 .pointContent h3 {
   margin-bottom: 7px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.04rem;
   font-weight: 800;
@@ -266,7 +304,8 @@
 .pointContent p {
   max-width: 650px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.76rem;
 
@@ -276,13 +315,16 @@
 
 /* ========================================
    Principle
-   ======================================== */
+======================================== */
 
 .rule {
   margin-top: 30px;
 
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+
+  grid-template-columns:
+    auto
+    minmax(0, 1fr);
 
   align-items: center;
 
@@ -290,24 +332,40 @@
 
   padding: 21px 23px;
 
-  background: var(--color-background-blue);
+  background:
+    var(--color-background-blue);
 
-  border-left: 3px solid var(--color-gold);
+  border-left:
+    3px solid
+    var(--color-gold);
 }
 
-.ruleMark {
-  width: 46px;
-  height: 46px;
+.ruleLogo {
+  width: 58px;
+  height: 58px;
 
   display: grid;
   place-items: center;
 
-  color: var(--color-white);
+  background:
+    var(--color-white);
 
-  background: var(--color-navy);
+  border:
+    4px solid
+    rgba(199, 162, 74, 0.2);
 
-  font-size: 0.67rem;
-  font-weight: 900;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.ruleLogoImage {
+  width: 50px;
+  height: 50px;
+
+  display: block;
+
+  object-fit: contain;
 }
 
 .ruleLabel {
@@ -315,7 +373,8 @@
 
   margin-bottom: 5px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.57rem;
   font-weight: 800;
@@ -327,7 +386,8 @@
 .rule p {
   max-width: 600px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.73rem;
 
@@ -337,7 +397,7 @@
 
 /* ========================================
    Button
-   ======================================== */
+======================================== */
 
 .button {
   min-height: 51px;
@@ -352,33 +412,142 @@
 
   padding: 0 21px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: var(--color-navy);
+  background:
+    var(--color-navy);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.78rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .button:hover {
-  background: var(--color-navy-dark);
+  background:
+    var(--color-navy-dark);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
+}
+
+
+/* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .layout {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .heading,
+:global(html[dir="rtl"]) .system {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    28px 28px 28px 90px;
+}
+
+:global(html[dir="rtl"]) .imageContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .imageLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .imageContent h3 {
+  line-height: 1.5;
+}
+
+:global(html[dir="rtl"]) .imageContent p {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .systemIntro {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .systemCode {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .systemIntro p {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .point {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .pointNumber {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .pointContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .pointContent p {
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .rule {
+  direction: rtl;
+
+  border-left: 0;
+
+  border-right:
+    3px solid
+    var(--color-gold);
+}
+
+:global(html[dir="rtl"]) .rule > div:last-child {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .ruleLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .rule p {
+  line-height: 1.8;
 }
 
 
 /* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .layout {
@@ -413,7 +582,13 @@
   .visual {
     min-height: 430px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
+  }
+
+  :global(html[dir="rtl"]) .visual {
+    border-radius:
+      var(--radius-xl);
   }
 
   .systemIntro {
@@ -423,7 +598,9 @@
   }
 
   .point {
-    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-columns:
+      52px
+      minmax(0, 1fr);
 
     gap: 14px;
   }
@@ -436,7 +613,12 @@
   }
 
   .title {
-    font-size: clamp(2.5rem, 12vw, 3.7rem);
+    font-size:
+      clamp(
+        2.5rem,
+        12vw,
+        3.7rem
+      );
   }
 
   .visual {
@@ -461,7 +643,8 @@
     padding-left: 0;
     padding-right: 0;
 
-    background: transparent;
+    background:
+      transparent;
   }
 
   .rule {

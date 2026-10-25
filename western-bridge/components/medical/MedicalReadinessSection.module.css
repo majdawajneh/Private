@@ -1,17 +1,21 @@
 .section {
-  padding: 130px 0 115px;
+  padding: 0px 0 115px;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 }
 
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .top {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.65fr);
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(320px, 0.65fr);
 
   align-items: end;
 
@@ -28,7 +32,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.72rem;
   font-weight: 800;
@@ -41,13 +46,20 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.9rem, 5vw, 4.9rem);
+  font-size:
+    clamp(
+      2.9rem,
+      5vw,
+      4rem
+    );
 
   line-height: 0.98;
 
@@ -55,13 +67,15 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .intro {
   max-width: 620px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.94rem;
 
@@ -71,11 +85,14 @@
 
 /* ========================================
    Main Workspace
-   ======================================== */
+======================================== */
 
 .workspace {
   display: grid;
-  grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
+
+  grid-template-columns:
+    minmax(320px, 0.72fr)
+    minmax(0, 1.28fr);
 
   gap: 42px;
 
@@ -85,28 +102,32 @@
 
 /* ========================================
    Image
-   ======================================== */
+======================================== */
 
 .visual {
   position: relative;
 
   min-height: 760px;
 
-  border-radius: 30px 30px 90px 30px;
+  border-radius:
+    30px 30px 90px 30px;
 
   overflow: hidden;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 }
 
 .image {
   object-fit: cover;
 
-  transition: transform 0.8s ease;
+  transition:
+    transform 0.8s ease;
 }
 
 .visual:hover .image {
-  transform: scale(1.025);
+  transform:
+    scale(1.025);
 }
 
 .imageOverlay {
@@ -137,7 +158,8 @@
 
   margin-bottom: 8px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.62rem;
   font-weight: 800;
@@ -151,7 +173,8 @@
 
   margin-bottom: 10px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.5rem;
   font-weight: 800;
@@ -162,7 +185,8 @@
 .visualText {
   max-width: 390px;
 
-  color: rgba(255, 255, 255, 0.67);
+  color:
+    rgba(255, 255, 255, 0.67);
 
   font-size: 0.75rem;
 
@@ -172,21 +196,28 @@
 
 /* ========================================
    Workstreams
-   ======================================== */
+======================================== */
 
 .workstreams {
-  border-top: 1px solid var(--color-border);
+  border-top:
+    1px solid
+    var(--color-border);
 }
 
 .workstream {
   padding: 30px 0;
 
-  border-bottom: 1px solid var(--color-border);
+  border-bottom:
+    1px solid
+    var(--color-border);
 }
 
 .workstreamHead {
   display: grid;
-  grid-template-columns: 60px minmax(0, 1fr);
+
+  grid-template-columns:
+    60px
+    minmax(0, 1fr);
 
   align-items: start;
 
@@ -196,7 +227,8 @@
 }
 
 .number {
-  color: rgba(13, 49, 88, 0.14);
+  color:
+    rgba(13, 49, 88, 0.14);
 
   font-size: 2.3rem;
   font-weight: 900;
@@ -211,7 +243,8 @@
 
   margin-bottom: 4px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -221,7 +254,8 @@
 }
 
 .workstreamTitle {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 1.35rem;
   font-weight: 800;
@@ -232,9 +266,14 @@
 .description {
   max-width: 720px;
 
-  margin: 0 0 20px 80px;
+  margin:
+    0
+    0
+    20px
+    80px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.8rem;
 
@@ -244,7 +283,7 @@
 
 /* ========================================
    Support Area
-   ======================================== */
+======================================== */
 
 .supportBlock {
   margin-left: 80px;
@@ -255,7 +294,8 @@
 
   margin-bottom: 10px;
 
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.59rem;
   font-weight: 800;
@@ -266,7 +306,12 @@
 
 .supportList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap: 9px 24px;
 }
@@ -277,7 +322,8 @@
 
   gap: 9px;
 
-  color: var(--color-text);
+  color:
+    var(--color-text);
 
   font-size: 0.71rem;
   font-weight: 700;
@@ -289,7 +335,8 @@
 
   flex-shrink: 0;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
   border-radius: 50%;
 }
@@ -297,10 +344,14 @@
 
 /* ========================================
    Authority
-   ======================================== */
+======================================== */
 
 .authority {
-  margin: 21px 0 0 80px;
+  margin:
+    21px
+    0
+    0
+    80px;
 
   padding-top: 15px;
 
@@ -310,11 +361,14 @@
 
   gap: 25px;
 
-  border-top: 1px dashed var(--color-border);
+  border-top:
+    1px dashed
+    var(--color-border);
 }
 
 .authorityLabel {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.61rem;
 
@@ -323,7 +377,8 @@
 }
 
 .authority strong {
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
   font-size: 0.68rem;
 
@@ -333,13 +388,17 @@
 
 /* ========================================
    Final Case Review
-   ======================================== */
+======================================== */
 
 .finalBlock {
   margin-top: 65px;
 
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.8fr) auto;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(300px, 0.8fr)
+    auto;
 
   align-items: center;
 
@@ -354,9 +413,11 @@
       var(--color-navy)
     );
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 .finalLabel {
@@ -364,7 +425,8 @@
 
   margin-bottom: 7px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.61rem;
   font-weight: 800;
@@ -376,7 +438,8 @@
 .finalTitle {
   margin-bottom: 8px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 1.18rem;
   font-weight: 800;
@@ -385,7 +448,8 @@
 .finalText {
   max-width: 610px;
 
-  color: rgba(255, 255, 255, 0.64);
+  color:
+    rgba(255, 255, 255, 0.64);
 
   font-size: 0.75rem;
 
@@ -395,11 +459,16 @@
 
 /* ========================================
    Case Fields
-   ======================================== */
+======================================== */
 
 .caseFields {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap: 8px;
 }
@@ -407,11 +476,16 @@
 .caseFields span {
   padding: 8px 10px;
 
-  color: rgba(255, 255, 255, 0.76);
+  color:
+    rgba(255, 255, 255, 0.76);
 
-  background: rgba(255, 255, 255, 0.06);
+  background:
+    rgba(255, 255, 255, 0.06);
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.08);
+
   border-radius: 6px;
 
   font-size: 0.65rem;
@@ -421,7 +495,7 @@
 
 /* ========================================
    CTA
-   ======================================== */
+======================================== */
 
 .cta {
   min-height: 52px;
@@ -434,11 +508,14 @@
 
   padding: 0 20px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.78rem;
   font-weight: 800;
@@ -446,30 +523,37 @@
   white-space: nowrap;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .cta:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
    Legal
-   ======================================== */
+======================================== */
 
 .legal {
   max-width: 960px;
 
   margin-top: 18px;
 
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.65rem;
 
@@ -478,8 +562,162 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .top {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .heading,
+:global(html[dir="rtl"]) .intro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .intro {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .workspace {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .visual {
+  border-radius:
+    30px 30px 30px 90px;
+}
+
+:global(html[dir="rtl"]) .visualContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .visualLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .visualText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .workstream {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .workstreamHead {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .number {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .subtitle {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .workstreamTitle {
+  letter-spacing: -0.01em;
+}
+
+:global(html[dir="rtl"]) .description {
+  margin:
+    0
+    80px
+    20px
+    0;
+
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .supportBlock {
+  margin-left: 0;
+  margin-right: 80px;
+}
+
+:global(html[dir="rtl"]) .supportLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .supportList {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .supportItem {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .authority {
+  margin:
+    21px
+    80px
+    0
+    0;
+
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .authorityLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .authority strong {
+  text-align: left;
+}
+
+:global(html[dir="rtl"]) .finalBlock {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .finalIntro {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .finalLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .finalText {
+  line-height: 1.8;
+}
+
+:global(html[dir="rtl"]) .caseFields {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .caseFields span {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .legal {
+  text-align: right;
+
+  line-height: 1.8;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
   .top {
@@ -503,7 +741,9 @@
   }
 
   .finalBlock {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr
+      1fr;
   }
 
   .cta {
@@ -516,19 +756,34 @@
 
 @media (max-width: 720px) {
   .section {
-    padding: 95px 0 85px;
+    padding:
+      95px
+      0
+      85px;
   }
 
   .visual {
     min-height: 450px;
 
-    border-radius: var(--radius-xl);
+    border-radius:
+      var(--radius-xl);
+  }
+
+  :global(html[dir="rtl"]) .visual {
+    border-radius:
+      var(--radius-xl);
   }
 
   .description,
   .supportBlock,
   .authority {
     margin-left: 0;
+  }
+
+  :global(html[dir="rtl"]) .description,
+  :global(html[dir="rtl"]) .supportBlock,
+  :global(html[dir="rtl"]) .authority {
+    margin-right: 0;
   }
 
   .supportList {
@@ -540,7 +795,11 @@
   }
 
   .caseFields {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
   }
 
   .cta {
@@ -555,7 +814,12 @@
   }
 
   .title {
-    font-size: clamp(2.5rem, 12vw, 3.7rem);
+    font-size:
+      clamp(
+        2.5rem,
+        12vw,
+        3.7rem
+      );
   }
 
   .visual {
@@ -589,13 +853,22 @@
     text-align: left;
   }
 
+  :global(html[dir="rtl"]) .authority strong {
+    text-align: right;
+  }
+
   .finalBlock {
     padding: 25px 21px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .caseFields {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
   }
 }

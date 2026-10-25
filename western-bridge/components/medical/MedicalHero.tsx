@@ -1,75 +1,255 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client";
 
-import Container from "../ui/Container";
+import Image from "next/image";
+import { useLocale } from "next-intl";
+
+import { Link } from "@/i18n/navigation";
+import Container from "@/components/ui/Container";
+
 import styles from "./MedicalHero.module.css";
 
-const professions = [
-  "Nurses",
-  "Doctors",
-  "Pharmacists",
-  "Allied Health",
-];
+type Locale = "de" | "en" | "ar";
 
-const pathway = [
-  {
-    number: "01",
-    title: "German Language",
+type PathwayStep = {
+  number: string;
+  title: string;
+};
+
+const content = {
+  de: {
+    eyebrow: "Medizinische Wege & Gesundheitswesen",
+
+    titleLineOne: "Ihre medizinische Karriere.",
+    titleLineTwoBefore: "Ein klarerer Weg nach",
+    highlightedTitle: "Deutschland.",
+
+    description:
+      "Western Bridge unterstützt Fachkräfte im Gesundheitswesen dabei, sprachliche Anforderungen, Anerkennung, Zulassung, Dokumente und berufliche Vorbereitung auf dem Weg nach Deutschland besser zu verstehen.",
+
+    professions: [
+      "Pflegefachkräfte",
+      "Ärzte",
+      "Apotheker",
+      "Weitere Gesundheitsberufe",
+    ],
+
+    primaryButton: "Medizinischen Weg entdecken",
+    secondaryButton: "Ihre Situation besprechen",
+
+    disclaimer:
+      "Western Bridge bietet Orientierung, Vorbereitung, Training und Unterstützung bei der Strukturierung Ihres Weges. Entscheidungen über Anerkennung, Zulassung, Visa und Beschäftigung liegen bei den jeweils zuständigen Behörden und Organisationen.",
+
+    imageAlt:
+      "Fachkraft im Gesundheitswesen in einer modernen medizinischen Umgebung",
+
+    imageLabel: "Gesundheitsweg nach Deutschland",
+
+    imageTitle:
+      "Bereiten Sie sich mit einem klareren Plan auf einen regulierten Beruf vor.",
+
+    pathwayLabel: "Medizinischer Weg",
+
+    pathwayTitle:
+      "Von der Vorbereitung zur beruflichen Bereitschaft",
+
+    pathway: [
+      {
+        number: "01",
+        title: "Deutsche Sprache",
+      },
+      {
+        number: "02",
+        title: "Anerkennung der Qualifikation",
+      },
+      {
+        number: "03",
+        title: "Zulassung & Prüfungen",
+      },
+      {
+        number: "04",
+        title: "Berufliche Vorbereitung",
+      },
+      {
+        number: "05",
+        title: "Möglichkeiten erkunden",
+      },
+    ],
   },
-  {
-    number: "02",
-    title: "Qualification Recognition",
+
+  en: {
+    eyebrow: "Medical & Healthcare Pathways",
+
+    titleLineOne: "Your Medical Career.",
+    titleLineTwoBefore: "A Clearer Route to",
+    highlightedTitle: "Germany.",
+
+    description:
+      "Western Bridge supports healthcare professionals in understanding the language, recognition, licensing, documentation, and professional preparation involved in building a medical pathway toward Germany.",
+
+    professions: [
+      "Nurses",
+      "Doctors",
+      "Pharmacists",
+      "Allied Health",
+    ],
+
+    primaryButton: "Explore the Medical Pathway",
+    secondaryButton: "Discuss Your Case",
+
+    disclaimer:
+      "Western Bridge provides guidance, preparation, training, and pathway support. Recognition, licensing, visas, and employment decisions remain with the relevant authorities and organizations.",
+
+    imageAlt:
+      "Healthcare professional working in a modern hospital environment",
+
+    imageLabel: "Germany Healthcare Pathway",
+
+    imageTitle:
+      "Prepare for a regulated profession with a clearer plan.",
+
+    pathwayLabel: "Medical Path",
+
+    pathwayTitle:
+      "From Preparation to Professional Readiness",
+
+    pathway: [
+      {
+        number: "01",
+        title: "German Language",
+      },
+      {
+        number: "02",
+        title: "Qualification Recognition",
+      },
+      {
+        number: "03",
+        title: "Licensing & Exams",
+      },
+      {
+        number: "04",
+        title: "Professional Readiness",
+      },
+      {
+        number: "05",
+        title: "Opportunity Exploration",
+      },
+    ],
   },
-  {
-    number: "03",
-    title: "Licensing & Exams",
+
+  ar: {
+    eyebrow: "المسارات الطبية والصحية",
+
+    titleLineOne: "مسيرتك الطبية.",
+    titleLineTwoBefore: "طريق أوضح نحو",
+    highlightedTitle: "ألمانيا.",
+
+    description:
+      "تساعد Western Bridge المتخصصين في القطاع الطبي على فهم متطلبات اللغة والاعتراف والترخيص والوثائق والاستعداد المهني المرتبط ببناء مسار طبي نحو ألمانيا.",
+
+    professions: [
+      "الممرضون",
+      "الأطباء",
+      "الصيادلة",
+      "المهن الصحية المساندة",
+    ],
+
+    primaryButton: "استكشف المسار الطبي",
+    secondaryButton: "ناقش حالتك معنا",
+
+    disclaimer:
+      "تقدم Western Bridge التوجيه والاستعداد والتدريب ودعم تنظيم المسار. وتبقى قرارات الاعتراف والترخيص والتأشيرات والتوظيف من اختصاص الجهات الرسمية والمؤسسات المعنية.",
+
+    imageAlt:
+      "متخصص في القطاع الطبي يعمل في بيئة صحية حديثة",
+
+    imageLabel: "المسار الطبي نحو ألمانيا",
+
+    imageTitle:
+      "استعد لمهنة منظمة ضمن خطة أكثر وضوحًا.",
+
+    pathwayLabel: "المسار الطبي",
+
+    pathwayTitle:
+      "من الاستعداد إلى الجاهزية المهنية",
+
+    pathway: [
+      {
+        number: "01",
+        title: "اللغة الألمانية",
+      },
+      {
+        number: "02",
+        title: "الاعتراف بالمؤهلات",
+      },
+      {
+        number: "03",
+        title: "الترخيص والامتحانات",
+      },
+      {
+        number: "04",
+        title: "الجاهزية المهنية",
+      },
+      {
+        number: "05",
+        title: "استكشاف الفرص",
+      },
+    ],
   },
+} satisfies Record<
+  Locale,
   {
-    number: "04",
-    title: "Professional Readiness",
-  },
-  {
-    number: "05",
-    title: "Opportunity Exploration",
-  },
-];
+    eyebrow: string;
+    titleLineOne: string;
+    titleLineTwoBefore: string;
+    highlightedTitle: string;
+    description: string;
+    professions: readonly string[];
+    primaryButton: string;
+    secondaryButton: string;
+    disclaimer: string;
+    imageAlt: string;
+    imageLabel: string;
+    imageTitle: string;
+    pathwayLabel: string;
+    pathwayTitle: string;
+    pathway: PathwayStep[];
+  }
+>;
 
 export default function MedicalHero() {
+  const locale = useLocale() as Locale;
+  const t = content[locale] ?? content.de;
+
   return (
     <section className={styles.hero}>
       <Container>
         <div className={styles.wrapper}>
-          {/* Content */}
-
           <div className={styles.content}>
             <div className={styles.eyebrow}>
-              <span className={styles.eyebrowLine}></span>
-              Medical & Healthcare Pathways
+              <span className={styles.eyebrowLine} />
+              {t.eyebrow}
             </div>
 
             <h1 className={styles.title}>
-              Your Medical Career.
+              {t.titleLineOne}
               <br />
-              A Clearer Route to{" "}
+              {t.titleLineTwoBefore}{" "}
               <span className={styles.goldText}>
-                Germany.
+                {t.highlightedTitle}
               </span>
             </h1>
 
             <p className={styles.description}>
-              Western Bridge supports healthcare professionals in
-              understanding the language, recognition, licensing,
-              documentation, and professional preparation involved in
-              building a medical pathway toward Germany.
+              {t.description}
             </p>
 
             <div className={styles.professions}>
-              {professions.map((profession) => (
+              {t.professions.map((profession) => (
                 <span
                   key={profession}
                   className={styles.profession}
                 >
-                  <span className={styles.professionDot}></span>
+                  <span className={styles.professionDot} />
                   {profession}
                 </span>
               ))}
@@ -80,68 +260,82 @@ export default function MedicalHero() {
                 href="#medical-pathway"
                 className={styles.primaryButton}
               >
-                Explore the Medical Pathway
-                <span aria-hidden="true">→</span>
+                {t.primaryButton}
+
+                <span aria-hidden="true">
+                  {locale === "ar" ? "←" : "→"}
+                </span>
               </Link>
 
               <Link
                 href="/contact"
                 className={styles.secondaryButton}
               >
-                Discuss Your Case
+                {t.secondaryButton}
               </Link>
             </div>
 
             <p className={styles.disclaimer}>
-              Western Bridge provides guidance, preparation, training,
-              and pathway support. Recognition, licensing, visas, and
-              employment decisions remain with the relevant authorities
-              and organizations.
+              {t.disclaimer}
             </p>
           </div>
-
-          {/* Visual */}
 
           <div className={styles.visual}>
             <div className={styles.imageWrapper}>
               <Image
                 src="/images/medical-hero.jpg"
-                alt="Healthcare professional working in a modern hospital environment"
+                alt={t.imageAlt}
                 fill
                 priority
                 sizes="(max-width: 900px) 100vw, 48vw"
                 className={styles.image}
               />
 
-              <div className={styles.overlay}></div>
+              <div className={styles.overlay} />
 
               <div className={styles.imageContent}>
                 <span className={styles.imageLabel}>
-                  Germany Healthcare Pathway
+                  {t.imageLabel}
                 </span>
 
                 <h2 className={styles.imageTitle}>
-                  Prepare for a regulated profession with a clearer plan.
+                  {t.imageTitle}
                 </h2>
               </div>
             </div>
 
-            {/* Pathway Strip */}
-
-            <div className={styles.pathway}>
+            <div
+              id="medical-pathway"
+              className={styles.pathway}
+            >
               <div className={styles.pathwayHeader}>
                 <div>
                   <span className={styles.pathwayLabel}>
-                    Medical Path
+                    {t.pathwayLabel}
                   </span>
 
                   <h3 className={styles.pathwayTitle}>
-                    From Preparation to Professional Readiness
+                    {t.pathwayTitle}
                   </h3>
                 </div>
-
               </div>
 
+              <div className={styles.steps}>
+                {t.pathway.map((step) => (
+                  <div
+                    key={step.number}
+                    className={styles.step}
+                  >
+                    <span className={styles.stepNumber}>
+                      {step.number}
+                    </span>
+
+                    <span className={styles.stepTitle}>
+                      {step.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

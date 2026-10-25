@@ -1,9 +1,10 @@
 .section {
   position: relative;
 
-  padding: 130px 0;
+  padding: 100px 0;
 
-  background: var(--color-white);
+  background:
+    var(--color-white);
 
   overflow: hidden;
 }
@@ -11,11 +12,14 @@
 
 /* ========================================
    Header
-   ======================================== */
+======================================== */
 
 .header {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
 
   align-items: end;
 
@@ -32,7 +36,8 @@
 
   margin-bottom: 18px;
 
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.74rem;
   font-weight: 800;
@@ -45,15 +50,22 @@
   width: 32px;
   height: 2px;
 
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 }
 
 .title {
   max-width: 700px;
 
-  color: var(--color-navy);
+  color:
+    var(--color-navy);
 
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size:
+    clamp(
+      2.8rem,
+      5vw,
+      4rem
+    );
 
   line-height: 1;
 
@@ -61,13 +73,15 @@
 }
 
 .goldText {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 }
 
 .headerText {
   max-width: 650px;
 
-  color: var(--color-text-secondary);
+  color:
+    var(--color-text-secondary);
 
   font-size: 0.98rem;
 
@@ -77,13 +91,18 @@
 
 /* ========================================
    Entry Layout
-   ======================================== */
+======================================== */
 
 .entries {
   position: relative;
 
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
 
   gap: 24px;
 
@@ -93,18 +112,20 @@
 
 /* ========================================
    Portal
-   ======================================== */
+======================================== */
 
 .portal {
   position: relative;
 
   min-height: 610px;
 
-  border-radius: var(--radius-xl);
+  border-radius:
+    var(--radius-xl);
 
   overflow: hidden;
 
-  box-shadow: var(--shadow-lg);
+  box-shadow:
+    var(--shadow-lg);
 
   isolation: isolate;
 }
@@ -124,13 +145,14 @@
 }
 
 .portal:hover .image {
-  transform: scale(1.035);
+  transform:
+    scale(1.035);
 }
 
 
 /* ========================================
    Overlays
-   ======================================== */
+======================================== */
 
 .student .overlay {
   position: absolute;
@@ -165,7 +187,7 @@
 
 /* ========================================
    Top Label
-   ======================================== */
+======================================== */
 
 .portalTop {
   display: flex;
@@ -178,7 +200,8 @@
 }
 
 .portalNumber {
-  color: rgba(255, 255, 255, 0.82);
+  color:
+    rgba(255, 255, 255, 0.82);
 
   font-size: 0.7rem;
   font-weight: 800;
@@ -189,15 +212,24 @@
 .portalType {
   padding: 8px 11px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  background: rgba(8, 38, 65, 0.42);
+  background:
+    rgba(8, 38, 65, 0.42);
 
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--radius-full);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.18);
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  border-radius:
+    var(--radius-full);
+
+  backdrop-filter:
+    blur(10px);
+
+  -webkit-backdrop-filter:
+    blur(10px);
 
   font-size: 0.64rem;
   font-weight: 800;
@@ -209,7 +241,7 @@
 
 /* ========================================
    Content
-   ======================================== */
+======================================== */
 
 .portalContent {
   position: absolute;
@@ -226,7 +258,8 @@
 
   margin-bottom: 10px;
 
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
   font-size: 0.68rem;
   font-weight: 800;
@@ -240,9 +273,15 @@
 
   margin-bottom: 15px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
-  font-size: clamp(2rem, 3.7vw, 3.5rem);
+  font-size:
+    clamp(
+      2rem,
+      3.7vw,
+      1rem
+    );
 
   line-height: 1;
 
@@ -254,7 +293,8 @@
 
   margin-bottom: 24px;
 
-  color: rgba(255, 255, 255, 0.72);
+  color:
+    rgba(255, 255, 255, 0.72);
 
   font-size: 0.88rem;
 
@@ -264,7 +304,7 @@
 
 /* ========================================
    Features
-   ======================================== */
+======================================== */
 
 .features {
   display: flex;
@@ -283,14 +323,24 @@
 
   padding: 8px 10px;
 
-  color: rgba(255, 255, 255, 0.86);
+  color:
+    rgba(255, 255, 255, 0.86);
 
-  background: rgba(255, 255, 255, 0.08);
+  background:
+    rgba(255, 255, 255, 0.08);
 
-  border: 1px solid rgba(255, 255, 255, 0.11);
-  border-radius: var(--radius-full);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.11);
 
-  backdrop-filter: blur(8px);
+  border-radius:
+    var(--radius-full);
+
+  backdrop-filter:
+    blur(8px);
+
+  -webkit-backdrop-filter:
+    blur(8px);
 
   font-size: 0.68rem;
   font-weight: 700;
@@ -302,7 +352,8 @@
 
   flex-shrink: 0;
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
   border-radius: 50%;
 }
@@ -310,7 +361,7 @@
 
 /* ========================================
    Portal Action
-   ======================================== */
+======================================== */
 
 .action {
   min-height: 50px;
@@ -325,33 +376,42 @@
 
   padding: 0 20px;
 
-  color: var(--color-navy-dark);
+  color:
+    var(--color-navy-dark);
 
-  background: var(--color-gold-light);
+  background:
+    var(--color-gold-light);
 
-  border-radius: var(--radius-sm);
+  border-radius:
+    var(--radius-sm);
 
   font-size: 0.82rem;
   font-weight: 800;
 
   transition:
-    transform var(--transition-fast),
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
+    transform
+      var(--transition-fast),
+    background
+      var(--transition-fast),
+    box-shadow
+      var(--transition-fast);
 }
 
 .action:hover {
-  background: var(--color-gold);
+  background:
+    var(--color-gold);
 
-  transform: translateY(-2px);
+  transform:
+    translateY(-2px);
 
-  box-shadow: var(--shadow-md);
+  box-shadow:
+    var(--shadow-md);
 }
 
 
 /* ========================================
-   Center Bridge Marker
-   ======================================== */
+   Center Bridge Logo
+======================================== */
 
 .bridgeMarker {
   position: absolute;
@@ -361,57 +421,44 @@
 
   z-index: 8;
 
-  width: 86px;
-  height: 86px;
+  width: 94px;
+  height: 94px;
 
   display: grid;
   place-items: center;
 
-  color: var(--color-navy-dark);
+  background:
+    var(--color-white);
 
-  background: var(--color-white);
+  border:
+    8px solid
+    rgba(199, 162, 74, 0.14);
 
-  border: 8px solid rgba(199, 162, 74, 0.14);
   border-radius: 50%;
 
   box-shadow:
-    0 15px 35px rgba(8, 38, 65, 0.16);
+    0 15px 35px
+    rgba(8, 38, 65, 0.16);
 
-  transform: translate(-50%, -50%);
+  transform:
+    translate(-50%, -50%);
+
+  overflow: hidden;
 }
 
-.bridgeInner {
-  text-align: center;
-}
+.bridgeLogo {
+  width: 78px;
+  height: 78px;
 
-.bridgeMark {
   display: block;
 
-  color: var(--color-gold-dark);
-
-  font-size: 0.76rem;
-  font-weight: 900;
-}
-
-.bridgeText {
-  display: block;
-
-  margin-top: 2px;
-
-  color: var(--color-navy);
-
-  font-size: 0.51rem;
-  font-weight: 800;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.05em;
+  object-fit: contain;
 }
 
 
 /* ========================================
    Divider
-   ======================================== */
+======================================== */
 
 .entries::before {
   content: "";
@@ -434,13 +481,14 @@
       transparent
     );
 
-  transform: translateX(-50%);
+  transform:
+    translateX(-50%);
 }
 
 
 /* ========================================
    Bottom Note
-   ======================================== */
+======================================== */
 
 .bottom {
   margin-top: 34px;
@@ -454,14 +502,16 @@
 }
 
 .bottomMark {
-  color: var(--color-gold-dark);
+  color:
+    var(--color-gold-dark);
 
   font-size: 0.9rem;
   font-weight: 900;
 }
 
 .bottomText {
-  color: var(--color-text-light);
+  color:
+    var(--color-text-light);
 
   font-size: 0.79rem;
 
@@ -471,7 +521,7 @@
 
 /* ========================================
    Background Decoration
-   ======================================== */
+======================================== */
 
 .backgroundWord {
   position: absolute;
@@ -479,9 +529,16 @@
   right: -30px;
   bottom: -55px;
 
-  color: rgba(13, 49, 88, 0.022);
+  color:
+    rgba(13, 49, 88, 0.022);
 
-  font-size: clamp(8rem, 18vw, 17rem);
+  font-size:
+    clamp(
+      8rem,
+      18vw,
+      17rem
+    );
+
   font-weight: 900;
 
   letter-spacing: -0.08em;
@@ -492,8 +549,109 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .header {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .header > div,
+:global(html[dir="rtl"]) .headerText {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .eyebrow {
+  direction: rtl;
+
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .title {
+  letter-spacing: -0.02em;
+
+  line-height: 1.25;
+}
+
+:global(html[dir="rtl"]) .headerText {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .entries {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .portalTop {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .portalNumber,
+:global(html[dir="rtl"]) .portalType {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .portalType {
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .portalContent {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .portalLabel {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+:global(html[dir="rtl"]) .portalTitle {
+  letter-spacing: -0.01em;
+
+  line-height: 1.35;
+}
+
+:global(html[dir="rtl"]) .portalText {
+  line-height: 1.9;
+}
+
+:global(html[dir="rtl"]) .features {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .feature {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .action {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .bottom {
+  direction: rtl;
+
+  margin-left: auto;
+  margin-right: 0;
+}
+
+:global(html[dir="rtl"]) .bottomText {
+  text-align: right;
+
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .backgroundWord {
+  right: auto;
+  left: -30px;
+
+  letter-spacing: 0;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1000px) {
   .header {
@@ -529,6 +687,16 @@
 
   .bridgeMarker {
     top: 50%;
+
+    width: 82px;
+    height: 82px;
+
+    border-width: 7px;
+  }
+
+  .bridgeLogo {
+    width: 68px;
+    height: 68px;
   }
 }
 
@@ -543,7 +711,12 @@
   }
 
   .portalTitle {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size:
+      clamp(
+        2rem,
+        10vw,
+        3rem
+      );
   }
 
   .bridgeMarker {
@@ -551,6 +724,11 @@
     height: 72px;
 
     border-width: 6px;
+  }
+
+  .bridgeLogo {
+    width: 60px;
+    height: 60px;
   }
 }
 
@@ -561,13 +739,19 @@
   }
 
   .title {
-    font-size: clamp(2.4rem, 12vw, 3.6rem);
+    font-size:
+      clamp(
+        2.4rem,
+        12vw,
+        3.6rem
+      );
   }
 
   .portal {
     min-height: 520px;
 
-    border-radius: var(--radius-lg);
+    border-radius:
+      var(--radius-lg);
   }
 
   .portalTop {
@@ -585,7 +769,8 @@
   .feature {
     width: 100%;
 
-    border-radius: var(--radius-sm);
+    border-radius:
+      var(--radius-sm);
   }
 
   .action {
@@ -595,6 +780,11 @@
   .bridgeMarker {
     width: 64px;
     height: 64px;
+  }
+
+  .bridgeLogo {
+    width: 54px;
+    height: 54px;
   }
 
   .bottom {
