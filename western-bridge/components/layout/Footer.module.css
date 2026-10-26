@@ -9,7 +9,8 @@
       #154671 100%
     );
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   overflow: hidden;
 }
@@ -17,74 +18,79 @@
 
 /* ========================================
    Main Footer
-   ======================================== */
+======================================== */
 
 .main {
-  padding: 82px 0 56px;
+  position: relative;
+
+  z-index: 2;
+
+  padding:
+    50px 0 20px;
 }
 
 .grid {
   display: grid;
-
-  grid-template-columns: 1.35fr repeat(4, minmax(0, 1fr));
-
+  grid-template-columns:
+    1.35fr
+    repeat(
+      4,
+      minmax(0, 1fr)
+    );
   gap: 46px;
 }
 
 
 /* ========================================
    Brand
-   ======================================== */
+======================================== */
 
 .brandColumn {
   max-width: 330px;
 }
 
-.logo {
-  width: auto;
-  height: 72px;
-
-  margin-bottom: 24px;
-
-  object-fit: contain;
+.logoLink {
+  width: fit-content;
+  display: inline-flex;
 }
 
-.brandText {
-  margin-bottom: 24px;
-
-  color: rgba(255, 255, 255, 0.72);
-
-  font-size: 0.9rem;
-
-  line-height: 1.75;
+.logo {
+  width: 150px;
+  height: 150px;
+  display: block;
+  object-fit: contain;
 }
 
 .focusBadge {
   width: fit-content;
-
   display: inline-flex;
   align-items: center;
-
   gap: 8px;
-
-  padding: 9px 13px;
-
-  color: var(--color-gold-light);
-
-  background: rgba(255, 255, 255, 0.06);
-
-  border: 1px solid rgba(219, 193, 118, 0.18);
-  border-radius: var(--radius-full);
-
+  padding:
+    9px 13px;
+  color:
+    var(--color-gold-light);
+  background:
+    rgba(255, 255, 255, 0.06);
+  border:
+    1px solid
+    rgba(219, 193, 118, 0.18);
+  border-radius:
+    var(--radius-full);
   font-size: 0.75rem;
   font-weight: 700;
+  line-height: 1.35;
+  margin-top: 30px;
 }
 
 .focusDot {
   width: 7px;
   height: 7px;
 
-  background: var(--color-gold);
+  flex-shrink: 0;
+
+  background:
+    var(--color-gold);
 
   border-radius: 50%;
 }
@@ -92,12 +98,17 @@
 
 /* ========================================
    Columns
-   ======================================== */
+======================================== */
+
+.column {
+  min-width: 0;
+}
 
 .columnTitle {
   margin-bottom: 19px;
 
-  color: var(--color-white);
+  color:
+    var(--color-white);
 
   font-size: 0.9rem;
   font-weight: 800;
@@ -115,72 +126,55 @@
 .link {
   width: fit-content;
 
-  color: rgba(255, 255, 255, 0.65);
+  color:
+    rgba(255, 255, 255, 0.65);
 
   font-size: 0.82rem;
   font-weight: 500;
 
+  line-height: 1.45;
+
   transition:
-    color var(--transition-fast),
-    transform var(--transition-fast);
+    color
+      var(--transition-fast),
+    transform
+      var(--transition-fast);
 }
 
 .link:hover {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 
-  transform: translateX(3px);
-}
-
-
-/* ========================================
-   Contact
-   ======================================== */
-
-.contactList {
-  display: flex;
-  flex-direction: column;
-
-  gap: 13px;
-}
-
-.contactItem {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 10px;
-
-  color: rgba(255, 255, 255, 0.68);
-
-  font-size: 0.82rem;
-
-  line-height: 1.55;
-}
-
-.contactIcon {
-  color: var(--color-gold-light);
-
-  flex-shrink: 0;
-
-  margin-top: 2px;
+  transform:
+    translateX(3px);
 }
 
 
 /* ========================================
    Divider
-   ======================================== */
+======================================== */
 
 .divider {
+  position: relative;
+
+  z-index: 2;
+
   height: 1px;
 
-  background: rgba(255, 255, 255, 0.1);
+  background:
+    rgba(255, 255, 255, 0.1);
 }
 
 
 /* ========================================
    Bottom
-   ======================================== */
+======================================== */
 
 .bottom {
+  position: relative;
+
+  z-index: 2;
+
   min-height: 82px;
 
   display: flex;
@@ -191,9 +185,12 @@
 }
 
 .copyright {
-  color: rgba(255, 255, 255, 0.52);
+  color:
+    rgba(255, 255, 255, 0.52);
 
   font-size: 0.76rem;
+
+  line-height: 1.5;
 }
 
 .bottomLinks {
@@ -205,34 +202,46 @@
 }
 
 .bottomLink {
-  color: rgba(255, 255, 255, 0.52);
+  color:
+    rgba(255, 255, 255, 0.52);
 
   font-size: 0.75rem;
 
-  transition: color var(--transition-fast);
+  transition:
+    color
+      var(--transition-fast);
 }
 
 .bottomLink:hover {
-  color: var(--color-gold-light);
+  color:
+    var(--color-gold-light);
 }
 
 
 /* ========================================
    Disclaimer Strip
-   ======================================== */
+======================================== */
 
 .disclaimer {
+  position: relative;
+
+  z-index: 2;
+
   padding: 16px 0;
 
-  background: rgba(5, 28, 49, 0.55);
+  background:
+    rgba(5, 28, 49, 0.55);
 
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.06);
 }
 
 .disclaimerText {
   max-width: 1100px;
 
-  color: rgba(255, 255, 255, 0.44);
+  color:
+    rgba(255, 255, 255, 0.44);
 
   font-size: 0.68rem;
 
@@ -242,13 +251,16 @@
 
 /* ========================================
    Decorative Elements
-   ======================================== */
+======================================== */
 
 .circleOne,
 .circleTwo {
   position: absolute;
 
-  border: 1px solid rgba(219, 193, 118, 0.08);
+  border:
+    1px solid
+    rgba(219, 193, 118, 0.08);
+
   border-radius: 50%;
 
   pointer-events: none;
@@ -272,16 +284,100 @@
 
 
 /* ========================================
+   RTL
+======================================== */
+
+:global(html[dir="rtl"]) .footer {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .grid {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .brandColumn,
+:global(html[dir="rtl"]) .column {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .brandText {
+  line-height: 1.95;
+}
+
+:global(html[dir="rtl"]) .focusBadge {
+  direction: rtl;
+
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .columnTitle {
+  letter-spacing: 0;
+}
+
+:global(html[dir="rtl"]) .links {
+  align-items: flex-start;
+}
+
+:global(html[dir="rtl"]) .link {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .link:hover {
+  transform:
+    translateX(-3px);
+}
+
+:global(html[dir="rtl"]) .bottom {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .copyright {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .bottomLinks {
+  direction: rtl;
+}
+
+:global(html[dir="rtl"]) .bottomLink {
+  text-align: right;
+}
+
+:global(html[dir="rtl"]) .disclaimerText {
+  direction: rtl;
+
+  text-align: right;
+
+  line-height: 1.85;
+}
+
+:global(html[dir="rtl"]) .circleOne {
+  right: auto;
+  left: -130px;
+}
+
+:global(html[dir="rtl"]) .circleTwo {
+  left: auto;
+  right: -120px;
+}
+
+
+/* ========================================
    Responsive
-   ======================================== */
+======================================== */
 
 @media (max-width: 1100px) {
   .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
   }
 
   .brandColumn {
-    grid-column: span 3;
+    grid-column:
+      span 3;
 
     max-width: 500px;
   }
@@ -290,26 +386,38 @@
 
 @media (max-width: 760px) {
   .main {
-    padding: 68px 0 46px;
+    padding:
+      68px 0 46px;
   }
 
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
 
-    gap: 36px 24px;
+    gap:
+      36px 24px;
   }
 
   .brandColumn {
-    grid-column: span 2;
+    grid-column:
+      span 2;
   }
 
   .bottom {
-    padding: 24px 0;
+    padding:
+      24px 0;
 
     align-items: flex-start;
     flex-direction: column;
 
     gap: 14px;
+  }
+
+  :global(html[dir="rtl"]) .bottom {
+    align-items: flex-start;
   }
 }
 
@@ -328,10 +436,15 @@
   }
 
   .bottomLinks {
-    gap: 12px 16px;
+    gap:
+      12px 16px;
   }
 
   .disclaimerText {
     font-size: 0.64rem;
+  }
+
+  .focusBadge {
+    max-width: 100%;
   }
 }

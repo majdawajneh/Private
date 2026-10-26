@@ -77,6 +77,41 @@ export default function Navbar() {
 
   const isArabic = locale === "ar";
 
+  const navigationLabel =
+  locale === "ar"
+    ? "التنقل الرئيسي"
+    : locale === "de"
+      ? "Hauptnavigation"
+      : "Main navigation";
+
+const mobileNavigationLabel =
+  locale === "ar"
+    ? "قائمة التنقل"
+    : locale === "de"
+      ? "Mobile Navigation"
+      : "Mobile navigation";
+
+const changeLanguageLabel =
+  locale === "ar"
+    ? "تغيير اللغة"
+    : locale === "de"
+      ? "Sprache ändern"
+      : "Change language";
+
+const chooseLanguageLabel =
+  locale === "ar"
+    ? "اختر اللغة"
+    : locale === "de"
+      ? "Sprache auswählen"
+      : "Choose language";
+
+const languageEyebrow =
+  locale === "ar"
+    ? "اللغة"
+    : locale === "de"
+      ? "SPRACHE"
+      : "LANGUAGE";
+
   const currentLanguage =
     languages.find(
       (language) => language.code === locale
@@ -176,11 +211,7 @@ export default function Navbar() {
 
         <nav
           className={styles.desktopNav}
-          aria-label={
-            isArabic
-              ? "التنقل الرئيسي"
-              : "Main navigation"
-          }
+          aria-label={navigationLabel}
         >
           {navLinks.map((item) => {
             const active =
@@ -190,6 +221,7 @@ export default function Navbar() {
               <Link
                 key={item.key}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={`${styles.navLink} ${
                   active
                     ? styles.navLinkActive
@@ -214,18 +246,16 @@ export default function Navbar() {
                   ? styles.languageTriggerOpen
                   : ""
               }`}
-              aria-label={
-                isArabic
-                  ? "تغيير اللغة"
-                  : "Change language"
-              }
+              aria-label={changeLanguageLabel}
               aria-haspopup="menu"
               aria-expanded={languageMenuOpen}
-              onClick={() =>
-                setLanguageMenuOpen(
-                  (current) => !current
-                )
-              }
+              onClick={() => {
+                  setMobileMenuOpen(false);
+
+                  setLanguageMenuOpen(
+                    (current) => !current
+                  );
+                }}
             >
               <span className={styles.currentFlag}>
                 <Image
@@ -267,13 +297,11 @@ export default function Navbar() {
             >
               <div className={styles.languageMenuHeader}>
                 <span className={styles.languageMenuEyebrow}>
-                  LANGUAGE
+                  {languageEyebrow}
                 </span>
 
                 <strong>
-                  {isArabic
-                    ? "اختر اللغة"
-                    : "Choose language"}
+                  {chooseLanguageLabel}
                 </strong>
               </div>
 
@@ -354,11 +382,13 @@ export default function Navbar() {
                 : commonT("openMenu")
             }
             aria-expanded={mobileMenuOpen}
-            onClick={() =>
+            onClick={() => {
+              setLanguageMenuOpen(false);
+
               setMobileMenuOpen(
                 (current) => !current
-              )
-            }
+              );
+            }}
           >
             <span />
             <span />
@@ -376,11 +406,7 @@ export default function Navbar() {
       >
         <nav
           className={styles.mobileNav}
-          aria-label={
-            isArabic
-              ? "قائمة التنقل"
-              : "Mobile navigation"
-          }
+          aria-label={mobileNavigationLabel}
         >
           {navLinks.map((item, index) => (
             <Link

@@ -1,61 +1,150 @@
 import type { MetadataRoute } from "next";
 
-import { SITE_URL } from "@/lib/seo";
+import {
+  localizedUrl,
+  type SiteLocale,
+} from "@/lib/seo";
+
+type SitemapPage = {
+  path: string;
+  changeFrequency:
+    | "always"
+    | "hourly"
+    | "daily"
+    | "weekly"
+    | "monthly"
+    | "yearly"
+    | "never";
+  priority: number;
+};
+
+const locales: SiteLocale[] = [
+  "de",
+  "en",
+  "ar",
+];
+
+const pages: SitemapPage[] = [
+  {
+    path: "/",
+    changeFrequency: "weekly",
+    priority: 1,
+  },
+
+  {
+    path: "/individuals",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+
+  {
+    path: "/businesses",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+
+  {
+    path: "/medical",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+
+  {
+    path: "/education",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+
+  {
+    path: "/germany",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+
+  {
+    path: "/services",
+    changeFrequency: "monthly",
+    priority: 0.9,
+  },
+
+  {
+    path: "/about",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+
+  {
+    path: "/contact",
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+
+  {
+    path: "/privacy-policy",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
+
+  {
+    path: "/terms",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
+
+  {
+    path: "/disclaimer",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
+
+  {
+    path: "/cookie-policy",
+    changeFrequency: "yearly",
+    priority: 0.3,
+  },
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: `${SITE_URL}/`,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
+  return pages.flatMap((page) =>
+    locales.map((locale) => ({
+      url: localizedUrl(
+        locale,
+        page.path
+      ),
 
-    {
-      url: `${SITE_URL}/individuals`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+      changeFrequency:
+        page.changeFrequency,
 
-    {
-      url: `${SITE_URL}/businesses`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+      priority:
+        page.priority,
 
-    {
-      url: `${SITE_URL}/medical`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+      alternates: {
+        languages: {
+          de:
+            localizedUrl(
+              "de",
+              page.path
+            ),
 
-    {
-      url: `${SITE_URL}/education`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+          en:
+            localizedUrl(
+              "en",
+              page.path
+            ),
 
-    {
-      url: `${SITE_URL}/germany`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
+          ar:
+            localizedUrl(
+              "ar",
+              page.path
+            ),
 
-    {
-      url: `${SITE_URL}/services`,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-
-    {
-      url: `${SITE_URL}/about`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-
-    {
-      url: `${SITE_URL}/contact`,
-      changeFrequency: "monthly",
-      priority: 0.7,
-    },
-  ];
+          "x-default":
+            localizedUrl(
+              "de",
+              page.path
+            ),
+        },
+      },
+    }))
+  );
 }

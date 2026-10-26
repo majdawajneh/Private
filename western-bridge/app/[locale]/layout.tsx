@@ -10,6 +10,10 @@ import {
   NextIntlClientProvider,
 } from "next-intl";
 
+import {
+  setRequestLocale,
+} from "next-intl/server";
+
 import { notFound } from "next/navigation";
 
 import Navbar from "@/components/layout/Navbar";
@@ -68,7 +72,10 @@ export default async function LocaleLayout({
     notFound();
   }
 
-  const isArabic = locale === "ar";
+  setRequestLocale(locale);
+
+  const isArabic =
+    locale === "ar";
 
   return (
     <html
@@ -83,7 +90,9 @@ export default async function LocaleLayout({
             : "western-site"
         }
       >
-        <NextIntlClientProvider>
+        <NextIntlClientProvider
+          locale={locale}
+        >
           <Navbar />
 
           {children}
