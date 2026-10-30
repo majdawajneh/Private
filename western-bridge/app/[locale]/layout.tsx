@@ -23,6 +23,7 @@ import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/seo";
 
 import "../globals.css";
+import SiteNotice from "@/components/layout/SiteNotice";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -94,7 +95,7 @@ export default async function LocaleLayout({
           locale={locale}
         >
           <Navbar />
-
+        <SiteNotice />
           {children}
 
           <Footer />
